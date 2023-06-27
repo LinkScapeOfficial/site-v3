@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Gilroy-Bold';
+  font-weight: bold;
+  font-display: swap;
+  src: url('https://linkscape.app/Gilroy-Bold.woff') format('woff');
+}
