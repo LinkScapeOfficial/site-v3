@@ -67,9 +67,12 @@ export default function NavBar() {
                                 <a href="https://github.com/LinkScapeOfficial">
                                   <FaGithub className="h-8 w-8 mr-4" />
                                 </a>
-                                <FaDiscord className="h-8 w-8 mr-4" />
-                                <FaTwitter className="h-8 w-8"/>
-
+                                <a href="https://discord.gg/WDdvabyKaH">
+                                  <FaDiscord className="h-8 w-8 mr-4" />
+                                </a>
+                                <a href="https://twitter.com/RealLinkScape">
+                                  <FaTwitter className="h-8 w-8"/>
+                                </a>
                             </div>
                         </div>
                     </div>
