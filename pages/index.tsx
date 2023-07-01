@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import { FaGithub, FaDonate } from 'react-icons/fa'
+import Sponsors from '../components/sponsors'
+
 
 export default function Home() {
     return (
@@ -31,6 +33,8 @@ export default function Home() {
                     </button>
                 </a>
             </div>
+            <Sponsors />
         </div>
+        
     )
 }
