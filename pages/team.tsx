@@ -156,24 +156,24 @@ const people = [
     },
 ]
 
-export default function Leaders() {
+export default function Team() {
     return (
       <div className="bg-white mb-10 mt-5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="text-3xl font-bold tracking-tight text-center text-gray-900 sm:text-4xl mt-12">Meet Our Team</h2>
           <ul role="list" className="grid gap-x-8 gap-y-6 sm:gap-x-6 sm:gap-y-8 sm:grid-cols-2 xl:gap-y-10 xl:grid-cols-3 mt-8">
-            {people.map((person) => (
-              <Link href={person.github}>
-                <li key={person.name} className="flex items-center justify-center">
-                    <div className="flex flex-col items-center gap-2">
+            {people.map((person, index) => (
+              <Link href={person.github} key={index}>
+                <li className="flex items-center justify-center">
+                  <div className="flex flex-col items-center gap-2">
                     <img className="h-16 w-16 rounded-full" src={person.imageUrl} alt="" />
                     <div className="text-center">
-                        <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
-                        <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
+                      <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
+                      <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
                     </div>
-                    </div>
+                  </div>
                 </li>
-              </Link>  
+              </Link>
             ))}
           </ul>
         </div>
