@@ -1,4 +1,5 @@
 import {FiMoreHorizontal} from "react-icons/fi";
+import Link from 'next/link'
 
 const people = [
     {
@@ -52,10 +53,10 @@ export default function Leaders() {
                             </div>
                         </li>
                     ))}
-                    <a className="flex items-center gap-x-6" href="/team">
+                    <Link className="flex items-center gap-x-6" href="/team">
                         <FiMoreHorizontal className="h-16 w-16 rounded-full" />
                         <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900 -mt-1">View More</h3>
-                    </a>
+                    </Link>
                 </ul>
             </div>
         </div>
