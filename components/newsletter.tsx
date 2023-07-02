@@ -4,7 +4,7 @@ export default function Newsletter() {
   return (
     <>
         <h2 className="text-3xl font-bold tracking-tight text-center text-gray-900 sm:text-4xl mt-12">Newsletter</h2>
-        <div className="flex justify-center mt-4">
+        <div className="flex justify-center mt-4 mb-4">
             <form
             action="https://postal.hackclub.com/subscribe"
             method="POST"

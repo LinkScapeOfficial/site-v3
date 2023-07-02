@@ -6,8 +6,8 @@ import Link from 'next/link'
 
 const navigation = [
     { name: 'Team', href: '/team', current: false },
-    { name: 'Projects', href: '#', current: false },
-    { name: 'Calendar', href: '#', current: false },
+    { name: 'Finances', href: '/finances', current: false },
+    { name: 'Projects', href: '/projects', current: false },
 ]
 
 // @ts-ignore
