@@ -131,7 +131,7 @@ const people = [
             'https://github.com/ana-jiangR',
     },
     {
-        name: 'Always Finder',
+        name: 'Layla Ma',
         role: 'Member',
         imageUrl:
             '',
