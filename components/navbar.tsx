@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { FaGithub, FaDiscord, FaTwitter } from 'react-icons/fa'
+import Link from 'next/link'
 
 const navigation = [
     { name: 'Team', href: '/team', current: false },
@@ -33,7 +34,7 @@ export default function NavBar() {
                                 </Disclosure.Button>
                             </div>
                             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                                <a className="flex flex-shrink-0 items-center" href="/">
+                                <Link className="flex flex-shrink-0 items-center" href="/">
                                     <img
                                         className="block h-8 w-auto lg:hidden"
                                         src="https://cdn.linkscape.app/linkscape-logo.png"
@@ -44,7 +45,7 @@ export default function NavBar() {
                                         src="https://cdn.linkscape.app/linkscape-logo.png"
                                         alt="LinkScape"
                                     />
-                                </a>
+                                </Link>
                                 <div className="hidden sm:ml-6 sm:block">
                                     <div className="flex space-x-4">
                                         {navigation.map((item) => (

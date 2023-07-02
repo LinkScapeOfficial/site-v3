@@ -1,4 +1,5 @@
 import { FaHome, FaDonate } from 'react-icons/fa'
+import Link from 'next/link'
 
 export default function Home() {
     return (
@@ -13,23 +14,23 @@ export default function Home() {
                 </span>
             </h1>
             <div className="py-6 text-base sm:text-lg text-center">
-                Sorry, we couldn't find the page you're looking for.
+                Sorry, we couldn&apos;t find the page you&apos;re looking for.
                 <br />
                 But you can find us happy by donating to us!
             </div>
             <div className="flex flex-row">
-                <a href="/">
+                <Link href="/">
                     <button className="bg-black text-white px-4 py-3 rounded-md flex items-center mr-3">
                         <FaHome className="w-7 h-7 mr-1.5" />
                         <div className="font-semibold">Home</div>
                     </button>
-                </a>
-                <a href="/">
+                </Link>
+                <Link href="/">
                     <button className="bg-black text-white px-4 py-3 rounded-md flex items-center mr-3">
                         <FaDonate className="w-7 h-7 mr-1.5" />
                         <div className="font-semibold">Donate</div>
                     </button>
-                </a>
+                </Link>
             </div>
         </div>
     )

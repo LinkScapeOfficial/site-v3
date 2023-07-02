@@ -1,4 +1,5 @@
 import { FaGithub, FaDonate } from 'react-icons/fa'
+import Link from 'next/link'
 
 export default function Home() {
     return (
@@ -17,18 +18,18 @@ export default function Home() {
                 We are a group of students who hack, build, and compete together.
             </p>
             <div className="flex flex-row">
-                <a href="https://github.com/LinkScapeOfficial">
+                <Link href="https://github.com/LinkScapeOfficial">
                     <button className="bg-black text-white px-4 py-3 rounded-md flex items-center mr-3">
                         <FaGithub className="w-7 h-7 mr-1.5" />
                         <div className="font-semibold">GitHub</div>
                     </button>
-                </a>
-                <a href="/donate">
+                </Link>
+                <Link href="/donate">
                     <button className="bg-black text-white px-4 py-3 rounded-md flex items-center mr-3">
                         <FaDonate className="w-7 h-7 mr-1.5" />
                         <div className="font-semibold">Donate</div>
                     </button>
-                </a>
+                </Link>
             </div>
         </div>
     )
