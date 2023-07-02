@@ -4,7 +4,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { FaGithub, FaDiscord, FaTwitter } from 'react-icons/fa'
 
 const navigation = [
-    { name: 'Team', href: '#', current: false },
+    { name: 'Team', href: '/team', current: false },
     { name: 'Projects', href: '#', current: false },
     { name: 'Calendar', href: '#', current: false },
 ]
@@ -23,7 +23,7 @@ export default function NavBar() {
                         <div className="relative flex h-16 items-center justify-between">
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
-                                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-blue-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                                     <span className="sr-only">Open Main Menu</span>
                                     {open ? (
                                         <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -33,7 +33,7 @@ export default function NavBar() {
                                 </Disclosure.Button>
                             </div>
                             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                                <div className="flex flex-shrink-0 items-center">
+                                <a className="flex flex-shrink-0 items-center" href="/">
                                     <img
                                         className="block h-8 w-auto lg:hidden"
                                         src="https://cdn.linkscape.app/linkscape-logo.png"
@@ -44,7 +44,7 @@ export default function NavBar() {
                                         src="https://cdn.linkscape.app/linkscape-logo.png"
                                         alt="LinkScape"
                                     />
-                                </div>
+                                </a>
                                 <div className="hidden sm:ml-6 sm:block">
                                     <div className="flex space-x-4">
                                         {navigation.map((item) => (
@@ -52,7 +52,7 @@ export default function NavBar() {
                                                 key={item.name}
                                                 href={item.href}
                                                 className={classNames(
-                                                    item.current ? 'bg-gray-900 text-white' : 'text-gray-700 hover:bg-gray-700 hover:text-white',
+                                                    item.current ? 'bg-gray-900 text-white' : 'text-gray-700 hover:bg-blue-500 hover:text-white',
                                                     'rounded-md px-3 py-2 text-sm font-medium'
                                                 )}
                                                 aria-current={item.current ? 'page' : undefined}
@@ -85,7 +85,7 @@ export default function NavBar() {
                                     as="a"
                                     href={item.href}
                                     className={classNames(
-                                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                        item.current ? 'bg-gray-900 text-white' : 'text-black hover:bg-blue-500 hover:text-white',
                                         'block rounded-md px-3 py-2 text-base font-medium'
                                     )}
                                     aria-current={item.current ? 'page' : undefined}

@@ -5,7 +5,7 @@ export default function Sponsors() {
           <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
             Sponsored by Your Favourite Companies
           </h2>
-          <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+          <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-4">
             <img
               className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
               src="https://cdn.linkscape.app/vercel-logo.png"
@@ -22,22 +22,15 @@ export default function Sponsors() {
             />
             <img
               className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
-              alt="Tuple"
+              src="https://cdn.linkscape.app/1password-logo.png"
+              alt="1Password"
               width={158}
               height={48}
             />
             <img
               className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
-              alt="SavvyCal"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
-              alt="Statamic"
+              src="https://cdn.linkscape.app/twilio-logo.png"
+              alt="Twilio"
               width={158}
               height={48}
             />
