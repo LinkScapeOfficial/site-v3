@@ -18,6 +18,9 @@ export default function About() {
                     Technology
                   </span>
                 </h1>
+                <p className="py-6 text-base sm:text-lg text-center">
+                    LinkScape is a nonprofit led by passionate students dedicated to influence the world through technology.
+                </p>
             </div>
         </>
     )

@@ -179,10 +179,10 @@ export default function Team() {
           <ul role="list" className="grid gap-x-8 gap-y-6 sm:gap-x-6 sm:gap-y-8 sm:grid-cols-2 xl:gap-y-10 xl:grid-cols-3 mt-8">
             {people.map((person, index) => (
                 <li className="flex items-center justify-center">
-                  <div className="flex flex-col items-center gap-2">
+                  <div className="flex flex-col items-center gap-2" key={index}>
                     <img className="h-16 w-16 rounded-full" src={person.imageUrl} alt="" />
                     <div className="text-center">
-                        <Link href={person.github} key={index}>
+                        <Link href={person.github}>
                           <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900 hover:underline">{person.name}</h3>
                         </Link>
                       <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
