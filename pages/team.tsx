@@ -1,4 +1,3 @@
-import {FiMoreHorizontal} from "react-icons/fi";
 import Link from 'next/link'
 
 const people = [
@@ -14,7 +13,7 @@ const people = [
         name: 'Meli Liu',
         role: 'Founder',
         imageUrl:
-            'https://gcore.jsdelivr.net/gh/thomaswcy/linkscape.io@main/MeliLiu-Avatar.png',
+            'https://cdn.linkscape.app/MeliLiu.png',
         github:
         'https://github.com/MeliLXT',    
     },
@@ -54,7 +53,7 @@ const people = [
         name: 'Kai Xu',
         role: 'Senior Member',
         imageUrl:
-            '',
+            'https://cdn.linkscape.app/KaiXu.png',
         github:
             '',
         },
@@ -84,11 +83,11 @@ const people = [
     },
     {
         name: 'Tze-Yun Hsiao',
-        role: 'Senior Member',
+        role: 'Senior Member & Head of Design',
         imageUrl:
             '',
         github:
-            'https://github.com/SolarisEco',    
+            'https://github.com/Powerlean',
     },
     {
         name: 'Yucheng Zou',
@@ -102,7 +101,7 @@ const people = [
         name: 'Nash Sun',
         role: 'Senior Member',
         imageUrl:
-            '',
+            'https://cdn.linkscape.app/NashSun.png',
         github:
             'https://github.com/sun-xx',    
     },
@@ -136,7 +135,7 @@ const people = [
         imageUrl:
             '',
         github:
-            '',
+            'https://github.com/Marion-China',
     },
     {
         name: 'Eason Ji',
@@ -154,6 +153,22 @@ const people = [
         github:
             '',
     },
+    {
+        name: 'Arnold Chao',
+        role: 'Member',
+        imageUrl:
+            'https://cdn.linkscape.app/ArnoldChao.png',
+        github:
+            'https://github.com/benxxxzzz',
+    },
+    {
+        name: 'Jaden Hou',
+        role: 'Member',
+        imageUrl:
+            'https://cdn.linkscape.app/JadenHou.png',
+        github:
+            'https://github.com/InternetRamen',
+    },
 ]
 
 export default function Team() {
@@ -163,17 +178,17 @@ export default function Team() {
           <h2 className="text-3xl font-bold tracking-tight text-center text-gray-900 sm:text-4xl mt-12">Meet Our Team</h2>
           <ul role="list" className="grid gap-x-8 gap-y-6 sm:gap-x-6 sm:gap-y-8 sm:grid-cols-2 xl:gap-y-10 xl:grid-cols-3 mt-8">
             {people.map((person, index) => (
-              <Link href={person.github} key={index}>
                 <li className="flex items-center justify-center">
                   <div className="flex flex-col items-center gap-2">
                     <img className="h-16 w-16 rounded-full" src={person.imageUrl} alt="" />
                     <div className="text-center">
-                      <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
+                        <Link href={person.github} key={index}>
+                          <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900 hover:underline">{person.name}</h3>
+                        </Link>
                       <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
                     </div>
                   </div>
                 </li>
-              </Link>
             ))}
           </ul>
         </div>
