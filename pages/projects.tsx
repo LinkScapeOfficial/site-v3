@@ -42,7 +42,20 @@ export default function Projects() {
                                         <dd className="inline">{feature.description}</dd>
                                     </div>
                                 ))}
-                                <Link href="https://github.com/LinkScapeOfficial/LinkDown"><button className="bg-black text-white rounded-md h-auto w-auto"><FaDownload className="w-7 h-7 mr-1.5"/>Download</button></Link>
+                                <div className="flex flex-row">
+                                    <Link href="https://github.com/LinkScapeOfficial/LinkDown/releases">
+                                        <button className="bg-black text-white px-3 py-2 rounded-md flex items-center mr-3 mt-2">
+                                            <FaDownload className="w-5 h-5 mr-1.5" />
+                                            <div className="font-semibold">Download</div>
+                                        </button>
+                                    </Link>
+                                    <Link href="https://github.com/LinkScapeOfficial/LinkDown">
+                                        <button className="bg-black text-white px-3 py-2 rounded-md flex items-center mr-3 mt-2">
+                                            <FaGithub className="w-5 h-5 mr-1.5" />
+                                            <div className="font-semibold">GitHub</div>
+                                        </button>
+                                    </Link>
+                                </div>
                             </dl>
                         </div>
                     </div>
