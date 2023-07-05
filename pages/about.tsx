@@ -8,19 +8,23 @@ export default function About() {
                     <div className="fix-safari-blur blur-[32px] sm:blur-[106px] h-20 sm:h-40 bg-gradient-to-r from-blue-400 to-blue-300 dark:to-blue-600"></div>
                 </div>
                 <h1 className="text-4xl sm:text-8xl font-bold text-center">
-                  We are{" "}
+                  We{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-700">
-                    Students
+                    Hack,
+                  </span>
+                  We{" "}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-700">
+                    Link,
                   </span>
                 </h1>
                 <h1 className="text-4xl sm:text-8xl font-bold text-center">
-                  We Love{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-700">
-                    Technology
+                    We{" "}
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-700">
+                    Grow.
                   </span>
                 </h1>
                 <p className="py-6 text-base sm:text-lg text-center">
-                    LinkScape is a nonprofit led by passionate students dedicated to influence the world through technology.
+                    LinkScape is led by passionate students dedicated to influence the world through technology.
                 </p>
                 <h2 className="text-2xl sm:text-4xl font-bold text-center mb-8 mt-8">
                     Legal Documents
