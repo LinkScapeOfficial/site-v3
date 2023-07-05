@@ -27,11 +27,11 @@ export default function About() {
                 </h2>
                 <div className="flex flex-wrap">
                     <Link href="https://cdn.linkscape.app/IRS_Letter.pdf" className="mr-6 hover:-translate-y-1 transition-transform duration-300">
-                        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md h-100">
+                        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md">
                             <div className="flex justify-center items-center">
                                 <img className="rounded-t-lg max-h-72" src="https://cdn.linkscape.app/IRS_Letter.png" alt="" />
                             </div>
-                            <div className="p-5 w-52 -mt-16 font-bold -mb-2">
+                            <div className="p-5 w-52 -mt-7 font-bold -mb-2">
                               IRS 501(c)(3) Status Determination Letter
                             </div>
                         </div>
@@ -41,7 +41,7 @@ export default function About() {
                             <div className="flex justify-center items-center">
                                 <img className="rounded-t-lg max-h-72" src="https://cdn.linkscape.app/Certificate_of_Status.png" alt="" />
                             </div>
-                            <div className="p-5 w-52 -mt-16 font-bold mb-4">
+                            <div className="p-5 w-52 -mt-7 font-bold mb-4">
                                 Certificate of Status
                             </div>
                         </div>
@@ -51,7 +51,7 @@ export default function About() {
                             <div className="flex justify-center items-center">
                                 <img className="rounded-t-lg max-h-72" src="https://cdn.linkscape.app/fiscal_sponsorship_letter.png" alt="" />
                             </div>
-                            <div className="p-5 w-52 -mt-16 font-bold -mb-2">
+                            <div className="p-5 w-52 -mt-7 font-bold -mb-2">
                                 Fiscal Sponsorship Confirmation
                             </div>
                         </div>
