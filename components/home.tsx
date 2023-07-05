@@ -19,13 +19,13 @@ export default function Home() {
             </p>
             <div className="flex flex-row">
                 <Link href="https://github.com/LinkScapeOfficial">
-                    <button className="bg-black text-white px-4 py-3 rounded-md flex items-center mr-3">
+                    <button className="bg-black text-white px-3 py-2 rounded-md flex items-center mr-3">
                         <FaGithub className="w-7 h-7 mr-1.5" />
                         <div className="font-semibold">GitHub</div>
                     </button>
                 </Link>
                 <Link href="/donate">
-                    <button className="bg-black text-white px-4 py-3 rounded-md flex items-center mr-3">
+                    <button className="bg-black text-white px-3 py-2 rounded-md flex items-center mr-3">
                         <FaDonate className="w-7 h-7 mr-1.5" />
                         <div className="font-semibold">Donate</div>
                     </button>
