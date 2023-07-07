@@ -1,9 +1,13 @@
 import { FaGithub, FaDonate } from 'react-icons/fa'
+import Head from 'next/head'
 import Link from 'next/link'
 
 export default function Home() {
     return (
         <div className="flex flex-col justify-center items-center mt-12 sm:mt-60">
+            <Head>
+                <title>Linkscape | Home</title>
+            </Head>
             <div className="absolute inset-0 grid grid-cols-2 -space-x-12 sm:-space-x-52 opacity-40 dark:opacity-20" style={{ zIndex: -1 }}>
                 <div className="fix-safari-blur blur-[32px] sm:blur-[106px] h-32 sm:h-64 bg-gradient-to-br from-blue-500 to-blue-400 dark:from-blue-700"></div>
                 <div className="fix-safari-blur blur-[32px] sm:blur-[106px] h-20 sm:h-40 bg-gradient-to-r from-blue-400 to-blue-300 dark:to-blue-600"></div>

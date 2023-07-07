@@ -50,7 +50,7 @@ export default function Newsletter() {
             type="submit"
             name="submit"
             id="submit"
-            className="bg-black text-white px-4 py-2 rounded-md cursor-pointer"
+            className="bg-black text-white px-4 py-2 rounded-md cursor-pointer font-semibold"
             value="Subscribe"
             />
         </form>

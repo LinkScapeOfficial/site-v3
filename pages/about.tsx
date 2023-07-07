@@ -1,7 +1,11 @@
 import Link from 'next/link'
+import Head from 'next/head'
 export default function About() {
     return(
         <>
+            <Head>
+                <title>LinkScape | About</title>
+            </Head>
             <div className="flex flex-col justify-center items-center mt-12 sm:mt-60 sm:mb-64 mb-20">
                 <div className="absolute inset-0 grid grid-cols-2 -space-x-12 sm:-space-x-52 opacity-40 dark:opacity-20" style={{ zIndex: -1 }}>
                     <div className="fix-safari-blur blur-[32px] sm:blur-[106px] h-32 sm:h-64 bg-gradient-to-br from-blue-500 to-blue-400 dark:from-blue-700"></div>
