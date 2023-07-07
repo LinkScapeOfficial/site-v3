@@ -10,7 +10,7 @@ export default function About() {
                 <h1 className="text-4xl sm:text-8xl font-bold text-center">
                   We{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-700">
-                    Hack,
+                    Hack,{" "}
                   </span>
                   We{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-700">

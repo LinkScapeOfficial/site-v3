@@ -20,13 +20,13 @@ export default function Home() {
             </div>
             <div className="flex flex-row">
                 <Link href="/">
-                    <button className="bg-black text-white px-4 py-3 rounded-md flex items-center mr-3">
+                    <button className="bg-black text-white px-3 py-2 rounded-md flex items-center mr-3">
                         <FaHome className="w-7 h-7 mr-1.5" />
                         <div className="font-semibold">Home</div>
                     </button>
                 </Link>
                 <Link href="/">
-                    <button className="bg-black text-white px-4 py-3 rounded-md flex items-center mr-3">
+                    <button className="bg-black text-white px-3 py-2 rounded-md flex items-center mr-3">
                         <FaDonate className="w-7 h-7 mr-1.5" />
                         <div className="font-semibold">Donate</div>
                     </button>
