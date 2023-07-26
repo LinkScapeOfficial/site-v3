@@ -170,6 +170,14 @@ const people = [
         github:
             'https://github.com/InternetRamen',
     },
+    {
+        name: 'Otto Chou',
+        role: 'Member',
+        imageUrl:
+            '',
+        github:
+            'https://github.com/ottochou1',
+    },
 ]
 
 export default function Team() {
