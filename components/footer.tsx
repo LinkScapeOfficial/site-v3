@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 text-black text-center">
+    <footer className="bg-gray-50 text-center text-black">
       <br />
       <a href="https://vercel.com/?utm_source=linkscape&utm_campaign=oss">
         <img

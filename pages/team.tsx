@@ -139,17 +139,17 @@ const people = [
 
 export default function Team() {
   return (
-    <div className="bg-white mb-10 mt-5">
+    <div className="mb-10 mt-5 bg-white">
       <Head>
         <title>LinkScape | Team</title>
       </Head>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-3xl font-bold tracking-tight text-center text-gray-900 sm:text-4xl mt-12">
+        <h2 className="mt-12 text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Meet Our Team
         </h2>
         <ul
           role="list"
-          className="grid gap-x-8 gap-y-6 sm:gap-x-6 sm:gap-y-8 sm:grid-cols-2 xl:gap-y-10 xl:grid-cols-3 mt-8"
+          className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-8 xl:grid-cols-3 xl:gap-y-10"
         >
           {people.map((person, index) => (
             <div key={index}>

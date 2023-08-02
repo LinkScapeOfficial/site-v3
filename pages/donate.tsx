@@ -3,7 +3,7 @@ import Head from "next/head";
 
 export default function Donate() {
   return (
-    <div className="flex flex-col h-512px screen">
+    <div className="h-512px screen flex flex-col">
       <Head>
         <title>LinkScape | Donate</title>
       </Head>

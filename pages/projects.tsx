@@ -29,7 +29,7 @@ const features = [
 
 export default function Projects() {
   return (
-    <div className="overflow-hidden bg-white mt-12 mb-4 sm:py-32">
+    <div className="mb-4 mt-12 overflow-hidden bg-white sm:py-32">
       <Head>
         <title>LinkScape | Projects</title>
       </Head>
@@ -59,14 +59,14 @@ export default function Projects() {
                 ))}
                 <div className="flex flex-row">
                   <Link href="https://github.com/LinkScapeOfficial/LinkDown/releases">
-                    <button className="bg-black text-white px-3 py-2 rounded-md flex items-center mr-3 mt-2">
-                      <FaDownload className="w-5 h-5 mr-1.5" />
+                    <button className="mr-3 mt-2 flex items-center rounded-md bg-black px-3 py-2 text-white">
+                      <FaDownload className="mr-1.5 h-5 w-5" />
                       <div className="font-semibold">Download</div>
                     </button>
                   </Link>
                   <Link href="https://github.com/LinkScapeOfficial/LinkDown">
-                    <button className="bg-black text-white px-3 py-2 rounded-md flex items-center mr-3 mt-2">
-                      <FaGithub className="w-5 h-5 mr-1.5" />
+                    <button className="mr-3 mt-2 flex items-center rounded-md bg-black px-3 py-2 text-white">
+                      <FaGithub className="mr-1.5 h-5 w-5" />
                       <div className="font-semibold">GitHub</div>
                     </button>
                   </Link>
@@ -77,7 +77,7 @@ export default function Projects() {
           <img
             src="https://cdn.linkscape.app/LinkDown_Sample.png"
             alt=""
-            className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0 hidden md:block"
+            className="hidden w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 md:block lg:-ml-0"
           />
         </div>
       </div>

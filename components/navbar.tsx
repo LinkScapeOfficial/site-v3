@@ -68,10 +68,10 @@ export default function NavBar() {
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <a href="https://github.com/LinkScapeOfficial">
-                  <FaGithub className="h-8 w-8 mr-4" />
+                  <FaGithub className="mr-4 h-8 w-8" />
                 </a>
                 <a href="https://discord.gg/WDdvabyKaH">
-                  <FaDiscord className="h-8 w-8 mr-4" />
+                  <FaDiscord className="mr-4 h-8 w-8" />
                 </a>
                 <a href="https://twitter.com/RealLinkScape">
                   <FaTwitter className="h-8 w-8" />
