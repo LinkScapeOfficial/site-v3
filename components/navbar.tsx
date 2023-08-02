@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import { FaGithub, FaDiscord, FaTwitter } from "react-icons/fa";
+import { Disclosure } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
 
 const navigation = [
@@ -10,8 +10,7 @@ const navigation = [
   { name: "Projects", href: "/projects", current: false },
 ];
 
-// @ts-ignore
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
