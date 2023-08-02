@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['cdn.linkscape.app'],
+    domains: ["cdn.linkscape.app", "avatars.githubusercontent.com"],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
