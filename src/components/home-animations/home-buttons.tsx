@@ -15,14 +15,14 @@ const containerVariants = {
       type: "spring",
       stiffness: 100,
       damping: 20,
-      delay: 0.9,
+      delay: 1.3,
     },
   },
 };
 
 export default function HomeButtons() {
-  const button1delay = 0.9;
-  const button2delay = 1.05;
+  const button1delay = 1.3;
+  const button2delay = 1.45;
 
   return (
     <motion.div

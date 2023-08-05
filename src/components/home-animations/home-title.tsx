@@ -15,7 +15,7 @@ const containerVariants = {
         type: "spring",
         stiffness: 100,
         damping: 20,
-        delay: 0.9,
+        delay: 1.3,
       },
     },
   },
@@ -35,7 +35,7 @@ const h2Variants = {
       type: "spring",
       stiffness: 400,
       damping: 20,
-      delay: 0.5,
+      delay: 0.7,
     },
   },
 };
@@ -52,7 +52,7 @@ const nameVariants = {
       type: "spring",
       stiffness: 400,
       damping: 20,
-      delay: 0.2,
+      delay: 0.4,
     },
   },
 };
