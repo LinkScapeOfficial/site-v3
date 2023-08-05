@@ -38,14 +38,14 @@ const people = [
 
 export default function Leaders() {
   return (
-    <div className="mb-10 bg-white mx-auto grid grid-cols-12 p-16 relative">
+    <div className="mb-10 bg-white mx-auto grid grid-cols-12 p-8 sm:p-16 relative">
       <div className="col-span-1 hidden lg:block">
         <div className="w-12 h-12 flex items-center justify-center -left-2 top-2 transform translate-x-px relative border-2 rounded-full bg-white z-20">
           <PeopleIcon className={"text-gh-gray-4 w-5 h-5"} />
         </div>
       </div>
       <div className="mt-1 col-span-12 lg:col-span-10 lg:col-start-2 mb-8">
-        <div className={"flex flex-row items-baseline cursor-pointer group"}>
+        <div className={"flex flex-row items-center cursor-pointer group"}>
           <Link href={"/team"}>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
               Team
@@ -69,7 +69,7 @@ export default function Leaders() {
       <div className="col-span-12 lg:col-span-10 lg:col-start-2 mt-4">
         <ul
           role="list"
-          className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-12"
         >
           {people.map((person) => (
             <li key={person.name}>
