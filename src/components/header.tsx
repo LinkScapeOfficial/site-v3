@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -14,8 +14,6 @@ const navigation = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLElement>(null);
-  const [isIntersecting, setIntersecting] = useState(true);
   const pathname = usePathname();
 
   const toggleMenu = () => {
@@ -25,7 +23,7 @@ export default function Header() {
   return (
     <header
       className={
-        "bg-white/30 py-1 fixed left-0 top-0 w-screen backdrop-blur-md backdrop-saturate-[85%] border-b border-black/10 z-50"
+        "bg-white py-1 fixed left-0 top-0 w-screen backdrop-blur-md backdrop-saturate-[85%] border-b border-black/10 z-50"
       }
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -77,6 +75,7 @@ export default function Header() {
                 alt="LinkScape"
                 width={2608}
                 height={769}
+                priority={true}
               />
               <Image
                 className="hidden h-8 w-auto lg:block"
@@ -84,6 +83,7 @@ export default function Header() {
                 alt="LinkScape"
                 width={2608}
                 height={769}
+                priority={true}
               />
             </Link>
             <div className="hidden sm:ml-6 sm:block">
@@ -124,13 +124,13 @@ export default function Header() {
           </div>
           <div className="flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <Link href={"https://github.com/LinkScapeOfficial"}>
-              <FaGithub className="mr-4 h-6 w-6 text-gh-text-secondary hover:text-gh-text-primary transition-colors" />
+              <FaGithub className="mr-4 h-6 w-6 text-gh-text-primary hover:text-gh-text-secondary transition-colors" />
             </Link>
             <Link href={"https://discord.gg/WDdvabyKaH"}>
-              <FaDiscord className="mr-4 h-6 w-6 text-gh-text-secondary hover:text-gh-text-primary transition-colors" />
+              <FaDiscord className="mr-4 h-6 w-6 text-gh-text-primary hover:text-gh-text-secondary transition-colors" />
             </Link>
             <Link href={"https://twitter.com/RealLinkScape"}>
-              <FaTwitter className="mr-4 h-6 w-6 text-gh-text-secondary hover:text-gh-text-primary transition-colors" />
+              <FaTwitter className="mr-4 h-6 w-6 text-gh-text-primary hover:text-gh-text-secondary transition-colors" />
             </Link>
           </div>
         </div>

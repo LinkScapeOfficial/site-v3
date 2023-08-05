@@ -5,40 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a969f09b-c198-4d73-ac4e-e84e876f7b77" name="Changes" comment="fix wrong spelling">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prettier.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/prettier.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.pages-legacy/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/.pages-legacy/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.pages-legacy/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/.pages-legacy/_document.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.pages-legacy/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/.pages-legacy/about.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.pages-legacy/donate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/.pages-legacy/donate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.pages-legacy/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/.pages-legacy/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/.pages-legacy/projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/.pages-legacy/projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.pages-legacy/team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/.pages-legacy/team.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/donate/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/donate/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/not-found.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/not-found.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/team/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/team/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home-animations/home-buttons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home-animations/home-buttons.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home-animations/home-title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home-animations/home-title.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/leaders.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/leaders.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/newsletter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/newsletter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sponsors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sponsors.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/configParticles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/configParticles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +31,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "thomaswcy"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="ece80087-2360-4db9-b22b-65325a66084a" />
+        <option name="url" value="https://github.com/LinkScapeOfficial/site-v3.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -175,7 +162,7 @@
       <workItem from="1691197278277" duration="17343000" />
       <workItem from="1691251149050" duration="4704000" />
       <workItem from="1691256234481" duration="182000" />
-      <workItem from="1691275544755" duration="1750000" />
+      <workItem from="1691275544755" duration="3911000" />
     </task>
     <task id="LOCAL-00001" summary="refactor: fix home banner">
       <option name="closed" value="true" />
@@ -217,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691203868706</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix wrong spelling">
+      <option name="closed" value="true" />
+      <created>1691277335853</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1691277335853</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,5 +237,7 @@
     <MESSAGE value="goodbye blur" />
     <MESSAGE value="fix wrong spelling" />
     <option name="LAST_COMMIT_MESSAGE" value="fix wrong spelling" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

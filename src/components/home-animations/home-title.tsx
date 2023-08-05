@@ -72,7 +72,7 @@ export default function HomeTitle() {
     useEffect(() => {
       const interval = setInterval(() => {
         setIsVisible((v) => !v);
-      }, 1000);
+      }, 533);
 
       return () => clearInterval(interval);
     }, []);
@@ -105,6 +105,7 @@ export default function HomeTitle() {
           className="block text-6xl sm:text-8xl sm:inline-block bg-gradient-to-r from-blue-500 to-purple-700 bg-clip-text text-transparent"
         >
           LinkScape
+          <BlinkingCursor />
         </motion.span>
       </motion.h1>
       <motion.h2

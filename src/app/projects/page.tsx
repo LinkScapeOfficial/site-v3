@@ -3,6 +3,7 @@ import { FaCloudArrowDown } from "react-icons/fa6";
 import Link from "next/link";
 import NavBar from "@/src/components/header";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "LinkScape | Projects",
@@ -74,10 +75,12 @@ export default function Projects() {
                 </dl>
               </div>
             </div>
-            <img
-              src="https://cdn.linkscape.app/LinkDown_Sample.png"
-              alt=""
+            <Image
               className="hidden w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 md:block lg:-ml-0"
+              src="https://cdn.linkscape.app/LinkDown_Sample.png"
+              width={1113}
+              height={626}
+              alt=""
             />
           </div>
         </div>

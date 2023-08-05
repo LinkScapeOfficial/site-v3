@@ -1,12 +1,12 @@
-import {
-  CloudArrowUpIcon,
-  LockClosedIcon,
-  ServerIcon,
-} from "@heroicons/react/20/solid";
-import { FaExchangeAlt, FaGithub, FaDownload } from "react-icons/fa";
+import { FaDownload, FaExchangeAlt, FaGithub } from "react-icons/fa";
 import { FaCloudArrowDown } from "react-icons/fa6";
 import Link from "next/link";
-import Head from "next/head";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "LinkScape | Projects",
+  description: "Projects made by LinkScape",
+};
 
 const features = [
   {
@@ -30,9 +30,6 @@ const features = [
 export default function Projects() {
   return (
     <div className="mb-4 mt-12 overflow-hidden bg-white sm:py-32">
-      <Head>
-        <title>LinkScape | Projects</title>
-      </Head>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pr-8 lg:pt-4">
