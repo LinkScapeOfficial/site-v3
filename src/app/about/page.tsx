@@ -1,10 +1,11 @@
 import Link from "next/link";
 import NavBar from "@/src/components/header";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "LinkScape | About",
-  description: "We are Linkscape.",
+  description: "We are LinkScape.",
 };
 
 export default function About() {
@@ -43,9 +44,11 @@ export default function About() {
           >
             <div className="max-w-sm rounded-lg border border-gray-200 bg-white shadow-md">
               <div className="flex items-center justify-center">
-                <img
+                <Image
                   className="max-h-72 rounded-t-lg"
                   src="https://cdn.linkscape.app/IRS_Letter.png"
+                  width={716}
+                  height={933}
                   alt=""
                 />
               </div>
@@ -60,9 +63,11 @@ export default function About() {
           >
             <div className="h-100 max-w-sm rounded-lg border border-gray-200 bg-white shadow-md">
               <div className="flex items-center justify-center">
-                <img
+                <Image
                   className="max-h-72 rounded-t-lg"
                   src="https://cdn.linkscape.app/Certificate_of_Status.png"
+                  width={720}
+                  height={933}
                   alt=""
                 />
               </div>
@@ -77,9 +82,11 @@ export default function About() {
           >
             <div className="h-100 max-w-sm rounded-lg border border-gray-200 bg-white shadow-md">
               <div className="flex items-center justify-center">
-                <img
+                <Image
                   className="max-h-72 rounded-t-lg"
                   src="https://cdn.linkscape.app/fiscal_sponsorship_letter.png"
+                  width={720}
+                  height={933}
                   alt=""
                 />
               </div>

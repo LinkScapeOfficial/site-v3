@@ -3,10 +3,14 @@
 @tailwind utilities;
 
 .gh-border {
-    @apply border border-solid border-gh-gray-2
+  @apply border border-solid border-gh-gray-2;
 }
 
 .background-dotted {
-    background-size: 40px 40px;
-    background-image: radial-gradient(circle, rgb(214, 219, 220) 1.2px, rgb(255, 255, 255) 1.2px);
+  background-size: 40px 40px;
+  background-image: radial-gradient(
+    circle,
+    rgb(214, 219, 220) 1.2px,
+    rgb(255, 255, 255) 1.2px
+  );
 }

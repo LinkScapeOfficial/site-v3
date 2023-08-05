@@ -7,14 +7,14 @@ import Footer from "@/src/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Linkscape",
+  title: "LinkScape",
   description: "We are a group of student hackers",
   icons: {
     shortcut: "/favicon.png",
   },
   openGraph: {
     title: "Linkscape",
-    description: "We are Linkscape.",
+    description: "We are LinkScape.",
     url: "https://linkscape.app",
     siteName: "Linkscape",
     images: [

@@ -8,7 +8,7 @@ import HomeButtons from "@/src/components/home-animations/home-buttons";
 
 export const metadata: Metadata = {
   title: "LinkScape | Home",
-  description: "We are Linkscape.",
+  description: "We are LinkScape.",
 };
 
 export default function Index() {

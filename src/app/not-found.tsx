@@ -4,8 +4,8 @@ import { Metadata } from "next";
 import Header from "@/src/components/header";
 
 export const metadata: Metadata = {
-  title: "Linkscape | 404",
-  description: "We are Linkscape.",
+  title: "LinkScape | 404",
+  description: "We are LinkScape.",
 };
 
 export default function Home() {

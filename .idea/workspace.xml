@@ -4,20 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a969f09b-c198-4d73-ac4e-e84e876f7b77" name="Changes" comment="goodbye blur">
-      <change afterPath="$PROJECT_DIR$/public/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/configParticles.tsx" afterDir="false" />
+    <list default="true" id="a969f09b-c198-4d73-ac4e-e84e876f7b77" name="Changes" comment="fix wrong spelling">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prettier.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/prettier.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.pages-legacy/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/.pages-legacy/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.pages-legacy/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/.pages-legacy/_document.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.pages-legacy/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/.pages-legacy/about.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.pages-legacy/donate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/.pages-legacy/donate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.pages-legacy/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/.pages-legacy/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.pages-legacy/projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/.pages-legacy/projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.pages-legacy/team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/.pages-legacy/team.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/donate/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/donate/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/not-found.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/not-found.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/team/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/team/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home-animations/home-buttons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home-animations/home-buttons.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home-animations/home-title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home-animations/home-title.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/leaders.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/leaders.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/newsletter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/newsletter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sponsors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sponsors.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/configParticles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/configParticles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,28 +79,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.protractor.protractor_package&quot;: &quot;&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;C:\\Users\\thomaswcy\\AppData\\Roaming\\npm\\pnpm.cmd&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/evanluo/Documents/Code/site-v3/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/evanluo/Documents/Code/site-v3/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.protractor.protractor_package": "",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "C:\\Users\\thomaswcy\\AppData\\Roaming\\npm\\pnpm.cmd",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\thomaswcy\\WebstormProjects\\site-v3\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\thomaswcy\\WebstormProjects\\site-v3\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -154,6 +175,7 @@
       <workItem from="1691197278277" duration="17343000" />
       <workItem from="1691251149050" duration="4704000" />
       <workItem from="1691256234481" duration="182000" />
+      <workItem from="1691275544755" duration="1750000" />
     </task>
     <task id="LOCAL-00001" summary="refactor: fix home banner">
       <option name="closed" value="true" />
@@ -218,6 +240,7 @@
     <MESSAGE value="animation: a bit slower" />
     <MESSAGE value="fix:blur" />
     <MESSAGE value="goodbye blur" />
-    <option name="LAST_COMMIT_MESSAGE" value="goodbye blur" />
+    <MESSAGE value="fix wrong spelling" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix wrong spelling" />
   </component>
 </project>
