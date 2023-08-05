@@ -3,6 +3,8 @@ import React, { useRef, useState } from "react";
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const navigation = [
   { name: "About", href: "/about", current: false },
@@ -69,46 +71,67 @@ export default function Header() {
           </nav>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <Link href={"/"} className="flex flex-shrink-0 items-center">
-              <img
+              <Image
                 className="block h-8 w-auto lg:hidden"
                 src="https://cdn.linkscape.app/linkscape-logo.png"
                 alt="LinkScape"
+                width={2608}
+                height={769}
               />
-              <img
+              <Image
                 className="hidden h-8 w-auto lg:block"
                 src="https://cdn.linkscape.app/linkscape-logo.png"
                 alt="LinkScape"
+                width={2608}
+                height={769}
               />
             </Link>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className={`${
-                      item.current
-                        ? "bg-gray-900 text-white"
-                        : "text-gray-700 hover:bg-blue-500 hover:text-white"
-                    } rounded-md px-3 py-2 text-sm font-medium`}
-                    aria-current={item.current ? "page" : undefined}
-                  >
-                    {item.name}
-                  </Link>
+                  <>
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className={`text-gh-gray-7 ${
+                        pathname !== item.href
+                          ? "hover:bg-blue-600/20"
+                          : "hover:text-gh-text-primary"
+                      } rounded-md px-2.5 py-2 text-sm font-medium transition-all`}
+                    >
+                      <p className={"relative px-0.5"}>
+                        {item.name}
+                        {pathname === item.href && (
+                          <motion.span
+                            layoutId={"nav-underline"}
+                            initial={{ opacity: 1 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                              type: "spring",
+                              stiffness: 300,
+                              damping: 25,
+                              duration: 0.5,
+                            }}
+                            className="absolute left-0 -bottom-1.5 w-full h-[2px] bg-gh-text-secondary"
+                          />
+                        )}
+                      </p>
+                    </Link>
+                  </>
                 ))}
               </div>
             </div>
           </div>
           <div className="flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <a href="https://github.com/LinkScapeOfficial">
-              <FaGithub className="mr-4 h-8 w-8" />
-            </a>
-            <a href="https://discord.gg/WDdvabyKaH">
-              <FaDiscord className="mr-4 h-8 w-8" />
-            </a>
-            <a href="https://twitter.com/RealLinkScape">
-              <FaTwitter className="h-8 w-8" />
-            </a>
+            <Link href={"https://github.com/LinkScapeOfficial"}>
+              <FaGithub className="mr-4 h-6 w-6 text-gh-text-secondary hover:text-gh-text-primary transition-colors" />
+            </Link>
+            <Link href={"https://discord.gg/WDdvabyKaH"}>
+              <FaDiscord className="mr-4 h-6 w-6 text-gh-text-secondary hover:text-gh-text-primary transition-colors" />
+            </Link>
+            <Link href={"https://twitter.com/RealLinkScape"}>
+              <FaTwitter className="mr-4 h-6 w-6 text-gh-text-secondary hover:text-gh-text-primary transition-colors" />
+            </Link>
           </div>
         </div>
       </div>
