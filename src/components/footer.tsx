@@ -24,9 +24,9 @@ const social = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gh-bg text-center text-black border-t border-gh-border py-6 px-8 sm:px-32">
-      <section className="grid grid-cols-12">
-        <div className={"p-6 flex flex-col items-start col-span-6"}>
+    <footer className="bg-gh-bg text-center text-black border-t border-gh-border py-6 px-4 sm:px-12 md:px-32">
+      <section className="flex flex-col gap-6 sm:gap-0 sm:grid sm:grid-cols-12">
+        <div className={"px-6 flex flex-col items-start sm:col-span-8"}>
           <Image
             src={
               "https://files.ohevan.com/tmp/3fa-link_%E9%BB%91%E5%B8%A6%E5%AD%97.svg"
@@ -38,7 +38,7 @@ export default function Footer() {
           />
           <p className={"text-gh-text-secondary text-left mt-6"}>
             A nonprofit fiscally sponsored by{" "}
-            <span className={" block"}>
+            <span className={"inline  sm:block"}>
               <a
                 href="https://the.hackfoundation.org"
                 className="hover:text-blue-500 transition-colors"
@@ -50,11 +50,15 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="flex flex-col justify-center items-start col-start-10">
+        <div className="flex flex-col justify-center items-start sm:col-start-9 md:col-start-10 px-6 sm:px-0">
           <h3 className="text-sm font-semibold text-gh-text-secondary">
             Contacts
           </h3>
-          <div className={"flex flex-col mt-3 gap-0.5 items-start "}>
+          <div
+            className={
+              "flex flex-col mt-1 sm:mt-3 gap-0 sm:gap-0.5 items-start "
+            }
+          >
             {social.map((item) => (
               <Link
                 href={item.href}
@@ -66,11 +70,15 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col justify-center items-start col-start-12">
+        <div className="flex flex-col justify-center items-start sm:col-start-11  md:col-start-12 px-6 sm:px-0">
           <h3 className="text-sm font-semibold text-gh-text-secondary">
             Navigation
           </h3>
-          <div className={"flex flex-col mt-3 gap-0.5 items-start "}>
+          <div
+            className={
+              "flex flex-col mt-1 sm:mt-3 gap-0 sm:gap-0.5 items-start "
+            }
+          >
             {navigation.map((item) => (
               <Link
                 href={item.href}
@@ -83,20 +91,23 @@ export default function Footer() {
           </div>
         </div>
       </section>
-      <section className="container mx-auto pl-6">
+      <section className="container mx-auto pl-6 mt-6">
         <div className="text-base text-left text-gh-text-secondary">
-          © 2022 - 2023 LinkScape. All rights reserved. Deployed on
-          <Link
-            href={"https://vercel.com/?utm_source=linkscape&utm_campaign=oss"}
-          >
-            <Image
-              src={"https://files.ohevan.com/tmp/Vercel_logo_black.svg"}
-              alt={"Vercel logo"}
-              width={158}
-              height={48}
-              className={"inline-block ml-2 w-20 "}
-            />
-          </Link>
+          © 2022 - 2023 LinkScape. All rights reserved.{" "}
+          <span className="block">
+            Deployed on
+            <Link
+              href={"https://vercel.com/?utm_source=linkscape&utm_campaign=oss"}
+            >
+              <Image
+                src={"https://files.ohevan.com/tmp/Vercel_logo_black.svg"}
+                alt={"Vercel logo"}
+                width={158}
+                height={48}
+                className={"inline-block ml-2 w-20 "}
+              />
+            </Link>
+          </span>
         </div>
         <div className="mt-3 text-sm text-gray-500"></div>
       </section>
