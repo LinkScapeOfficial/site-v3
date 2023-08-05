@@ -23,7 +23,15 @@ const containerVariants = {
 
 const h1Variants = {
   initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 400,
+      damping: 20,
+    },
+  },
 };
 
 const h2Variants = {
@@ -81,7 +89,7 @@ export default function HomeTitle() {
       variants={containerVariants}
       initial="initial"
       animate="animate"
-      className="flex flex-col items-center justify-center w-full h-full"
+      className="flex flex-col items-center justify-center w-full h-full z-3"
     >
       <motion.h1
         variants={h1Variants}
@@ -94,17 +102,16 @@ export default function HomeTitle() {
           variants={nameVariants}
           initial="initial"
           animate="animate"
-          className="inline-block bg-gradient-to-r from-blue-500 to-purple-700 bg-clip-text text-transparent"
+          className="block text-6xl sm:text-8xl sm:inline-block bg-gradient-to-r from-blue-500 to-purple-700 bg-clip-text text-transparent"
         >
           LinkScape
-          {/*<BlinkingCursor />*/}
         </motion.span>
       </motion.h1>
       <motion.h2
         variants={h2Variants}
         initial="initial"
         animate="animate"
-        className="py-6 text-center text-base sm:text-lg"
+        className="px-4 py-6 text-center text-base sm:text-lg text-gh-text-secondary"
       >
         A group of students who hack, build, and compete together.
       </motion.h2>

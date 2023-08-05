@@ -11,7 +11,7 @@ export default function Donate() {
   return (
     <>
       <NavBar />
-      <div className="h-512px screen flex flex-col">
+      <div className="h-512px screen flex flex-col mt-16">
         <iframe
           src="https://bank.hackclub.com/donations/start/linkscape"
           name="donateFrame"

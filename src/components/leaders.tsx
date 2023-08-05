@@ -1,6 +1,7 @@
-import { FiMoreHorizontal } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
+import { PeopleIcon } from "@primer/octicons-react";
+import { RiArrowRightLine } from "react-icons/ri";
 
 const people = [
   {
@@ -37,50 +38,62 @@ const people = [
 
 export default function Leaders() {
   return (
-    <div className="-mt-5 mb-10 bg-white">
-      <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-10 px-6 sm:gap-y-12 lg:px-8 xl:grid-cols-3">
-        <div className="max-w-2xl">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Meet Our Team
-          </h2>
+    <div className="mb-10 bg-white mx-auto grid grid-cols-12 p-16 relative">
+      <div className="col-span-1 hidden lg:block">
+        <div className="w-12 h-12 flex items-center justify-center -left-2 top-2 transform translate-x-px relative border-2 rounded-full bg-white z-20">
+          <PeopleIcon className={"text-gh-gray-4 w-5 h-5"} />
         </div>
+      </div>
+      <div className="mt-1 col-span-12 lg:col-span-10 lg:col-start-2 mb-8">
+        <div className={"flex flex-row items-baseline cursor-pointer group"}>
+          <Link href={"/team"}>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+              Team
+            </h2>
+          </Link>
+          <RiArrowRightLine
+            strokeWidth={2}
+            className={
+              "ml-1.5 w-8 h-8 group-hover:translate-x-1.5 transition-transform duration-200"
+            }
+          />
+        </div>
+
+        <h3 className={"mt-2 text-gh-text-secondary text-lg"}>
+          Meet the team behind Linkscape.
+        </h3>
+      </div>
+      <div className="col-span-1 col-start-1 hidden lg:block">
+        <div className="border-l-2 border-gh-gray-2/60 h-[91.5%] absolute top-20 left-20 translate-x-[1px] z-10"></div>
+      </div>
+      <div className="col-span-12 lg:col-span-10 lg:col-start-2 mt-4">
         <ul
           role="list"
-          className="grid gap-x-8 gap-y-6 sm:grid-cols-2 sm:gap-y-8 xl:col-span-2"
+          className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12"
         >
           {people.map((person) => (
             <li key={person.name}>
-              <div className="flex items-center gap-x-6">
+              <div className="flex items-center flex-col gap-y-3">
                 <Image
-                  className="h-16 w-16 rounded-full"
+                  className="h-28 w-28 rounded-full shadow-sm hover:shadow-lg transition-shadow duration-200 gh-border cursor-pointer"
                   src={person.imageUrl}
                   width={512}
                   height={512}
                   alt=""
                 />
-                <div>
+                <div className={"mt-1"}>
                   <Link href={person.github}>
-                    <h3 className="text-base font-semibold hover:underline leading-7 tracking-tight text-gray-900">
+                    <h3 className="text-lg font-semibold hover:underline leading-7 tracking-tight text-gray-900 text-center">
                       {person.name}
                     </h3>
                   </Link>
-                  <p className="text-sm font-semibold leading-6 text-indigo-600">
+                  <p className="text-sm font-semibold leading-6 text-indigo-600 text-center w-40">
                     {person.role}
                   </p>
                 </div>
               </div>
             </li>
           ))}
-          <li className="flex items-center gap-x-6">
-            <Link href="/team">
-              <div className="flex items-center gap-x-6">
-                <FiMoreHorizontal className="h-16 w-16 rounded-full" />
-                <h3 className="-mt-1 text-base font-semibold leading-7 tracking-tight text-gray-900">
-                  View More
-                </h3>
-              </div>
-            </Link>
-          </li>
         </ul>
       </div>
     </div>

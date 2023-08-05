@@ -71,7 +71,7 @@ const people = [
     github: "https://github.com/juicyk-cn",
   },
   {
-    name: "Tze-Yun Hsiao",
+    name: "Tzu-Yun Hsiao",
     role: "Senior Member & Head of Design",
     imageUrl: "https://cdn.linkscape.app/TzeYunHsiao.png",
     github: "https://github.com/Powerlean",
@@ -148,7 +148,7 @@ export default function Team() {
   return (
     <>
       <NavBar />
-      <div className="mb-10 mt-5 bg-white">
+      <div className="mb-10 mt-24 bg-white">
         <Head>
           <title>LinkScape | Team</title>
         </Head>

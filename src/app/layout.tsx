@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Linkscape",
   description: "We are a group of student hackers",
+  icons: {
+    shortcut: "/favicon.png",
+  },
   openGraph: {
     title: "Linkscape",
     description: "We are Linkscape.",
@@ -32,7 +35,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <div
+          className={
+            "background-dotted w-screen absolute h-screen z-[-1] dark:opacity-10"
+          }
+        />
         {children}
+
         <Analytics />
         <Footer />
       </body>
