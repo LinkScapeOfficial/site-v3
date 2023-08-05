@@ -16,7 +16,7 @@ export default function Index() {
     <>
       <NavBar />
       <div className="absolute -top-6 sm:-top-12 left-0 sm:left-12 w-96 h-72 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-75 flex items-center justify-center blur-[300px]"></div>
-      <div className="mt-12 flex flex-col items-center justify-center min-h-screen">
+      <div className="mt-6 flex flex-col items-center justify-center min-h-screen">
         <HomeTitle />
         <HomeButtons />
       </div>
