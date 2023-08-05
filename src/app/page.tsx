@@ -1,6 +1,6 @@
 import Leaders from "@/src/components/leaders";
 import Newsletter from "@/src/components/newsletter";
-import NavBar from "@/src/components/navbar";
+import NavBar from "@/src/components/header";
 import { Metadata } from "next";
 import Sponsors from "@/src/components/sponsors";
 import HomeTitle from "@/src/components/home-animations/home-title";

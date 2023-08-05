@@ -1,7 +1,7 @@
 import { FaDownload, FaExchangeAlt, FaGithub } from "react-icons/fa";
 import { FaCloudArrowDown } from "react-icons/fa6";
 import Link from "next/link";
-import NavBar from "@/src/components/navbar";
+import NavBar from "@/src/components/header";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

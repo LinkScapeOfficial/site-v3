@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
-import NavBar from "@/src/components/navbar";
+import NavBar from "@/src/components/header";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
