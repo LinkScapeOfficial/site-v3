@@ -1,9 +1,9 @@
-import "../styles/globals.css";
+import "@/src/app/globals.css";
 import type { AppProps } from "next/app";
-import NavBar from "../components/navbar";
-import Footer from "../components/footer";
+import Footer from "@/src/components/footer";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
           content="https://cdn.linkscape.app/linkscape-logo.png"
         />
       </Head>
-      <NavBar />
+
       <Component {...pageProps} />
       <Analytics />
       <Footer />

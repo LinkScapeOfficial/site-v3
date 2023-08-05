@@ -11,6 +11,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.15",
     "@heroicons/react": "^2.0.18",
+    "@primer/octicons-react": "^19.5.0",
     "@types/node": "20.3.1",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
@@ -19,6 +20,9 @@
     "daisyui": "^3.1.6",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
+    "framer-motion": "^10.15.0",
+    "lucide": "^0.263.0",
+    "lucide-react": "^0.263.1",
     "next": "13.4.7",
     "postcss": "8.4.24",
     "react": "18.2.0",
