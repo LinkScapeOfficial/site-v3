@@ -12,12 +12,12 @@ export default function About() {
   return (
     <>
       <NavBar />
-      <div className="mb-20 mt-12 flex flex-col items-center justify-center sm:mb-64 sm:mt-60">
+      <div className="mb-20 mt-32 flex flex-col items-center justify-center sm:mb-64 sm:mt-36">
         <Hero />
         <h2 className="mb-8 mt-8 text-center text-2xl font-bold sm:text-4xl">
           Legal Documents
         </h2>
-        <div className="flex flex-wrap">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-2">
           <LegalDoc
             hrefPdf="https://cdn.linkscape.app/IRS_Letter.pdf"
             imgSrc="https://cdn.linkscape.app/IRS_Letter.png"
