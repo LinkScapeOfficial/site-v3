@@ -24,7 +24,7 @@ const social = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gh-bg text-center text-black border-t border-gh-border pb-6 pt-12 px-4 sm:px-12 md:px-32">
+    <footer className="bg-gh-bg text-center text-black border-t border-gh-border py-12 px-4 sm:px-12 md:px-32">
       <section className="flex flex-col gap-6 sm:gap-0 sm:grid sm:grid-cols-12">
         <div className={"px-6 flex flex-col items-start sm:col-span-8"}>
           <Image
@@ -69,7 +69,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="flex flex-col justify-center items-start sm:col-start-9 md:col-start-10 px-6 sm:px-0">
+        <div className="hidden sm:flex flex-col justify-center items-start sm:col-start-9 md:col-start-10 px-6 sm:px-0">
           <h3 className="text-sm font-semibold text-gh-text-secondary">
             Contacts
           </h3>
@@ -89,7 +89,7 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col justify-center items-start sm:col-start-11  md:col-start-12 px-6 sm:px-0">
+        <div className="hidden sm:flex flex-col justify-center items-start sm:col-start-11  md:col-start-12 px-6 sm:px-0">
           <h3 className="text-sm font-semibold text-gh-text-secondary">
             Navigation
           </h3>
@@ -109,9 +109,6 @@ export default function Footer() {
             ))}
           </div>
         </div>
-      </section>
-      <section className="container mx-auto pl-6 mt-6">
-        <div className="mt-3 text-sm text-gray-500"></div>
       </section>
     </footer>
   );

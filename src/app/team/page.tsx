@@ -166,27 +166,29 @@ export default function Team() {
           <div className="fix-safari-blur h-20 bg-gradient-to-r from-blue-400 to-blue-300 blur-[32px] dark:to-blue-600 sm:h-40 sm:blur-[106px]"></div>
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h1 className="text-left text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl px-16">
+          <h1 className="text-left text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl px-8 sm:px-16">
             Team
           </h1>
-          <p className="mt-4 max-w-2xl text-left text-xl text-gray-500 px-16">
+          <p className="mt-4 max-w-2xl text-left text-xl text-gray-500 px-8 sm:px-16">
             Meet the team behind Linkscape.
           </p>
-          <div className="mt-6 mb-10 border-b-2 border-gh-border mx-16" />
+          <div className="mt-6 mb-10 border-b-2 border-gh-border mx-8 sm:mx-16" />
           <ul
             role="list"
-            className="mt-8 grid gap-x-8 gap-y-6 grid-cols-2 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-8 xl:grid-cols-4 xl:gap-y-10"
+            className="mt-8 grid gap-x-6 gap-y-6 grid-cols-2 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-8 xl:grid-cols-4 xl:gap-y-10"
           >
             {people.map((person, index) => (
               <div key={index}>
                 <li className="flex items-center justify-center">
                   <div className="flex flex-col items-center">
                     <Image
-                      className="h-24 w-24 rounded-full gh-border shadow-sm hover:shadow-lg transition-shadow cursor-pointer bg-gh-bg"
+                      className={`${
+                        person.imageUrl ? "" : "p-3"
+                      } h-24 w-24 rounded-full gh-border shadow-sm hover:shadow-lg transition-shadow cursor-pointer bg-gh-bg`}
                       src={
                         person.imageUrl
                           ? person.imageUrl
-                          : "https://files.ohevan.com/img/0fa0fef757e0ba5129bb5250755ff6f1-2ec26.png"
+                          : "https://files.ohevan.com/img/a3c212565127bde07c193731c3a1e997-421e1.svg"
                       }
                       width={512}
                       height={512}
