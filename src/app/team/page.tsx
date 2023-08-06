@@ -47,6 +47,13 @@ const people = [
     github: "https://github.com/xiaobaizzh",
   },
   {
+    name: "Evan Luo",
+    role: "Senior Member",
+    imageUrl:
+      "https://files.ohevan.com/img/b6a9a2cce1f68df01f344db54559a607-2016c.png",
+    github: "https://github.com/evannotfound",
+  },
+  {
     name: "Kai Xu",
     role: "Senior Member",
     imageUrl: "https://cdn.linkscape.app/KaiXu.png",
