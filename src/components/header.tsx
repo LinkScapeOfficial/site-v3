@@ -23,7 +23,7 @@ export default function Header() {
   return (
     <header
       className={
-        "bg-white py-1 fixed left-0 top-0 w-screen backdrop-blur-md backdrop-saturate-[85%] border-b border-black/10 z-50"
+        "bg-white bg-opacity-70 py-1 fixed left-0 top-0 w-screen backdrop-blur-lg backdrop-saturate-[85%] border-b border-black/10 z-50"
       }
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
