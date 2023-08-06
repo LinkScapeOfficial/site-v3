@@ -3,7 +3,7 @@ import { MailIcon } from "@primer/octicons-react";
 
 export default function Newsletter() {
   return (
-    <div className="mb-10 bg-gradient-to-br from-gh-blue-1 to-gh-purple-1/50 p-8 sm:p-16 mx-auto sm:rounded-[48px] grid grid-cols-12 relative border-0 sm:border border-gh-border">
+    <div className="mb-10 bg-gh-bg bg-gradient-to-br from-gh-blue-1/80 to-gh-purple-1/60 p-8 sm:p-16 mx-auto sm:rounded-[48px] grid grid-cols-12 relative border-0 sm:border border-gh-border">
       <div className="col-span-1 hidden lg:block">
         <div className="w-12 h-12 flex items-center justify-center -left-2 top-2 transform translate-x-px relative border-2 rounded-full bg-gh-bg border-gh-border z-20">
           <MailIcon className={"text-gh-gray-4 w-5 h-5"} />
