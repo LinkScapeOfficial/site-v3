@@ -1,7 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import { PeopleIcon } from "@primer/octicons-react";
 import { RiArrowRightLine } from "react-icons/ri";
+import HomeTeamPerson from "@/src/components/home-animations/home-team-person";
+import HomeTeamTitle from "@/src/components/home-animations/home-team-title";
 
 const people = [
   {
@@ -45,23 +46,30 @@ export default function Leaders() {
         </div>
       </div>
       <div className="mt-1 col-span-12 lg:col-span-10 lg:col-start-2 mb-8">
-        <div className={"flex flex-row items-center cursor-pointer group"}>
+        <HomeTeamTitle
+          delay={0}
+          className={"flex flex-row items-center cursor-pointer group"}
+        >
           <Link href={"/team"}>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
               Team
             </h2>
           </Link>
+
           <RiArrowRightLine
             strokeWidth={2}
             className={
               "ml-1.5 w-8 h-8 group-hover:translate-x-1.5 transition-transform duration-200"
             }
           />
-        </div>
+        </HomeTeamTitle>
 
-        <h3 className={"mt-2 text-gh-text-secondary text-lg"}>
+        <HomeTeamTitle
+          delay={0.1}
+          className={"mt-2 text-gh-text-secondary text-lg"}
+        >
           Meet the team behind LinkScape.
-        </h3>
+        </HomeTeamTitle>
       </div>
       <div className="col-span-1 col-start-1 hidden lg:block">
         <div className="border-l-2 border-gh-gray-2/60 h-[91.5%] absolute top-20 left-20 translate-x-[1px] z-10"></div>
@@ -71,27 +79,9 @@ export default function Leaders() {
           role="list"
           className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-12"
         >
-          {people.map((person) => (
+          {people.map((person, index) => (
             <li key={person.name}>
-              <div className="flex items-center flex-col gap-y-3">
-                <Image
-                  className="h-28 w-28 rounded-full shadow-sm hover:shadow-lg transition-shadow duration-200 gh-border cursor-pointer"
-                  src={person.imageUrl}
-                  width={512}
-                  height={512}
-                  alt=""
-                />
-                <div className={"mt-1"}>
-                  <Link href={person.github}>
-                    <h3 className="text-lg font-semibold hover:underline leading-7 tracking-tight text-gray-900 text-center">
-                      {person.name}
-                    </h3>
-                  </Link>
-                  <p className="text-sm font-semibold leading-6 text-indigo-600 text-center w-40">
-                    {person.role}
-                  </p>
-                </div>
-              </div>
+              <HomeTeamPerson delay={index * 0.08 + 0.2} person={person} />
             </li>
           ))}
         </ul>
