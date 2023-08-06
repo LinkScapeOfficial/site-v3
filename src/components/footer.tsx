@@ -24,7 +24,7 @@ const social = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gh-bg text-center text-black border-t border-gh-border py-6 px-4 sm:px-12 md:px-32">
+    <footer className="bg-gh-bg text-center text-black border-t border-gh-border pb-6 pt-12 px-4 sm:px-12 md:px-32">
       <section className="flex flex-col gap-6 sm:gap-0 sm:grid sm:grid-cols-12">
         <div className={"px-6 flex flex-col items-start sm:col-span-8"}>
           <Image
@@ -36,9 +36,28 @@ export default function Footer() {
             height={2194}
             className={"w-56"}
           />
-          <p className={"text-gh-text-secondary text-left mt-6"}>
+          <div className="text-base text-left text-gh-text-secondary  mt-6">
+            © 2022 - 2023 LinkScape. All rights reserved.{" "}
+            <span className="inline">
+              Deployed on
+              <Link
+                href={
+                  "https://vercel.com/?utm_source=linkscape&utm_campaign=oss"
+                }
+              >
+                <Image
+                  src={"https://files.ohevan.com/tmp/Vercel_logo_black.svg"}
+                  alt={"Vercel logo"}
+                  width={158}
+                  height={48}
+                  className={"inline-block ml-2 w-20 "}
+                />
+              </Link>
+            </span>
+          </div>
+          <p className={"text-gh-text-secondary text-left mt-1"}>
             A nonprofit fiscally sponsored by{" "}
-            <span className={"inline  sm:block"}>
+            <span className={"inline"}>
               <a
                 href="https://the.hackfoundation.org"
                 className="hover:text-blue-500 transition-colors"
@@ -92,23 +111,6 @@ export default function Footer() {
         </div>
       </section>
       <section className="container mx-auto pl-6 mt-6">
-        <div className="text-base text-left text-gh-text-secondary">
-          © 2022 - 2023 LinkScape. All rights reserved.{" "}
-          <span className="block">
-            Deployed on
-            <Link
-              href={"https://vercel.com/?utm_source=linkscape&utm_campaign=oss"}
-            >
-              <Image
-                src={"https://files.ohevan.com/tmp/Vercel_logo_black.svg"}
-                alt={"Vercel logo"}
-                width={158}
-                height={48}
-                className={"inline-block ml-2 w-20 "}
-              />
-            </Link>
-          </span>
-        </div>
         <div className="mt-3 text-sm text-gray-500"></div>
       </section>
     </footer>
