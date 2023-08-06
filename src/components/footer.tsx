@@ -29,7 +29,7 @@ export default function Footer() {
         <div className={"px-6 flex flex-col items-start sm:col-span-8"}>
           <Image
             src={
-              "https://files.ohevan.com/tmp/3fa-link_%E9%BB%91%E5%B8%A6%E5%AD%97.svg"
+              "https://evan.beee.top/img/38a40a6e7aef11dee616fc3373c0f1d1-72dad.svg"
             }
             alt={"Linkscape logo"}
             width={648}
