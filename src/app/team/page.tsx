@@ -170,7 +170,7 @@ export default function Team() {
             Team
           </h1>
           <p className="mt-4 max-w-2xl text-left text-xl text-gray-500 px-8 sm:px-16">
-            Meet the team behind Linkscape.
+            Meet the team behind LinkScape.
           </p>
           <div className="mt-6 mb-10 border-b-2 border-gh-border mx-8 sm:mx-16" />
           <ul
