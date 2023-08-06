@@ -161,7 +161,7 @@ export default function Team() {
       {/*  }*/}
       {/*/>*/}
       <div className="mb-10 mt-32">
-        <div className="absolute inset-0 grid grid-cols-2 -space-x-12 opacity-10 dark:opacity-20 sm:-space-x-52 z-10">
+        <div className="absolute inset-0 grid grid-cols-2 -space-x-12 opacity-10 dark:opacity-20 sm:-space-x-52 z-10 pointer-events-none">
           <div className="fix-safari-blur h-32 bg-gradient-to-br from-blue-500 to-blue-400 blur-[32px] dark:from-blue-700 sm:h-64 sm:blur-[106px]"></div>
           <div className="fix-safari-blur h-20 bg-gradient-to-r from-blue-400 to-blue-300 blur-[32px] dark:to-blue-600 sm:h-40 sm:blur-[106px]"></div>
         </div>
