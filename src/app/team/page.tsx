@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import NavBar from "@/src/components/header";
 import { Metadata } from "next";
+import { FaGithub } from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "LinkScape | Team",
@@ -179,11 +180,14 @@ export default function Team() {
                       alt=""
                     />
                     <div className="text-center">
-                      <Link href={person.github}>
-                        <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900 hover:underline">
-                          {person.name}
-                        </h3>
-                      </Link>
+                      <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">
+                        {person.name}
+                        {person.github && (
+                          <Link href={person.github} className="inline ml-2">
+                            <FaGithub className="w-5 h-5 -mt-1 inline text-gh-text-primary hover:text-gh-text-secondary transition-colors" />
+                          </Link>
+                        )}
+                      </h3>
                       <p className="text-sm font-semibold leading-6 text-indigo-600">
                         {person.role}
                       </p>
