@@ -37,7 +37,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div
           className={
-            "background-dotted w-screen absolute h-screen z-[-1] dark:opacity-10"
+            "background-dotted w-screen fixed left-0 top-0 h-screen z-[-1] dark:opacity-10"
           }
         />
         {children}
