@@ -49,8 +49,7 @@ const people = [
   {
     name: "Evan Luo",
     role: "Senior Member",
-    imageUrl:
-      "https://files.ohevan.com/img/3c434e0ef074f06d3a473fb3a2d19e16-bdd67.png",
+    imageUrl: "https://files.ohevan.com/img/IMG_3824_best.png",
     github: "https://github.com/evannotfound",
   },
   {
