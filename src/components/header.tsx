@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -14,7 +14,17 @@ const navigation = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [isTop, setIsTop] = useState(true);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const scrollHandler = () => {
+      window.scrollY > 50 ? setIsTop(false) : setIsTop(true); // adjust the value as needed
+    };
+
+    window.addEventListener("scroll", scrollHandler);
+    return () => window.removeEventListener("scroll", scrollHandler);
+  }, []);
 
   const toggleMenu = () => {
     setOpen(!open);
@@ -22,9 +32,13 @@ export default function Header() {
 
   return (
     <header
-      className={
-        "bg-white bg-opacity-70 py-1 fixed left-0 top-0 w-screen backdrop-blur-lg backdrop-saturate-[85%] border-b border-black/10 z-50"
+      className={`${
+        isTop
+          ? "bg-transparent border-b border-transparent shadow-none py-3"
+          : " bg-white bg-opacity-70 backdrop-blur-lg border-b border-black/10 backdrop-saturate-[85%] py-1"
       }
+        
+         fixed left-0 top-0 w-screen z-50 transition-all`}
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
@@ -70,15 +84,8 @@ export default function Header() {
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <Link href={"/"} className="flex flex-shrink-0 items-center">
               <Image
-                className="block h-8 w-auto lg:hidden"
-                src="https://cdn.linkscape.app/linkscape-logo.png"
-                alt="LinkScape"
-                width={2608}
-                height={769}
-                priority={true}
-              />
-              <Image
-                className="hidden h-8 w-auto lg:block"
+                className={`${isTop ? "h-10 w-auto" : "h-8 w-auto"}
+                block transition-all`}
                 src="https://cdn.linkscape.app/linkscape-logo.png"
                 alt="LinkScape"
                 width={2608}
@@ -86,10 +93,10 @@ export default function Header() {
                 priority={true}
               />
             </Link>
-            <div className="hidden sm:ml-6 sm:block">
+            <div className="hidden sm:ml-6 sm:flex items-center justify-center">
               <div className="flex space-x-4">
-                {navigation.map((item) => (
-                  <>
+                {navigation.map((item, index) => (
+                  <React.Fragment key={index}>
                     <Link
                       key={item.name}
                       href={item.href}
@@ -117,7 +124,7 @@ export default function Header() {
                         )}
                       </p>
                     </Link>
-                  </>
+                  </React.Fragment>
                 ))}
               </div>
             </div>
