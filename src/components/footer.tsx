@@ -55,18 +55,6 @@ export default function Footer() {
               </Link>
             </span>
           </div>
-          <p className={"text-gh-text-secondary text-left mt-1"}>
-            A nonprofit fiscally sponsored by{" "}
-            <span className={"inline"}>
-              <a
-                href="https://the.hackfoundation.org"
-                className="hover:text-blue-500 transition-colors"
-              >
-                The Hack Foundation
-              </a>
-              .
-            </span>
-          </p>
         </div>
 
         <div className="hidden sm:flex flex-col justify-center items-start sm:col-start-9 md:col-start-10 px-6 sm:px-0">

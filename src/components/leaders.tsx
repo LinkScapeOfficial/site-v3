@@ -12,27 +12,15 @@ const people = [
     github: "https://github.com/thomaswcy",
   },
   {
-    name: "Meli Liu",
-    role: "Founder",
-    imageUrl: "https://cdn.linkscape.app/MeliLiu.png",
-    github: "https://github.com/MeliLXT",
-  },
-  {
     name: "Jett Chen",
     role: "Co-Founder & CTO",
     imageUrl: "https://cdn.linkscape.app/JettChen.png",
     github: "https://github.com/JettChenT",
   },
   {
-    name: "Snapdragon Lee",
+    name: "Eason Ji",
     role: "Co-Founder",
-    imageUrl: "https://avatars.githubusercontent.com/u/61799448",
-    github: "https://github.com/SnapdragonLee",
-  },
-  {
-    name: "Anthony Ji",
-    role: "Co-Founder & Head of Singapore",
-    imageUrl: "https://cdn.linkscape.app/AnthonyJi.jpg",
+    imageUrl: "https://files.ohevan.com/img/a3c212565127bde07c193731c3a1e997-421e1.svg",
     github: "",
   },
 ];
