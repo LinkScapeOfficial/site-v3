@@ -14,7 +14,7 @@ const people = [
     name: "Thomas Wu",
     role: "Founder & CEO",
     imageUrl: "https://cdn.linkscape.app/ThomasWu.png",
-    github: "https://github.com/thomaswcy",
+    github: "https://github.com/TakumiBC",
   },
   {
     name: "Jett Chen",
@@ -29,12 +29,6 @@ const people = [
     github: "",
   },
   {
-    name: "Meli Liu",
-    role: "Senior Member",
-    imageUrl: "https://cdn.linkscape.app/MeliLiu.png",
-    github: "https://github.com/MeliLXT",
-  },
-  {
     name: "Andy Chang",
     role: "Senior Member",
     imageUrl: "https://cdn.linkscape.app/AndyChang.png",
@@ -47,46 +41,16 @@ const people = [
     github: "",
   },
   {
-    name: "Tim Yu",
-    role: "Senior Member",
-    imageUrl: "",
-    github: "",
-  },
-  {
-    name: "Snapdragon Lee",
-    role: "Senior Member",
-    imageUrl: "https://avatars.githubusercontent.com/u/61799448",
-    github: "https://github.com/SnapdragonLee",
-  },
-  {
-    name: "Anthony Ji",
-    role: "Senior Member",
-    imageUrl: "https://cdn.linkscape.app/AnthonyJi.jpg",
-    github: "",
-  },
-  {
     name: "Evoker Ma",
     role: "Senior Member",
     imageUrl: "https://cdn.linkscape.app/EvokerMa.png",
     github: "",
   },
   {
-    name: "Kevin Zhang",
-    role: "Senior Member",
-    imageUrl: "https://cdn.linkscape.app/KevinZhang.png",
-    github: "https://github.com/juicyk-cn",
-  },
-  {
-    name: "Tzu-Yun Hsiao",
+    name: "Tz-Yun Hsiao",
     role: "Senior Member & Head of Design",
     imageUrl: "https://cdn.linkscape.app/TzeYunHsiao.png",
     github: "https://github.com/Powerlean",
-  },
-  {
-    name: "Yucheng Zou",
-    role: "Senior Member",
-    imageUrl: "",
-    github: "",
   },
   {
     name: "Nash Sun",
@@ -101,36 +65,6 @@ const people = [
     github: "https://github.com/Thedustye",
   },
   {
-    name: "Patirck Peng",
-    role: "Senior Member",
-    imageUrl: "",
-    github: "https://github.com/DDizzzy79",
-  },
-  {
-    name: "Ana Jiang",
-    role: "Senior Member",
-    imageUrl: "https://cdn.linkscape.app/AnaJiang.jpg",
-    github: "https://github.com/ana-jiangR",
-  },
-  {
-    name: "Evan Luo",
-    role: "Senior Member",
-    imageUrl: "https://files.ohevan.com/img/IMG_3824_best.png",
-    github: "https://github.com/evannotfound",
-  },
-  {
-    name: "Layla Ma",
-    role: "Member",
-    imageUrl: "",
-    github: "https://github.com/Marion-China",
-  },
-  {
-    name: "Newton Ngau",
-    role: "Member",
-    imageUrl: "",
-    github: "",
-  },
-  {
     name: "Jaden Hou",
     role: "Member",
     imageUrl: "https://cdn.linkscape.app/JadenHou.png",
@@ -143,7 +77,19 @@ const people = [
     github: "https://github.com/ottochou1",
   },
   {
+    name: "Evan Luo",
+    role: "Senior Member",
+    imageUrl: "https://files.ohevan.com/img/IMG_3824_best.png",
+    github: "https://github.com/evannotfound",
+  },
+  {
     name: "Zigao Wang",
+    role: "Member",
+    imageUrl: "",
+    github: "",
+  },
+  {
+    name: "Thomas Gu",
     role: "Member",
     imageUrl: "",
     github: "",
