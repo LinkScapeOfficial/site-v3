@@ -29,12 +29,6 @@ const people = [
     github: "",
   },
   {
-    name: "Andy Chang",
-    role: "Senior Member",
-    imageUrl: "https://cdn.linkscape.app/AndyChang.png",
-    github: "https://github.com/xiaobaizzh",
-  },
-  {
     name: "Kai Xu",
     role: "Senior Member",
     imageUrl: "https://cdn.linkscape.app/KaiXu.png",
