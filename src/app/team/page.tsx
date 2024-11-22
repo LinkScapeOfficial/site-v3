@@ -24,19 +24,19 @@ const people = [
   },
   {
     name: "Tz-Yun Hsiao",
-    role: "Senior Member & Head of Design",
+    role: "Member",
     imageUrl: "https://cdn.linkscape.app/TzeYunHsiao.png",
     github: "https://github.com/Powerlean",
   },
   {
     name: "Thedust Ye",
-    role: "Senior Member",
+    role: "Member",
     imageUrl: "https://cdn.linkscape.app/Thedustye.png",
     github: "https://github.com/Thedustye",
   },
   {
     name: "Evan Luo",
-    role: "Senior Member",
+    role: "Member",
     imageUrl: "https://files.ohevan.com/img/IMG_3824_best.png",
     github: "https://github.com/evannotfound",
   },
@@ -46,6 +46,12 @@ const people = [
     imageUrl: "https://avatars.githubusercontent.com/u/102006756",
     github: "ZigaoWang",
   },
+  {
+    name: "Anthony Ji",
+    role: "Member",
+    imageUrl: "https://cdn.linkscape.app/AnthonyJi.jpg",
+    github: "",
+  },  
   {
     name: "Lily Ding",
     role: "Member",
