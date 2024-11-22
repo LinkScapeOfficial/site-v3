@@ -23,52 +23,16 @@ const people = [
     github: "https://github.com/JettChenT",
   },
   {
-    name: "Eason Ji",
-    role: "Co-Founder",
-    imageUrl: "",
-    github: "",
-  },
-  {
-    name: "Kai Xu",
-    role: "Senior Member",
-    imageUrl: "https://cdn.linkscape.app/KaiXu.png",
-    github: "",
-  },
-  {
-    name: "Evoker Ma",
-    role: "Senior Member",
-    imageUrl: "https://cdn.linkscape.app/EvokerMa.png",
-    github: "",
-  },
-  {
     name: "Tz-Yun Hsiao",
     role: "Senior Member & Head of Design",
     imageUrl: "https://cdn.linkscape.app/TzeYunHsiao.png",
     github: "https://github.com/Powerlean",
   },
   {
-    name: "Nash Sun",
-    role: "Senior Member",
-    imageUrl: "https://cdn.linkscape.app/NashSun.png",
-    github: "https://github.com/sun-xx",
-  },
-  {
     name: "Thedust Ye",
     role: "Senior Member",
     imageUrl: "https://cdn.linkscape.app/Thedustye.png",
     github: "https://github.com/Thedustye",
-  },
-  {
-    name: "Jaden Hou",
-    role: "Member",
-    imageUrl: "https://cdn.linkscape.app/JadenHou.png",
-    github: "https://github.com/InternetRamen",
-  },
-  {
-    name: "Otto Chou",
-    role: "Member",
-    imageUrl: "",
-    github: "https://github.com/ottochou1",
   },
   {
     name: "Evan Luo",
@@ -79,14 +43,14 @@ const people = [
   {
     name: "Zigao Wang",
     role: "Member",
-    imageUrl: "",
-    github: "",
+    imageUrl: "https://avatars.githubusercontent.com/u/102006756",
+    github: "ZigaoWang",
   },
   {
-    name: "Thomas Gu",
+    name: "Lily Ding",
     role: "Member",
     imageUrl: "",
-    github: "",
+    github: "https://github.com/Lily-D-coder",
   },
 ];
 
