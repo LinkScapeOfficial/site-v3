@@ -18,9 +18,21 @@ const people = [
   },
   {
     name: "Jett Chen",
-    role: "Co-Founder & CTO",
+    role: "Co-Founder",
     imageUrl: "https://cdn.linkscape.app/JettChen.png",
     github: "https://github.com/JettChenT",
+  },
+  {
+    name: "Zigao Wang",
+    role: "CTO",
+    imageUrl: "https://avatars.githubusercontent.com/u/102006756",
+    github: "https://github.com/ZigaoWang",
+  },
+  {
+    name: "Lily Ding",
+    role: "CFO",
+    imageUrl: "https://avatars.githubusercontent.com/u/188736174",
+    github: "https://github.com/Lily-D-coder",
   },
   {
     name: "Tz-Yun Hsiao",
@@ -41,22 +53,10 @@ const people = [
     github: "https://github.com/evannotfound",
   },
   {
-    name: "Zigao Wang",
-    role: "Member",
-    imageUrl: "https://avatars.githubusercontent.com/u/102006756",
-    github: "ZigaoWang",
-  },
-  {
     name: "Anthony Ji",
     role: "Member",
     imageUrl: "https://cdn.linkscape.app/AnthonyJi.jpg",
     github: "",
-  },  
-  {
-    name: "Lily Ding",
-    role: "Member",
-    imageUrl: "",
-    github: "https://github.com/Lily-D-coder",
   },
 ];
 
