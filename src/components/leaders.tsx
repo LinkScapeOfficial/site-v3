@@ -9,19 +9,25 @@ const people = [
     name: "Thomas Wu",
     role: "Founder & CEO",
     imageUrl: "https://cdn.linkscape.app/ThomasWu.png",
-    github: "https://github.com/thomaswcy",
+    github: "https://github.com/TakumiBC",
   },
   {
     name: "Jett Chen",
-    role: "Co-Founder & CTO",
+    role: "Co-Founder",
     imageUrl: "https://cdn.linkscape.app/JettChen.png",
     github: "https://github.com/JettChenT",
   },
   {
-    name: "Eason Ji",
-    role: "Co-Founder",
-    imageUrl: "https://files.ohevan.com/img/a3c212565127bde07c193731c3a1e997-421e1.svg",
-    github: "",
+    name: "Zigao Wang",
+    role: "CTO",
+    imageUrl: "https://avatars.githubusercontent.com/u/102006756",
+    github: "https://github.com/ZigaoWang",
+  },
+  {
+    name: "Lily Ding",
+    role: "CFO",
+    imageUrl: "https://avatars.githubusercontent.com/u/188736174",
+    github: "https://github.com/Lily-D-coder",
   },
 ];
 
