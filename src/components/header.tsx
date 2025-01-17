@@ -5,11 +5,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const navigation = [
+  { name: "Projects", href: "/projects", current: false },
   { name: "About", href: "/about", current: false },
   { name: "Team", href: "/team", current: false },
-  { name: "Projects", href: "/projects", current: false },
 ];
 
 export default function Header() {
@@ -19,7 +20,7 @@ export default function Header() {
 
   useEffect(() => {
     const scrollHandler = () => {
-      window.scrollY > 50 ? setIsTop(false) : setIsTop(true); // adjust the value as needed
+      window.scrollY > 5 ? setIsTop(false) : setIsTop(true); // adjust the value as needed
     };
 
     window.addEventListener("scroll", scrollHandler);
@@ -32,13 +33,12 @@ export default function Header() {
 
   return (
     <header
-      className={`${
+      className={cn(
+        "py-3 fixed left-0 top-0 w-screen z-50 transition-all",
         isTop
-          ? "bg-transparent border-b border-transparent shadow-none py-3"
-          : " bg-white bg-opacity-70 backdrop-blur-lg border-b border-black/10 backdrop-saturate-[85%] py-1"
-      }
-        
-         fixed left-0 top-0 w-screen z-50 transition-all`}
+          ? "bg-transparent border-b border-transparent shadow-none"
+          : "bg-opacity-70 backdrop-blur-lg border-b border-black/10 backdrop-saturate-[85%]"
+      )}
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
@@ -84,8 +84,9 @@ export default function Header() {
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <Link href={"/"} className="flex flex-shrink-0 items-center">
               <Image
-                className={`${isTop ? "h-10 w-auto" : "h-8 w-auto"}
-                block transition-all`}
+                className={cn(
+                  "block transition-all h-10 w-auto"
+                )}
                 src="https://cdn.linkscape.app/linkscape-logo.png"
                 alt="LinkScape"
                 width={2608}
@@ -94,17 +95,18 @@ export default function Header() {
               />
             </Link>
             <div className="hidden sm:ml-6 sm:flex items-center justify-center">
-              <div className="flex space-x-4">
+              <div className="flex gap-1 items-center">
                 {navigation.map((item, index) => (
                   <React.Fragment key={index}>
                     <Link
                       key={item.name}
                       href={item.href}
-                      className={`text-gh-gray-7 ${
+                      className={cn(
+                        "text-zinc-600 rounded-full px-4 py-2 text-sm transition-all",
                         pathname !== item.href
-                          ? "hover:bg-blue-600/20"
+                          ? "hover:bg-zinc-200"
                           : "hover:text-gh-text-primary"
-                      } rounded-md px-2.5 py-2 text-sm font-medium transition-all`}
+                      )}
                     >
                       <p className={"relative px-0.5"}>
                         {item.name}
