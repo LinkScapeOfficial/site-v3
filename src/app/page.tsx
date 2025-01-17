@@ -24,7 +24,7 @@ export default function Index() {
     <>
       <NavBar />
       <div className="mt-24 flex flex-col items-center justify-center">
-        <div className="flex flex-col items-center justify-center w-full h-full z-3 max-w-6xl p-4">
+        <div className="flex flex-col items-center justify-center w-full h-full max-w-6xl">
           <GridSystem>
             <HomeTitle />
             <GridDivider height={"2rem"} />

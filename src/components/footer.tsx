@@ -24,7 +24,7 @@ const social = [
 
 export default function Footer() {
   return (
-    <footer className="text-center py-12 px-8 max-w-6xl mx-auto">
+    <footer className="text-center py-12 px-4 max-w-6xl mx-auto">
       <section className="gap-6 sm:gap-0 grid-cols-2 grid sm:grid-cols-12">
         <div
           className={
