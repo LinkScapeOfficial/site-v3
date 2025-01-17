@@ -6,6 +6,17 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { FaXTwitter } from "react-icons/fa6";
+import { ArrowRight, MenuIcon } from "lucide-react";
+import { Button } from "./ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const navigation = [
   { name: "Projects", href: "/projects", current: false },
@@ -14,7 +25,6 @@ const navigation = [
 ];
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
   const [isTop, setIsTop] = useState(true);
   const pathname = usePathname();
 
@@ -27,66 +37,21 @@ export default function Header() {
     return () => window.removeEventListener("scroll", scrollHandler);
   }, []);
 
-  const toggleMenu = () => {
-    setOpen(!open);
-  };
-
   return (
     <header
       className={cn(
         " fixed left-0 top-0 w-screen z-50 transition-all",
         isTop
           ? "bg-transparent border-b border-transparent shadow-none"
-          : "bg-background border-b border-black/10 "
+          : "bg-background border-b border-black/10 ",
       )}
     >
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <nav className="flex items-center sm:hidden">
-            <button
-              className="inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-zinc-100 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              onClick={toggleMenu}
-            >
-              <span className="sr-only">Open Main Menu</span>
-              {open ? (
-                <svg
-                  className="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              )}
-            </button>
-          </nav>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div className="flex flex-1 items-center justify-start sm:items-stretch sm:justify-start">
             <Link href={"/"} className="flex flex-shrink-0 items-center">
               <Image
-                className={cn(
-                  "block transition-all h-10 w-auto"
-                )}
+                className={cn("block transition-all h-10 w-auto")}
                 src="https://cdn.linkscape.app/linkscape-logo.png"
                 alt="LinkScape"
                 width={2608}
@@ -105,7 +70,7 @@ export default function Header() {
                         "text-zinc-600 rounded-full px-4 py-2 text-sm transition-all",
                         pathname !== item.href
                           ? "hover:bg-zinc-100"
-                          : "hover:text-zinc-600"
+                          : "hover:text-zinc-600",
                       )}
                     >
                       <p className={"relative px-0.5"}>
@@ -131,21 +96,92 @@ export default function Header() {
               </div>
             </div>
           </div>
-          <div className="flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <Link href={"https://github.com/LinkScapeOfficial"}>
-              <FaGithub className="mr-4 h-6 w-6 text-gh-text-primary hover:text-gh-text-secondary transition-colors" />
+          <div className="flex items-center gap-2 rounded-full p-1">
+            <Link
+              href={"https://github.com/LinkScapeOfficial"}
+              className="pl-2.5 p-1 rounded-full hover:bg-zinc-100 transition-all duration-200 flex items-center gap-2 border border-border bg-white shadow-sm"
+            >
+              <span className="text-sm font-medium">GitHub</span>
+              <FaGithub className="h-6 w-6 text-zinc-700" />
             </Link>
-            <Link href={"https://discord.gg/WDdvabyKaH"}>
-              <FaDiscord className="mr-4 h-6 w-6 text-gh-text-primary hover:text-gh-text-secondary transition-colors" />
+            <Link
+              href={"https://discord.gg/WDdvabyKaH"}
+              className="hidden sm:block p-1 rounded-full hover:bg-zinc-100 transition-all duration-200"
+            >
+              <FaDiscord className="h-6 w-6 text-secondary-foreground hover:text-primary transition-colors" />
             </Link>
-            <Link href={"https://twitter.com/RealLinkScape"}>
-              <FaTwitter className="mr-4 h-6 w-6 text-gh-text-primary hover:text-gh-text-secondary transition-colors" />
+            <Link
+              href={"https://twitter.com/RealLinkScape"}
+              className="hidden sm:block p-1 rounded-full hover:bg-zinc-100 transition-all duration-200"
+            >
+              <FaXTwitter className="h-5 w-5 text-secondary-foreground hover:text-primary transition-colors" />
             </Link>
+            <nav className="flex items-center sm:hidden">
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant={"ghost"} size={"icon"} className="">
+                    <MenuIcon className="h-6 w-6" />
+                    <span className="sr-only">Open Main Menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent className="w-[80vw]">
+                  <SheetHeader>
+                    <SheetTitle className="sr-only">Menu</SheetTitle>
+                  </SheetHeader>
+                  <Image
+                    src="https://cdn.linkscape.app/linkscape-logo.png"
+                    alt="LinkScape"
+                    width={2608}
+                    height={769}
+                    priority={true}
+                    className="w-24 h-auto mb-4"
+                  />
+                  <h2 className="font-semibold mt-8">Navigation</h2>
+                  <div className="flex flex-col gap-2 mt-2">
+                    {navigation.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="text-base font-medium text-zinc-600 hover:text-zinc-900 transition-all border-b border-border py-2 flex items-center justify-between"
+                      >
+                        <span>{item.name}</span>
+                        <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    ))}
+                  </div>
+
+                  <h2 className="font-semibold mt-8">Socials</h2>
+                  <div className="flex flex-col gap-2 mt-2">
+                    <Link
+                      href={"https://github.com/LinkScapeOfficial"}
+                      className="text-base font-medium text-zinc-600 hover:text-zinc-900 transition-all border-b border-border py-2 flex items-center justify-between"
+                    >
+                      GitHub
+                      <FaGithub className="h-4 w-4" />
+                    </Link>
+                    <Link
+                      href={"https://discord.gg/WDdvabyKaH"}
+                      className="text-base font-medium text-zinc-600 hover:text-zinc-900 transition-all border-b border-border py-2 flex items-center justify-between"
+                    >
+                      Discord
+                      <FaDiscord className="h-4 w-4" />
+                    </Link>
+                    <Link
+                      href={"https://twitter.com/RealLinkScape"}
+                      className="text-base font-medium text-zinc-600 hover:text-zinc-900 transition-all border-b border-border py-2 flex items-center justify-between"
+                    >
+                      Twitter / X
+                      <FaXTwitter className="h-4 w-4" />
+                    </Link>
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </nav>
           </div>
         </div>
       </div>
 
-      {open && (
+      {/* {open && (
         <div className="sm:hidden">
           <div className="space-y-1 px-2 pb-3 pt-2">
             {navigation.map((item) => (
@@ -164,7 +200,7 @@ export default function Header() {
             ))}
           </div>
         </div>
-      )}
+      )} */}
     </header>
   );
 }
