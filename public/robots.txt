@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://linkscape.app
+
+# Sitemaps
+Sitemap: https://linkscape.app/sitemap.xml

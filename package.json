@@ -10,7 +10,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.16",
     "@heroicons/react": "^2.0.18",
     "@primer/octicons-react": "^19.5.0",
     "@types/node": "20.4.8",
@@ -21,10 +20,10 @@
     "daisyui": "^3.5.1",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
-    "framer-motion": "^10.15.0",
+    "framer-motion": "^11.18.0",
     "lucide": "^0.263.0",
-    "lucide-react": "^0.263.1",
-    "next": "15.0.3",
+    "lucide-react": "^0.471.1",
+    "next": "15.1.4",
     "next-sitemap": "^4.1.8",
     "postcss": "8.4.27",
     "react": "19.0.0-rc.1",
