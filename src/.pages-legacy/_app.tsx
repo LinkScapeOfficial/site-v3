@@ -1,6 +1,6 @@
-import "@/src/app/globals.css";
+import "@/app/globals.css";
 import type { AppProps } from "next/app";
-import Footer from "@/src/components/footer";
+import Footer from "@/components/footer";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
 

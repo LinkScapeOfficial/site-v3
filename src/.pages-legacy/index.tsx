@@ -1,7 +1,7 @@
-import Home from "@/src/components/home";
-import Sponsors from "@/src/components/sponsors";
-import Leaders from "@/src/components/leaders";
-import Newsletter from "@/src/components/newsletter";
+import Home from "@/components/home";
+import Sponsors from "@/components/sponsors";
+import Leaders from "@/components/leaders";
+import Newsletter from "@/components/newsletter";
 import Head from "next/head";
 
 export default function Index() {
