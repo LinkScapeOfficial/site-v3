@@ -22,7 +22,7 @@ export default function Index() {
         <div className="fix-safari-blur h-32 bg-gradient-to-br from-blue-500 to-blue-400 blur-[32px] dark:from-blue-700 sm:h-64 sm:blur-[106px]"></div>
         <div className="fix-safari-blur h-20 bg-gradient-to-r from-blue-400 to-blue-300 blur-[32px] dark:to-blue-600 sm:h-40 sm:blur-[106px]"></div>
       </div> */}
-      <div className="mt-24 flex flex-col items-center justify-center min-h-screen">
+      <div className="mt-24 flex flex-col items-center justify-center ">
         <HomeTitle />
       </div>
       <div className={"min-h-screen flex flex-col justify-center"}>

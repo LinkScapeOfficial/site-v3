@@ -10,6 +10,8 @@
 
 .rg-grid-guides {
   display: contents;
+  z-index: 0;
+  position: relative;
 }
 
 .rg-grid-guide {
@@ -22,6 +24,7 @@
   border: 1px solid hsl(var(--border));
   border-left: none;
   border-top: none;
+  z-index: 0;
 }
 
 .rg-grid-cell {
@@ -35,6 +38,8 @@
   border-top: none;
   margin-right: -1px;
   margin-bottom: -1px;
+  position: relative;
+  z-index: 1;
 }
 
 .rg-grid-cross {
@@ -43,6 +48,7 @@
   height: 1px;
   transform: translate(-50%, -50%);
   background: none;
+  z-index: 3;
 }
 
 .rg-grid-cross::before,
@@ -65,4 +71,9 @@
   height: 15px;
   left: 0;
   top: -7px;
+}
+
+.rg-grid-cell.solid-class {
+  z-index: 2;
+  background-color: hsl(var(--background));
 }

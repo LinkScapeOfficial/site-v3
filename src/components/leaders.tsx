@@ -33,7 +33,7 @@ const people = [
 
 export default function Leaders() {
   return (
-    <div className="mb-10 bg-white mx-auto grid grid-cols-12 p-8 sm:p-16 relative">
+    <div className="mb-10 mx-auto grid grid-cols-12 p-8 sm:p-16 relative">
       <div className="col-span-1 hidden lg:block">
         <div className="w-12 h-12 flex items-center justify-center -left-2 top-2 transform translate-x-px relative border-2 rounded-full bg-white z-20">
           <PeopleIcon className={"text-gh-gray-4 w-5 h-5"} />
