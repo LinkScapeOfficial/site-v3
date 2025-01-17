@@ -56,21 +56,21 @@
   content: "";
   display: block;
   position: absolute;
-  background: currentColor;
+  background: hsl(var(--muted-foreground));
 }
 
 .rg-grid-cross::before {
-  width: 15px;
+  width: 20px;
   height: 1px;
-  left: -7px;
-  top: 0;
+  left: -10px;
+  top: -0.5px;
 }
 
 .rg-grid-cross::after {
   width: 1px;
-  height: 15px;
-  left: 0;
-  top: -7px;
+  height: 20px;
+  left: -0.5px;
+  top: -10px;
 }
 
 .rg-grid-cell.solid-class {

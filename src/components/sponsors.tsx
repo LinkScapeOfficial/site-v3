@@ -15,7 +15,7 @@ export default function Sponsors() {
           <h2 className="text-left font-semibold text-3xl tracking-tight">
             Proudly Sponsored By
           </h2>
-          <p className="text-left text-lg text-zinc-500 tracking-tight">
+          <p className="text-left text-lg text-muted-foreground tracking-tight">
             LinkScape is proudly sponsored by the following companies.
           </p>
         </div>

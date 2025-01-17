@@ -44,7 +44,7 @@ export default function Leaders() {
       >
         <div className="flex flex-col items-start justify-center w-full h-full">
         <h2 className="text-left font-semibold text-3xl tracking-tight">Meet the team</h2>
-        <p className="text-left text-lg text-zinc-500 tracking-tight">
+        <p className="text-left text-lg text-muted-foreground tracking-tight">
           The team behind LinkScape.
         </p>
         </div>
@@ -63,7 +63,7 @@ export default function Leaders() {
           <div className="w-full h-full flex flex-col items-start justify-end">
             <div className="w-fit h-fit leading-none">
               <p className="font-semibold tracking-tight ">Thomas Wu</p>
-              <p className=" text-zinc-500 text-sm tracking-tight">
+              <p className=" text-muted-foreground text-sm tracking-tight">
                 Founder & CEO
               </p>
             </div>
@@ -82,7 +82,7 @@ export default function Leaders() {
           <div className="w-full h-full flex flex-col items-start justify-end">
             <div className="w-fit h-fit leading-none ">
               <p className="font-semibold tracking-tight">Jett Chen</p>
-              <p className=" text-zinc-500 text-sm tracking-tight">
+              <p className=" text-muted-foreground text-sm tracking-tight">
                 Co-Founder
               </p>
             </div>
@@ -102,7 +102,7 @@ export default function Leaders() {
           <div className="w-full h-full flex flex-col items-start justify-end">
             <div className="w-fit h-fit leading-none">
               <p className="font-semibold tracking-tight">Zigao Wang</p>
-              <p className=" text-zinc-500 text-sm tracking-tight">CTO</p>
+              <p className=" text-muted-foreground text-sm tracking-tight">CTO</p>
             </div>
           </div>
         </div>
@@ -119,7 +119,7 @@ export default function Leaders() {
           <div className="w-full h-full flex flex-col items-start justify-end">
             <div className="w-fit h-fit leading-none">
               <p className="font-semibold tracking-tight">Lily Ding</p>
-              <p className="text-zinc-500 text-sm tracking-tight">CFO</p>
+              <p className="text-muted-foreground text-sm tracking-tight">CFO</p>
             </div>
           </div>
 
