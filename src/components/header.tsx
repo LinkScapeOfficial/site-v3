@@ -34,17 +34,17 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "py-3 fixed left-0 top-0 w-screen z-50 transition-all",
+        " fixed left-0 top-0 w-screen z-50 transition-all",
         isTop
           ? "bg-transparent border-b border-transparent shadow-none"
-          : "bg-opacity-70 backdrop-blur-lg border-b border-black/10 backdrop-saturate-[85%]"
+          : "bg-background border-b border-black/10 "
       )}
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <nav className="flex items-center sm:hidden">
             <button
-              className="inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-blue-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-zinc-100 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               onClick={toggleMenu}
             >
               <span className="sr-only">Open Main Menu</span>
@@ -104,8 +104,8 @@ export default function Header() {
                       className={cn(
                         "text-zinc-600 rounded-full px-4 py-2 text-sm transition-all",
                         pathname !== item.href
-                          ? "hover:bg-zinc-200"
-                          : "hover:text-gh-text-primary"
+                          ? "hover:bg-zinc-100"
+                          : "hover:text-zinc-600"
                       )}
                     >
                       <p className={"relative px-0.5"}>

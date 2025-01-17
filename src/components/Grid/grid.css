@@ -53,7 +53,7 @@
 
 .rg-grid-cross::before,
 .rg-grid-cross::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   background: currentColor;
@@ -76,4 +76,18 @@
 .rg-grid-cell.solid-class {
   z-index: 2;
   background-color: hsl(var(--background));
+}
+
+.rg-grid-system {
+  box-sizing: border-box;
+}
+
+.rg-grid-divider {
+  /* Remove top and bottom borders */
+  border-top: none !important;
+  border-bottom: none !important;
+  
+  /* Keep side borders if they exist in your grid styles */
+  border-left: var(--grid-border, 1px solid #e5e7eb);
+  border-right: var(--grid-border, 1px solid #e5e7eb);
 }

@@ -37,6 +37,7 @@ export interface GridProps {
   rows: ResponsiveValue<number>;
   columns: ResponsiveValue<number>;
   children?: React.ReactNode;
+  className?: string;
 }
 
 export interface CellProps {
@@ -46,6 +47,7 @@ export interface CellProps {
   columnSpan?: ResponsiveValue<number>;
   solid?: boolean;
   children?: React.ReactNode;
+  className?: string;
 }
 
 export interface CrossProps {
@@ -82,7 +84,8 @@ export function Cell({
   rowSpan = 1,
   columnSpan = 1,
   solid,
-  children
+  children,
+  className
 }: CellProps) {
   const bp = useCurrentBreakpoint();
   const finalRow = resolveResponsiveValue(row, bp);
@@ -92,7 +95,7 @@ export function Cell({
 
   return (
     <div
-      className={`rg-grid-cell ${solid ? 'solid-class' : ''}`}
+      className={`rg-grid-cell ${solid ? 'solid-class' : ''} ${className}`}
       style={{
         gridRow: getGridLine(finalRow, finalRowSpan),
         gridColumn: getGridLine(finalColumn, finalColSpan)
@@ -118,7 +121,7 @@ export function Cross({ row, column }: CrossProps) {
 }
 
 // 7) Grid
-export function Grid({ rows, columns, children }: GridProps) {
+export function Grid({ rows, columns, children, className }: GridProps) {
   const bp = useCurrentBreakpoint();
   const finalRows = resolveResponsiveValue(rows, bp);
   const finalCols = resolveResponsiveValue(columns, bp);
@@ -194,7 +197,7 @@ export function Grid({ rows, columns, children }: GridProps) {
 
   return (
     <div
-      className="rg-grid"
+      className={`rg-grid ${className}`}
       style={{
         '--rows': finalRows,
         '--columns': finalCols,
@@ -202,6 +205,69 @@ export function Grid({ rows, columns, children }: GridProps) {
       } as React.CSSProperties}
     >
       {gridGuides}
+      {children}
+    </div>
+  );
+}
+
+export interface GridSystemProps {
+  children?: React.ReactNode;
+  className?: string;
+  maxWidth?: string | number;  // Optional max-width constraint
+  gap?: string | number;       // Gap between grid sections
+  padding?: string | number;   // Container padding
+}
+
+export function GridSystem({ 
+  children, 
+  className = '',
+  maxWidth = '1200px',
+  gap = '0',
+  padding = '1rem'
+}: GridSystemProps) {
+  return (
+    <div 
+      className={`rg-grid-system ${className}`}
+      style={{
+        width: '100%',
+        maxWidth: typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth,
+        margin: '0 auto',
+        padding: typeof padding === 'number' ? `${padding}px` : padding,
+        display: 'flex',
+        flexDirection: 'column',
+        gap: typeof gap === 'number' ? `${gap}px` : gap
+      } as React.CSSProperties}
+    >
+      {children}
+    </div>
+  );
+}
+
+export interface GridDividerProps {
+  height?: string | number;
+  className?: string;
+  children?: React.ReactNode;
+  background?: string;
+}
+
+export function GridDivider({ 
+  height = '1px',
+  className = '',
+  children,
+  background = 'transparent'
+}: GridDividerProps) {
+  return (
+    <div 
+      className={`rg-grid rg-grid-divider ${className}`}
+      style={{
+        '--rows': 1,
+        '--columns': 1,
+        height: typeof height === 'number' ? `${height}px` : height,
+        minHeight: typeof height === 'number' ? `${height}px` : height,
+        background,
+        position: 'relative'
+      } as React.CSSProperties}
+    >
       {children}
     </div>
   );
