@@ -15,17 +15,18 @@ function getBreakpoint(width: number): Breakpoint {
 }
 
 function useCurrentBreakpoint(): Breakpoint {
-  const [bp, setBp] = React.useState<Breakpoint>('lg');
-  
-  React.useEffect(() => {
-    setBp(getBreakpoint(window.innerWidth));
+  const [bp, setBp] = React.useState<Breakpoint>(() =>
+    typeof window !== 'undefined' ? getBreakpoint(window.innerWidth) : 'lg'
+  );
+
+  React.useLayoutEffect(() => {
     function handleResize() {
       setBp(getBreakpoint(window.innerWidth));
     }
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
+
   return bp;
 }
 
@@ -122,27 +123,74 @@ export function Grid({ rows, columns, children }: GridProps) {
   const finalRows = resolveResponsiveValue(rows, bp);
   const finalCols = resolveResponsiveValue(columns, bp);
 
-  // Collect all covered positions (numeric only)
-  const coveredPositions = new Set<string>();
-  React.Children.forEach(children, (child) => {
-    if (React.isValidElement(child) && child.type === Cell) {
-      const { row = 1, column = 1, rowSpan = 1, columnSpan = 1 } = child.props as CellProps;
+  const [isHydrated, setIsHydrated] = React.useState(false);
+  React.useEffect(() => {
+    setIsHydrated(true);
+  }, []);
 
-      // Attempt numeric coverage only if row/column are pure numbers
-      const maybeRow = typeof row === 'number' ? row : null;
-      const maybeRowSpan = typeof rowSpan === 'number' ? rowSpan : 1;
-      const maybeCol = typeof column === 'number' ? column : null;
-      const maybeColSpan = typeof columnSpan === 'number' ? columnSpan : 1;
+  // Memoize covered positions calculation
+  const coveredPositions = React.useMemo(() => {
+    const positions = new Set<string>();
+    React.Children.forEach(children, (child) => {
+      if (React.isValidElement(child) && child.type === Cell) {
+        const { row = 1, column = 1, rowSpan = 1, columnSpan = 1 } = child.props as CellProps;
 
-      if (maybeRow != null && maybeCol != null) {
-        for (let r = maybeRow; r < maybeRow + maybeRowSpan; r++) {
-          for (let c = maybeCol; c < maybeCol + maybeColSpan; c++) {
-            coveredPositions.add(`${r}-${c}`);
+        const maybeRow = typeof row === 'number' ? row : null;
+        const maybeRowSpan = typeof rowSpan === 'number' ? rowSpan : 1;
+        const maybeCol = typeof column === 'number' ? column : null;
+        const maybeColSpan = typeof columnSpan === 'number' ? columnSpan : 1;
+
+        if (maybeRow != null && maybeCol != null) {
+          for (let r = maybeRow; r < maybeRow + maybeRowSpan; r++) {
+            for (let c = maybeCol; c < maybeCol + maybeColSpan; c++) {
+              positions.add(`${r}-${c}`);
+            }
           }
         }
       }
-    }
-  });
+    });
+    return positions;
+  }, [children]);
+
+  // Memoize grid guides
+  const gridGuides = React.useMemo(() => (
+    <div className="rg-grid-guides">
+      {Array.from({ length: finalRows * finalCols }, (_, index) => {
+        const x = (index % finalCols) + 1;
+        const y = Math.floor(index / finalCols) + 1;
+        const positionKey = `${y}-${x}`;
+        if (coveredPositions.has(positionKey)) {
+          return null;
+        }
+        return (
+          <div
+            key={`guide-${index}`}
+            className="rg-grid-guide"
+            style={{
+              '--x': x,
+              '--y': y
+            } as React.CSSProperties}
+          />
+        );
+      })}
+    </div>
+  ), [finalRows, finalCols, coveredPositions]);
+
+  if (!isHydrated) {
+    return (
+      <div
+        className="rg-grid opacity-0"
+        style={{
+          '--rows': finalRows,
+          '--columns': finalCols,
+          position: 'relative'
+        } as React.CSSProperties}
+      >
+        {gridGuides}
+        {children}
+      </div>
+    );
+  }
 
   return (
     <div
@@ -153,26 +201,7 @@ export function Grid({ rows, columns, children }: GridProps) {
         position: 'relative'
       } as React.CSSProperties}
     >
-      <div className="rg-grid-guides">
-        {Array.from({ length: finalRows * finalCols }, (_, index) => {
-          const x = (index % finalCols) + 1;
-          const y = Math.floor(index / finalCols) + 1;
-          const positionKey = `${y}-${x}`;
-          if (coveredPositions.has(positionKey)) {
-            return null;
-          }
-          return (
-            <div
-              key={`guide-${index}`}
-              className="rg-grid-guide"
-              style={{
-                '--x': x,
-                '--y': y
-              } as React.CSSProperties}
-            />
-          );
-        })}
-      </div>
+      {gridGuides}
       {children}
     </div>
   );
