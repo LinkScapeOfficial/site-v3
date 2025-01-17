@@ -37,7 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}>
+      <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans bg-background`}>
         {/* <div
           className={
             "background-dotted w-screen fixed left-0 top-0 h-screen z-[-1] dark:opacity-10"

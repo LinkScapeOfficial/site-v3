@@ -1,0 +1,68 @@
+.rg-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  border: 1px solid hsl(var(--border));
+  border-right: none;
+  border-bottom: none;
+  position: relative;
+}
+
+.rg-grid-guides {
+  display: contents;
+}
+
+.rg-grid-guide {
+  inset: 0px;
+  position: absolute;
+  grid-column-start: var(--x);
+  grid-column-end: span 1;
+  grid-row-start: var(--y);
+  grid-row-end: span 1;
+  border: 1px solid hsl(var(--border));
+  border-left: none;
+  border-top: none;
+}
+
+.rg-grid-cell {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid hsl(var(--border));
+  border-left: none;
+  border-top: none;
+  margin-right: -1px;
+  margin-bottom: -1px;
+}
+
+.rg-grid-cross {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  transform: translate(-50%, -50%);
+  background: none;
+}
+
+.rg-grid-cross::before,
+.rg-grid-cross::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: currentColor;
+}
+
+.rg-grid-cross::before {
+  width: 15px;
+  height: 1px;
+  left: -7px;
+  top: 0;
+}
+
+.rg-grid-cross::after {
+  width: 1px;
+  height: 15px;
+  left: 0;
+  top: -7px;
+}
