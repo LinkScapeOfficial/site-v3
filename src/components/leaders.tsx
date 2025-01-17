@@ -36,11 +36,28 @@ const people = [
 
 export default function Leaders() {
   return (
-    <Grid rows={2} columns={6}>
+    <Grid rows={{
+      sm: 4,
+      md: 3,      
+      lg: 2,
+    }} columns={{
+      sm:2,
+      md:4,
+      lg:6,
+    }}>
       <Cell
-        column={"1/3"}
+        column={{
+          sm: "1/3",
+          md: "1/3",
+          lg: "1/3",
+        }}
+        row={{
+          sm: 1,
+          md: 1,
+          lg: 1,
+        }}
         solid
-        className="flex flex-col items-center justify-center p-12 !bg-white"
+        className="flex flex-col items-center justify-center p-8 sm:p-12 !bg-white"
       >
         <div className="flex flex-col items-start justify-center w-full h-full">
         <h2 className="text-left font-semibold text-3xl tracking-tight">Meet the team</h2>
@@ -50,8 +67,18 @@ export default function Leaders() {
         </div>
 
       </Cell>
-      <Cell column={"3/5"} className="" solid>
-        <div className="grid grid-cols-2 p-4 gap-4">
+      <Cell column={{
+        sm: "1",
+        md: "3/5",
+        lg: "3/5",
+      }}
+      row={{
+        sm: "2",
+        md: "1",
+        lg: "1",
+      }}
+      className="" solid>
+        <div className="grid sm:grid-cols-2 p-4 gap-4">
           <Image
             src={"https://cdn.linkscape.app/ThomasWu.png"}
             alt="Team"
@@ -70,8 +97,16 @@ export default function Leaders() {
           </div>
         </div>
       </Cell>
-      <Cell column={"2/4"} row={"2"} solid>
-        <div className="grid grid-cols-2 p-4 gap-4">
+      <Cell column={{
+        sm: "2",
+        md: "1/3",
+        lg: "2/4",
+      }} row={{
+        sm: "2",
+        md: "2",
+        lg: "2",
+      }} solid>
+        <div className="grid sm:grid-cols-2 p-4 gap-4">
         <Image
             src={"https://cdn.linkscape.app/JettChen.png"}
             alt="Team"
@@ -90,8 +125,16 @@ export default function Leaders() {
 
         </div>
       </Cell>
-      <Cell column={"5/7"} row={"1"} solid>
-        <div className="grid grid-cols-2 gap-4 p-4">
+      <Cell column={{
+        sm: "1",
+        md: "3/5",
+        lg: "5/7",
+      }} row={{
+        sm: "3",
+        md: "2",
+        lg: "1",
+      }} solid>
+        <div className="grid sm:grid-cols-2 gap-4 p-4">
           <Image
             src={"https://avatars.githubusercontent.com/u/102006756"}
             alt="Team"
@@ -107,8 +150,16 @@ export default function Leaders() {
           </div>
         </div>
       </Cell>
-      <Cell column={"4/6"} row={"2"} solid>
-        <div className="grid grid-cols-2 gap-4 p-4">
+      <Cell column={{
+        sm: "2",
+        md: "1/3",
+        lg: "4/6",
+      }} row={{
+        sm: "3",
+        md: "3",
+        lg: "2",
+      }} solid>
+        <div className="grid sm:grid-cols-2 gap-4 p-4">
         <Image
             src={"https://avatars.githubusercontent.com/u/188736174"}
             alt="Team"
@@ -125,7 +176,15 @@ export default function Leaders() {
 
         </div>
       </Cell>
-      <Cell column={"6"} row={"2"} className="flex items-center justify-center hover:bg-white hover:cursor-pointer transition-all duration-200 group">
+      <Cell column={{
+        sm: "1/3",
+        md: "3/5",
+        lg: "6",
+      }} row={{
+        sm: "4",
+        md: "3",
+        lg: "2",
+      }} className="flex items-center justify-center hover:!bg-white hover:cursor-pointer transition-all duration-200 group" solid>
       <Link href={"/team"} className="w-full h-full flex items-center justify-center">
         <ArrowRight className="w-12 h-12 group-hover:translate-x-0.5 transition-transform duration-200" />
       </Link>

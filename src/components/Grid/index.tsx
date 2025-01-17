@@ -2,6 +2,7 @@
 import './grid.css';
 import React from 'react';
 
+
 // 1) Breakpoints
 const SM_BREAKPOINT = 640;
 const MD_BREAKPOINT = 768;
