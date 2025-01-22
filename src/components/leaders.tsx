@@ -80,7 +80,7 @@ export default function Leaders() {
       className="" solid>
         <div className="grid sm:grid-cols-2 p-4 gap-4">
           <Image
-            src={"https://cdn.linkscape.app/ThomasWu.png"}
+            src={"https://avatars.githubusercontent.com/u/62056970"}
             alt="Team"
             width={1000}
             height={1000}
