@@ -13,7 +13,7 @@ const people = [
   {
     name: "Thomas Wu",
     role: "Founder & CEO",
-    imageUrl: "https://cdn.linkscape.app/ThomasWu.png",
+    imageUrl: "https://avatars.githubusercontent.com/u/62056970",
     github: "https://github.com/TakumiBC",
   },
   {
