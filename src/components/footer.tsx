@@ -42,8 +42,7 @@ export default function Footer() {
           />
           <div className="text-sm sm:text-base text-left mt-2 sm:mt-6 text-muted-foreground">
             <div>
-              © 2022 - {new Date().getFullYear()} LinkScape. All rights
-              reserved.
+              © {new Date().getFullYear()} LinkScape. All rights reserved.
             </div>
             <div className="flex flex-row items-center justify-start">
               An
