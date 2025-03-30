@@ -18,19 +18,19 @@ const people = [
   },
   {
     name: "Jett Chen",
-    role: "Co-Founder",
+    role: "Co-founder",
     imageUrl: "https://cdn.linkscape.app/JettChen.png",
     github: "https://github.com/JettChenT",
   },
   {
     name: "Zigao Wang",
-    role: "CTO",
+    role: "Co-founder & CTO",
     imageUrl: "https://avatars.githubusercontent.com/u/102006756",
     github: "https://github.com/ZigaoWang",
   },
   {
     name: "Lily Ding",
-    role: "CFO",
+    role: "Co-founder & CFO",
     imageUrl: "https://avatars.githubusercontent.com/u/188736174",
     github: "https://github.com/Lily-D-coder",
   },
