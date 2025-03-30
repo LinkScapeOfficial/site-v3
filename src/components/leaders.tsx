@@ -145,7 +145,7 @@ export default function Leaders() {
           <div className="w-full h-full flex flex-col items-start justify-end">
             <div className="w-fit h-fit leading-none">
               <p className="font-semibold tracking-tight">Zigao Wang</p>
-              <p className=" text-muted-foreground text-sm tracking-tight">CTO</p>
+              <p className=" text-muted-foreground text-sm tracking-tight">Co-founder & CTO</p>
             </div>
           </div>
         </div>
@@ -170,7 +170,7 @@ export default function Leaders() {
           <div className="w-full h-full flex flex-col items-start justify-end">
             <div className="w-fit h-fit leading-none">
               <p className="font-semibold tracking-tight">Lily Ding</p>
-              <p className="text-muted-foreground text-sm tracking-tight">CFO</p>
+              <p className="text-muted-foreground text-sm tracking-tight">Co-founder & CFO</p>
             </div>
           </div>
 
