@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Cell, Cross } from "./Grid";
 import { Grid } from "./Grid";
@@ -25,10 +24,10 @@ export default function Sponsors() {
       >
         <div className="flex flex-col items-start justify-center w-full h-full">
           <h2 className="text-left font-semibold text-3xl tracking-tight">
-            Proudly Sponsored By
+            Partners
           </h2>
           <p className="text-left text-lg text-muted-foreground tracking-tight">
-            LinkScape is proudly sponsored by the following companies.
+            LinkScape is proudly partnering with the following companies / nonprofits.
           </p>
         </div>
       </Cell>
@@ -47,13 +46,13 @@ export default function Sponsors() {
         solid
       >
         <Link
-          href={"https://vercel.com/?utm_source=linkscape&utm_campaign=oss"}
+          href={"https://hackclub.com/"}
           className="w-full h-full flex items-center justify-center p-4 hover:bg-white transition-all duration-200"
         >
           <Image
             className="col-span-2 max-h-12 w-24 sm:w-full object-contain lg:col-span-1"
-            src="https://files.ohevan.com/tmp/Vercel_logo_black.svg"
-            alt="Vercel"
+            src="https://assets.hackclub.com/flag-orpheus-left.svg"
+            alt="Hack Club"
             width={158}
             height={48}
           />
@@ -95,11 +94,11 @@ export default function Sponsors() {
           md:2,
           lg:2,
         }} solid className="flex flex-col items-center justify-center">
-        <Link href={"https://1password.com"} className="w-full h-full flex items-center justify-center p-4 hover:bg-white transition-all duration-200">
+        <Link href={"https://adventure-x.org/en"} className="w-full h-full flex items-center justify-center p-4 hover:bg-white transition-all duration-200">
           <Image
             className="col-span-2 max-h-12 w-24 sm:w-full object-contain lg:col-span-1"
-            src="https://files.ohevan.com/tmp/1password-logo.svg"
-            alt="1Password"
+            src="https://sparklab.city/static/images/adventureX.png"
+            alt="AdventureX"
             width={158}
             height={48}
           />
@@ -117,8 +116,8 @@ export default function Sponsors() {
         <Link href={"https://www.twilio.com/"} className="w-full h-full flex items-center justify-center p-4 hover:bg-white transition-all duration-200">
           <Image
             className="col-span-2 max-h-12 w-24 sm:w-full object-contain sm:col-start-2 lg:col-span-1"
-            src="https://files.ohevan.com/tmp/Twilio-logo-red.svg"
-            alt="Twilio"
+            src="https://cdn.linkscape.app/spark_logo.png"
+            alt="Spark Lab"
             width={158}
             height={48}
           />
