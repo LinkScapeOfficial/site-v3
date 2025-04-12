@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Cell, Cross } from "./Grid";
 import { Grid } from "./Grid";
