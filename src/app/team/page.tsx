@@ -41,23 +41,23 @@ const people = [
     github: "https://github.com/Powerlean",
   },
   {
-    name: "Thedust Ye",
-    role: "Member",
-    imageUrl: "https://cdn.linkscape.app/Thedustye.png",
-    github: "https://github.com/Thedustye",
-  },
-  {
     name: "Evan Luo",
     role: "Member",
     imageUrl: "https://files.ohevan.com/img/IMG_3824_best.png",
     github: "https://github.com/evannotfound",
   },
   {
-    name: "Anthony Ji",
+    name: "Matthew Dong",
     role: "Member",
-    imageUrl: "https://cdn.linkscape.app/AnthonyJi.jpg",
+    imageUrl: "",
+    github: "https://github.com/matt-dong-123",
+  },  
+  {
+    name: "Eric Yan",
+    role: "Member",
+    imageUrl: "",
     github: "",
-  },
+  },    
 ];
 
 export default function Team() {
