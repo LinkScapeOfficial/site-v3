@@ -35,18 +35,6 @@ const people = [
     github: "https://github.com/Lily-D-coder",
   },
   {
-    name: "Tz-Yun Hsiao",
-    role: "Member",
-    imageUrl: "https://cdn.linkscape.app/TzeYunHsiao.png",
-    github: "https://github.com/Powerlean",
-  },
-  {
-    name: "Evan Luo",
-    role: "Member",
-    imageUrl: "https://files.ohevan.com/img/IMG_3824_best.png",
-    github: "https://github.com/evannotfound",
-  },
-  {
     name: "Matthew Dong",
     role: "Member",
     imageUrl: "",
