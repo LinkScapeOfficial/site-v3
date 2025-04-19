@@ -27,8 +27,6 @@ export default function Home() {
         </h1>
         <div className="py-6 text-center text-base sm:text-lg">
           Sorry, we couldn&apos;t find the page you&apos;re looking for.
-          <br />
-          But you can find us happy by donating to us!
         </div>
         <div className="flex flex-row">
           <Link href="/">
