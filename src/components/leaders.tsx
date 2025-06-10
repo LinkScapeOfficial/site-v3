@@ -7,26 +7,6 @@ import { Cell, Cross } from "./Grid";
 import { Grid } from "./Grid";
 import Image from "next/image";
 import { Button } from "./ui/button";
-const people = [
-  {
-    name: "Thomas Wu",
-    role: "Founder & CEO",
-    imageUrl: "https://avatars.githubusercontent.com/u/62056970",
-    github: "https://github.com/TakumiBC",
-  },
-  {
-    name: "Zigao Wang",
-    role: "Co-founder & CTO",
-    imageUrl: "https://avatars.githubusercontent.com/u/102006756",
-    github: "https://github.com/ZigaoWang",
-  },
-  {
-    name: "Lily Ding",
-    role: "Co-founder & CFO",
-    imageUrl: "https://avatars.githubusercontent.com/u/188736174",
-    github: "https://github.com/Lily-D-coder",
-  },
-];
 
 export default function Leaders() {
   return (
@@ -92,34 +72,6 @@ export default function Leaders() {
         </div>
       </Cell>
       <Cell column={{
-        sm: "2",
-        md: "1/3",
-        lg: "2/4",
-      }} row={{
-        sm: "2",
-        md: "2",
-        lg: "2",
-      }} solid>
-        <div className="grid sm:grid-cols-2 p-4 gap-4">
-        <Image
-            src={"https://cdn.linkscape.app/JettChen.png"}
-            alt="Team"
-            width={1000}
-            height={1000}
-            className="rounded-xl bg-zinc-100"
-          />
-          <div className="w-full h-full flex flex-col items-start justify-end">
-            <div className="w-fit h-fit leading-none ">
-              <p className="font-semibold tracking-tight">Jett Chen</p>
-              <p className=" text-muted-foreground text-sm tracking-tight">
-                Co-Founder
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </Cell>
-      <Cell column={{
         sm: "1",
         md: "3/5",
         lg: "5/7",
@@ -170,6 +122,32 @@ export default function Leaders() {
 
         </div>
       </Cell>
+      <Cell column={{
+        sm: "2",
+        md: "1/3",
+        lg: "4/6",
+      }} row={{
+        sm: "3",
+        md: "3",
+        lg: "2",
+      }} solid>
+        <div className="grid sm:grid-cols-2 gap-4 p-4">
+        <Image
+            src={"https://avatars.githubusercontent.com/u/186053406"}
+            alt="Team"
+            width={1000}
+            height={1000}
+            className="rounded-xl"
+          />
+          <div className="w-full h-full flex flex-col items-start justify-end">
+            <div className="w-fit h-fit leading-none">
+              <p className="font-semibold tracking-tight">July Wu</p>
+              <p className="text-muted-foreground text-sm tracking-tight">Co-founder & COO</p>
+            </div>
+          </div>
+
+        </div>
+      </Cell>      
       <Cell column={{
         sm: "1/3",
         md: "3/5",
