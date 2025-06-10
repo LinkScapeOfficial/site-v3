@@ -72,6 +72,34 @@ export default function Leaders() {
         </div>
       </Cell>
       <Cell column={{
+        sm: "2",
+        md: "1/3",
+        lg: "2/4",
+      }} row={{
+        sm: "2",
+        md: "2",
+        lg: "2",
+      }} solid>
+        <div className="grid sm:grid-cols-2 p-4 gap-4">
+        <Image
+            src={"https://avatars.githubusercontent.com/u/102006756"}
+            alt="Team"
+            width={1000}
+            height={1000}
+            className="rounded-xl bg-zinc-100"
+          />
+          <div className="w-full h-full flex flex-col items-start justify-end">
+            <div className="w-fit h-fit leading-none ">
+              <p className="font-semibold tracking-tight">Zigao Wang</p>
+              <p className=" text-muted-foreground text-sm tracking-tight">
+                Co-founder & CTO
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </Cell>
+      <Cell column={{
         sm: "1",
         md: "3/5",
         lg: "5/7",
@@ -82,31 +110,6 @@ export default function Leaders() {
       }} solid>
         <div className="grid sm:grid-cols-2 gap-4 p-4">
           <Image
-            src={"https://avatars.githubusercontent.com/u/102006756"}
-            alt="Team"
-            width={1000}
-            height={1000}
-            className="rounded-xl"
-          />
-          <div className="w-full h-full flex flex-col items-start justify-end">
-            <div className="w-fit h-fit leading-none">
-              <p className="font-semibold tracking-tight">Zigao Wang</p>
-              <p className=" text-muted-foreground text-sm tracking-tight">Co-founder & CTO</p>
-            </div>
-          </div>
-        </div>
-      </Cell>
-      <Cell column={{
-        sm: "2",
-        md: "1/3",
-        lg: "4/6",
-      }} row={{
-        sm: "3",
-        md: "3",
-        lg: "2",
-      }} solid>
-        <div className="grid sm:grid-cols-2 gap-4 p-4">
-        <Image
             src={"https://avatars.githubusercontent.com/u/188736174"}
             alt="Team"
             width={1000}
@@ -116,10 +119,9 @@ export default function Leaders() {
           <div className="w-full h-full flex flex-col items-start justify-end">
             <div className="w-fit h-fit leading-none">
               <p className="font-semibold tracking-tight">Lily Ding</p>
-              <p className="text-muted-foreground text-sm tracking-tight">Co-founder & CFO</p>
+              <p className=" text-muted-foreground text-sm tracking-tight">Co-founder & CFO</p>
             </div>
           </div>
-
         </div>
       </Cell>
       <Cell column={{
@@ -147,7 +149,7 @@ export default function Leaders() {
           </div>
 
         </div>
-      </Cell>      
+      </Cell>
       <Cell column={{
         sm: "1/3",
         md: "3/5",
