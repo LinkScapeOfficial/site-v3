@@ -30,7 +30,7 @@ const people = [
   },
   {
     name: "July Wu",
-    role: "Co-founder & CFO",
+    role: "Co-founder & COO",
     imageUrl: "https://avatars.githubusercontent.com/u/186053406",
     github: "https://github.com/JLW-7",
   },
