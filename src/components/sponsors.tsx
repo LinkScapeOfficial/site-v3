@@ -5,20 +5,23 @@ import { Grid } from "./Grid";
 
 export default function Sponsors() {
   return (
-    <Grid rows={{
-      sm: 3,
-      md: 2,
-      lg: 2,
-    }} columns={{
-      sm: 2,
-      md: 6,
-      lg: 6,
-    }}>
+    <Grid
+      rows={{
+        sm: 3,
+        md: 2,
+        lg: 2,
+      }}
+      columns={{
+        sm: 2,
+        md: 6,
+        lg: 6,
+      }}
+    >
       <Cell
         column={{
-          sm:"1/3",
-          md:"1/5",
-          lg:"1/5",
+          sm: "1/3",
+          md: "1/5",
+          lg: "1/5",
         }}
         className="flex flex-col items-center justify-center p-8 sm:p-12 !bg-white"
         solid
@@ -28,20 +31,21 @@ export default function Sponsors() {
             Partners
           </h2>
           <p className="text-left text-lg text-muted-foreground tracking-tight">
-            LinkScape is proudly partnering with the following companies / nonprofits.
+            LinkScape is proudly partnering with the following companies /
+            nonprofits.
           </p>
         </div>
       </Cell>
       <Cell
         column={{
-          sm:"1",
-          md:"5/7",
-          lg:"5/7",
+          sm: "1",
+          md: "5/7",
+          lg: "5/7",
         }}
         row={{
-          sm:2,
-          md:1,
-          lg:1,
+          sm: 2,
+          md: 1,
+          lg: 1,
         }}
         className="flex flex-col items-center justify-center hover:bg-white"
         solid
@@ -61,14 +65,14 @@ export default function Sponsors() {
       </Cell>
       <Cell
         column={{
-          sm:"2",
-          md:"1/3",
-          lg:"1/3",
+          sm: "2",
+          md: "1/3",
+          lg: "1/3",
         }}
         row={{
-          sm:2,
-          md:2,
-          lg:2,
+          sm: 2,
+          md: 2,
+          lg: 2,
         }}
         solid
         className="flex flex-col items-center justify-center"
@@ -86,35 +90,51 @@ export default function Sponsors() {
           />
         </Link>
       </Cell>
-      <Cell column={{
-          sm:"1",
-          md:"3/5",
-          lg:"3/5",
-        }} row={{
-          sm:3,
-          md:2,
-          lg:2,
-        }} solid className="flex flex-col items-center justify-center">
-        <Link href={"https://adventure-x.org/en"} className="w-full h-full flex items-center justify-center p-4 hover:bg-white transition-all duration-200">
+      <Cell
+        column={{
+          sm: "1",
+          md: "3/5",
+          lg: "3/5",
+        }}
+        row={{
+          sm: 3,
+          md: 2,
+          lg: 2,
+        }}
+        solid
+        className="flex flex-col items-center justify-center"
+      >
+        <Link
+          href={"https://adventure-x.org/en"}
+          className="w-full h-full flex items-center justify-center p-4 hover:bg-white transition-all duration-200"
+        >
           <Image
             className="col-span-2 max-h-12 w-24 sm:w-full object-contain lg:col-span-1"
-            src="https://sparklab.city/static/images/adventureX.png"
+            src="https://cdn.linkscape.app/adventureX.png"
             alt="AdventureX"
             width={158}
             height={48}
           />
         </Link>
       </Cell>
-      <Cell column={{
-        sm:"2",
-        md:"5/7",
-        lg:"5/7",
-      }} row={{
-        sm:3,
-        md:2,
-        lg:2,
-      }} solid className="flex flex-col items-center justify-center">
-        <Link href={"https://www.twilio.com/"} className="w-full h-full flex items-center justify-center p-4 hover:bg-white transition-all duration-200">
+      <Cell
+        column={{
+          sm: "2",
+          md: "5/7",
+          lg: "5/7",
+        }}
+        row={{
+          sm: 3,
+          md: 2,
+          lg: 2,
+        }}
+        solid
+        className="flex flex-col items-center justify-center"
+      >
+        <Link
+          href={"https://www.twilio.com/"}
+          className="w-full h-full flex items-center justify-center p-4 hover:bg-white transition-all duration-200"
+        >
           <Image
             className="col-span-2 max-h-12 w-24 sm:w-full object-contain sm:col-start-2 lg:col-span-1"
             src="https://cdn.linkscape.app/spark_logo.png"

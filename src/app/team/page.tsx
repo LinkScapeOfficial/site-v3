@@ -17,12 +17,6 @@ const people = [
     github: "https://github.com/TakumiBC",
   },
   {
-    name: "Jett Chen",
-    role: "Co-founder",
-    imageUrl: "https://cdn.linkscape.app/JettChen.png",
-    github: "https://github.com/JettChenT",
-  },
-  {
     name: "Zigao Wang",
     role: "Co-founder & CTO",
     imageUrl: "https://avatars.githubusercontent.com/u/102006756",
@@ -35,17 +29,23 @@ const people = [
     github: "https://github.com/Lily-D-coder",
   },
   {
+    name: "July Wu",
+    role: "Co-founder & CFO",
+    imageUrl: "https://avatars.githubusercontent.com/u/186053406",
+    github: "https://github.com/JLW-7",
+  },
+  {
     name: "Matthew Dong",
     role: "Member",
-    imageUrl: "",
+    imageUrl: "https://cdn.linkscape.app/MattDong.jpg",
     github: "https://github.com/matt-dong-123",
-  },  
+  },
   {
     name: "Eric Yan",
     role: "Member",
-    imageUrl: "",
+    imageUrl: "https://cdn.linkscape.app/EricYan.jpg",
     github: "",
-  },    
+  },
 ];
 
 export default function Team() {
