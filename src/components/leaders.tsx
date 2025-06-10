@@ -15,12 +15,6 @@ const people = [
     github: "https://github.com/TakumiBC",
   },
   {
-    name: "Jett Chen",
-    role: "Co-founder",
-    imageUrl: "https://cdn.linkscape.app/JettChen.png",
-    github: "https://github.com/JettChenT",
-  },
-  {
     name: "Zigao Wang",
     role: "Co-founder & CTO",
     imageUrl: "https://avatars.githubusercontent.com/u/102006756",
