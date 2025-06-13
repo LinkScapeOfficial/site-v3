@@ -10,15 +10,18 @@ import { Button } from "./ui/button";
 
 export default function Leaders() {
   return (
-    <Grid rows={{
-      sm: 4,
-      md: 3,      
-      lg: 2,
-    }} columns={{
-      sm:2,
-      md:4,
-      lg:6,
-    }}>
+    <Grid
+      rows={{
+        sm: 4,
+        md: 3,
+        lg: 2,
+      }}
+      columns={{
+        sm: 2,
+        md: 4,
+        lg: 6,
+      }}
+    >
       <Cell
         column={{
           sm: "1/3",
@@ -34,24 +37,28 @@ export default function Leaders() {
         className="flex flex-col items-center justify-center p-8 sm:p-12 !bg-white"
       >
         <div className="flex flex-col items-start justify-center w-full h-full">
-        <h2 className="text-left font-semibold text-3xl tracking-tight">Meet the team</h2>
-        <p className="text-left text-lg text-muted-foreground tracking-tight">
-          The team behind LinkScape.
-        </p>
+          <h2 className="text-left font-semibold text-3xl tracking-tight">
+            Meet the team
+          </h2>
+          <p className="text-left text-lg text-muted-foreground tracking-tight">
+            The team behind LinkScape.
+          </p>
         </div>
-
       </Cell>
-      <Cell column={{
-        sm: "1",
-        md: "3/5",
-        lg: "3/5",
-      }}
-      row={{
-        sm: "2",
-        md: "1",
-        lg: "1",
-      }}
-      className="" solid>
+      <Cell
+        column={{
+          sm: "1",
+          md: "3/5",
+          lg: "3/5",
+        }}
+        row={{
+          sm: "2",
+          md: "1",
+          lg: "1",
+        }}
+        className=""
+        solid
+      >
         <div className="grid sm:grid-cols-2 p-4 gap-4">
           <Image
             src={"https://avatars.githubusercontent.com/u/62056970"}
@@ -71,17 +78,21 @@ export default function Leaders() {
           </div>
         </div>
       </Cell>
-      <Cell column={{
-        sm: "2",
-        md: "1/3",
-        lg: "2/4",
-      }} row={{
-        sm: "2",
-        md: "2",
-        lg: "2",
-      }} solid>
+      <Cell
+        column={{
+          sm: "2",
+          md: "1/3",
+          lg: "2/4",
+        }}
+        row={{
+          sm: "2",
+          md: "2",
+          lg: "2",
+        }}
+        solid
+      >
         <div className="grid sm:grid-cols-2 p-4 gap-4">
-        <Image
+          <Image
             src={"https://avatars.githubusercontent.com/u/102006756"}
             alt="Team"
             width={1000}
@@ -96,18 +107,21 @@ export default function Leaders() {
               </p>
             </div>
           </div>
-
         </div>
       </Cell>
-      <Cell column={{
-        sm: "1",
-        md: "3/5",
-        lg: "5/7",
-      }} row={{
-        sm: "3",
-        md: "2",
-        lg: "1",
-      }} solid>
+      <Cell
+        column={{
+          sm: "1",
+          md: "3/5",
+          lg: "5/7",
+        }}
+        row={{
+          sm: "3",
+          md: "2",
+          lg: "1",
+        }}
+        solid
+      >
         <div className="grid sm:grid-cols-2 gap-4 p-4">
           <Image
             src={"https://avatars.githubusercontent.com/u/188736174"}
@@ -119,23 +133,29 @@ export default function Leaders() {
           <div className="w-full h-full flex flex-col items-start justify-end">
             <div className="w-fit h-fit leading-none">
               <p className="font-semibold tracking-tight">Lily Ding</p>
-              <p className=" text-muted-foreground text-sm tracking-tight">Co-founder & CFO</p>
+              <p className=" text-muted-foreground text-sm tracking-tight">
+                Co-founder & CFO
+              </p>
             </div>
           </div>
         </div>
       </Cell>
-      <Cell column={{
-        sm: "2",
-        md: "1/3",
-        lg: "4/6",
-      }} row={{
-        sm: "3",
-        md: "3",
-        lg: "2",
-      }} solid>
+      <Cell
+        column={{
+          sm: "2",
+          md: "1/3",
+          lg: "4/6",
+        }}
+        row={{
+          sm: "3",
+          md: "3",
+          lg: "2",
+        }}
+        solid
+      >
         <div className="grid sm:grid-cols-2 gap-4 p-4">
-        <Image
-            src={"https://avatars.githubusercontent.com/u/186053406"}
+          <Image
+            src={"https://cdn.linkscape.app/JulyWu.png"}
             alt="Team"
             width={1000}
             height={1000}
@@ -144,24 +164,33 @@ export default function Leaders() {
           <div className="w-full h-full flex flex-col items-start justify-end">
             <div className="w-fit h-fit leading-none">
               <p className="font-semibold tracking-tight">July Wu</p>
-              <p className="text-muted-foreground text-sm tracking-tight">Co-founder & COO</p>
+              <p className="text-muted-foreground text-sm tracking-tight">
+                Co-founder & COO
+              </p>
             </div>
           </div>
-
         </div>
       </Cell>
-      <Cell column={{
-        sm: "1/3",
-        md: "3/5",
-        lg: "6",
-      }} row={{
-        sm: "4",
-        md: "3",
-        lg: "2",
-      }} className="flex items-center justify-center hover:!bg-white hover:cursor-pointer transition-all duration-200 group" solid>
-      <Link href={"/team"} className="w-full h-full flex items-center justify-center">
-        <ArrowRight className="w-12 h-12 group-hover:translate-x-0.5 transition-transform duration-200" />
-      </Link>
+      <Cell
+        column={{
+          sm: "1/3",
+          md: "3/5",
+          lg: "6",
+        }}
+        row={{
+          sm: "4",
+          md: "3",
+          lg: "2",
+        }}
+        className="flex items-center justify-center hover:!bg-white hover:cursor-pointer transition-all duration-200 group"
+        solid
+      >
+        <Link
+          href={"/team"}
+          className="w-full h-full flex items-center justify-center"
+        >
+          <ArrowRight className="w-12 h-12 group-hover:translate-x-0.5 transition-transform duration-200" />
+        </Link>
       </Cell>
       <Cross row={1} column={1} />
     </Grid>
