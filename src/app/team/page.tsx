@@ -2,7 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import NavBar from "@/components/header";
 import { Metadata } from "next";
-import { FaGithub } from "react-icons/fa";
+import { MarkGithubIcon } from "@primer/octicons-react";
+import BlurFadeStagger from "@/components/animations/blur-fade-stagger";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "LinkScape | Team",
@@ -52,71 +54,83 @@ export default function Team() {
   return (
     <>
       <NavBar />
-      {/*<div*/}
-      {/*  className={*/}
-      {/*    "background-dotted w-screen fixed top-0 left-0 h-screen -z-20 dark:opacity-10"*/}
-      {/*  }*/}
-      {/*/>*/}
-      <div className="mb-10 mt-32">
-        <div className="absolute inset-0 grid grid-cols-2 -space-x-12 opacity-10 dark:opacity-20 sm:-space-x-52 z-10 pointer-events-none">
-          <div className="fix-safari-blur h-32 bg-gradient-to-br from-blue-500 to-blue-400 blur-[32px] dark:from-blue-700 sm:h-64 sm:blur-[106px]"></div>
-          <div className="fix-safari-blur h-20 bg-gradient-to-r from-blue-400 to-blue-300 blur-[32px] dark:to-blue-600 sm:h-40 sm:blur-[106px]"></div>
-        </div>
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h1 className="text-left text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl px-8 sm:px-16">
-            Team
-          </h1>
-          <p className="mt-4 max-w-2xl text-left text-xl text-gray-500 px-8 sm:px-16">
-            Meet the team behind LinkScape.
-          </p>
-          <div className="mt-6 mb-10 border-b-2 border-gh-border mx-8 sm:mx-16" />
-          <ul
-            role="list"
-            className="mt-8 grid gap-x-6 gap-y-6 grid-cols-2 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-8 xl:grid-cols-4 xl:gap-y-10"
-          >
-            {people.map((person, index) => (
-              <div key={index}>
-                <li className="flex items-center justify-center">
-                  <div className="flex flex-col items-center">
-                    <Image
-                      className={`${
-                        person.imageUrl ? "" : "p-3"
-                      } h-24 w-24 rounded-full gh-border shadow-sm hover:shadow-lg transition-shadow cursor-pointer bg-gh-bg`}
-                      src={
-                        person.imageUrl
-                          ? person.imageUrl
-                          : "https://files.ohevan.com/img/a3c212565127bde07c193731c3a1e997-421e1.svg"
-                      }
-                      width={512}
-                      height={512}
-                      alt=""
-                    />
-                    <div className="text-center mt-2">
-                      <h3 className="text-lg font-semibold leading-7 tracking-tight text-gray-900">
+      <main className="flex flex-col min-h-screen">
+        {/* Hero Title */}
+        <section className="relative bg-background">
+          {/* Gradient shine overlay at the bottom */}
+          <div
+            className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-radial from-blue-300/20 via-blue-300/5 to-transparent pointer-events-none z-10"
+            style={{
+              background:
+                "radial-gradient(ellipse at bottom center, rgba(147, 197, 253, 0.2) 0%, rgba(147, 197, 253, 0.05) 50%, transparent 100%)",
+            }}
+          ></div>
+          <div className="linkscape-wrapper">
+            <div className="flex flex-col gap-4 pt-32 pb-16 border-x border-border border-dashed px-4">
+              <BlurFadeStagger initialDelay={0.1}>
+                <h1 className="font-semibold tracking-tight text-4xl sm:text-5xl w-full text-transparent bg-clip-text bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-500">
+                  Team
+                </h1>
+                <h2 className="text-base sm:text-lg text-gh-text-secondary max-w-md">
+                  Meet the team behind LinkScape.
+                </h2>
+              </BlurFadeStagger>
+            </div>
+          </div>
+        </section>
+
+        {/* Team section */}
+        <section className="relative border-y border-border bg-white">
+          <div className="linkscape-wrapper">
+            <div className="border-x border-border">
+              {/* Team members list */}
+              <div className="flex flex-col">
+                {people.map((person, index) => (
+                  <div 
+                    key={index} 
+                    className={`bg-white hover:bg-gray-50 transition-colors flex flex-row items-center p-6 min-h-[120px] ${
+                      index !== people.length - 1 ? 'border-b border-border' : ''
+                    }`}
+                  >
+                    {/* Profile Picture */}
+                    <div className="flex-shrink-0 mr-6">
+                      <Image
+                        src={person.imageUrl || "https://assets.ohevan.com/img/a3c212565127bde07c193731c3a1e997-421e1.svg"}
+                        alt={person.name}
+                        width={100}
+                        height={100}
+                        className="rounded-xl bg-zinc-100 w-24 h-24 object-cover"
+                      />
+                    </div>
+
+                    {/* Info Content */}
+                    <div className="flex-1 flex flex-col justify-center">
+                      <h3 className="text-2xl font-semibold tracking-tight mb-1">
                         {person.name}
                       </h3>
-                      <p className="text-sm font-semibold leading-6 text-indigo-600">
+                      <p className="text-muted-foreground text-base tracking-tight mb-3">
                         {person.role}
                       </p>
+                      
+                      {/* GitHub Button */}
+                      {person.github && (
+                        <div>
+                          <Button variant="outline" size="sm" asChild className="rounded-full">
+                            <Link href={person.github} className="flex items-center !gap-1">
+                              <MarkGithubIcon className="w-4 h-4 mr-2" />
+                              <span className="text-sm">{person.github.replace("https://github.com/", "")}</span>
+                            </Link>
+                          </Button>
+                        </div>
+                      )}
                     </div>
-                    {person.github && (
-                      <Link
-                        href={person.github}
-                        className="flex flex-row items-center ml-2 hover:underline mt-2"
-                      >
-                        <FaGithub className="w-4 h-4 text-gh-text-primary hover:text-gh-text-secondary transition-colors" />
-                        <p className={"inline ml-1 text-sm font-semibold"}>
-                          {person.github.replace("https://github.com/", "")}
-                        </p>
-                      </Link>
-                    )}
                   </div>
-                </li>
+                ))}
               </div>
-            ))}
-          </ul>
-        </div>
-      </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </>
   );
 }
