@@ -25,17 +25,10 @@ export default function About() {
           <div className="linkscape-wrapper">
             <div className="flex flex-col gap-4 pt-32 pb-16 border-x border-border border-dashed px-4">
               <BlurFadeStagger initialDelay={0.1}>
-                <h1 className="font-semibold tracking-tight text-4xl sm:text-5xl w-full text-center">
-                  We{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-br from-blue-500 to-purple-700">
-                    Hack,{" "}
-                  </span>
-                  We{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-br from-blue-500 to-purple-700">
-                    Grow.
-                  </span>
+                <h1 className="font-semibold tracking-tight text-4xl sm:text-5xl w-full text-transparent bg-clip-text bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-500">
+                  About
                 </h1>
-                <h2 className="text-base sm:text-lg text-gh-text-secondary text-center max-w-2xl mx-auto">
+                <h2 className="text-base sm:text-lg text-gh-text-secondary max-w-md">
                   LinkScape is led by passionate students dedicated to influencing the world through technology.
                 </h2>
               </BlurFadeStagger>
