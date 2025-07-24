@@ -2,10 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      "cdn.linkscape.app",
-      "avatars.githubusercontent.com",
-      "files.ohevan.com",
+    remotePatterns: [
+      new URL("https://cdn.linkscape.app/**"),
+      new URL("https://avatars.githubusercontent.com/**"),
+      new URL("https://files.ohevan.com/**"),
+      new URL("https://assets.ohevan.com/**"),
     ],
   },
 };
