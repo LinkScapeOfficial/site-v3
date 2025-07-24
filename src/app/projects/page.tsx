@@ -142,8 +142,8 @@ export default function Projects() {
                         <Image
                           src={project.image}
                           alt={project.name}
-                          width={300}
-                          height={200}
+                          width={1920}
+                          height={1080}
                           className="h-80 w-auto rounded-xl object-cover shadow-lg"
                         />
                       </div>
