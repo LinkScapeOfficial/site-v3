@@ -1,12 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
+import { SiDiscord, SiGithub, SiX } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { FaXTwitter } from "react-icons/fa6";
 import { ArrowRight, MenuIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import {
@@ -96,7 +95,7 @@ export default function Header() {
               className="flex items-center gap-2 rounded-full border border-border bg-white px-3 py-1 text-sm font-medium shadow-sm hover:bg-zinc-100 transition-all"
             >
               GitHub
-              <FaGithub className="h-5 w-5 text-zinc-700" />
+              <SiGithub className="h-5 w-5 text-zinc-700" />
             </Link>
             
             {/* Desktop Social Links */}
@@ -104,13 +103,13 @@ export default function Header() {
               href="https://discord.gg/WDdvabyKaH"
               className="hidden sm:block p-1 rounded-full hover:bg-zinc-100 transition-all"
             >
-              <FaDiscord className="h-6 w-6 text-secondary-foreground hover:text-primary transition-colors" />
+              <SiDiscord className="h-6 w-6 text-secondary-foreground hover:text-primary transition-colors" />
             </Link>
             <Link
               href="https://twitter.com/RealLinkScape"
               className="hidden sm:block p-1 rounded-full hover:bg-zinc-100 transition-all"
             >
-              <FaXTwitter className="h-5 w-5 text-secondary-foreground hover:text-primary transition-colors" />
+              <SiX className="h-5 w-5 text-secondary-foreground hover:text-primary transition-colors" />
             </Link>
             
             {/* Mobile Menu */}
@@ -157,21 +156,21 @@ export default function Header() {
                       className="flex items-center justify-between py-2 border-b border-border text-base font-medium text-zinc-600 hover:text-zinc-900 transition-all"
                     >
                       GitHub
-                      <FaGithub className="h-4 w-4" />
+                      <SiGithub className="h-4 w-4" />
                     </Link>
                     <Link
                       href="https://discord.gg/WDdvabyKaH"
                       className="flex items-center justify-between py-2 border-b border-border text-base font-medium text-zinc-600 hover:text-zinc-900 transition-all"
                     >
                       Discord
-                      <FaDiscord className="h-4 w-4" />
+                      <SiDiscord className="h-4 w-4" />
                     </Link>
                     <Link
                       href="https://twitter.com/RealLinkScape"
                       className="flex items-center justify-between py-2 border-b border-border text-base font-medium text-zinc-600 hover:text-zinc-900 transition-all"
                     >
                       Twitter / X
-                      <FaXTwitter className="h-4 w-4" />
+                      <SiX className="h-4 w-4" />
                     </Link>
                   </div>
                 </SheetContent>
