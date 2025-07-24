@@ -79,3 +79,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+html,
+body {
+  scrollbar-gutter: stable;
+}
+
+.linkscape-wrapper {
+  @apply mx-auto max-w-6xl w-full px-4 sm:px-8;
+}
