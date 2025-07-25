@@ -31,7 +31,7 @@ export default function Donate() {
                   Donate
                 </h1>
                 <h2 className="max-w-md text-base text-gh-text-secondary sm:text-lg">
-                  Support LinkScape's mission to influence the world through
+                  Support LinkScape&apos;s mission to influence the world through
                   technology.
                 </h2>
               </BlurFadeStagger>
