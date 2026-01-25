@@ -103,7 +103,7 @@ export default function Index() {
                 <div className="border-r border-b border-border last:border-r-0">
                   <div className="p-6 flex flex-col items-center text-center gap-4 min-h-[200px]">
                     <Image
-                      src={"https://cdn.linkscape.app/JulyWu.png"}
+                      src={"https://cdn.linkscape.app/EricYan.jpg"}
                       alt="Eric Yan"
                       width={80}
                       height={80}
@@ -117,7 +117,6 @@ export default function Index() {
                     </div>
                   </div>
                 </div>
-              </div>
 
                 {/* Zigao Wang */}
                 <div className="border-r border-b border-border last:border-r-0">
@@ -143,7 +142,7 @@ export default function Index() {
                   <div className="p-6 flex flex-col items-center text-center gap-4 min-h-[200px]">
                     <Image
                       src={"https://avatars.githubusercontent.com/u/188736174"}
-                      alt="Eric Yan"
+                      alt="Lily Ding"
                       width={80}
                       height={80}
                       className="rounded-xl bg-zinc-100 w-20 h-20 object-cover"
@@ -156,7 +155,7 @@ export default function Index() {
                     </div>
                   </div>
                 </div>
-
+              </div>
 
               {/* Arrow link */}
               <Link
