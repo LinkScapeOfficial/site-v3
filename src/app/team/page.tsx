@@ -19,20 +19,26 @@ const people = [
     github: "https://github.com/TakumiBC",
   },
   {
+    name: "Eric Yan",
+    role: "Co-founder",
+    imageUrl: "https://cdn.linkscape.app/EricYan.jpg",
+    github: "",
+  },
+  {
     name: "Zigao Wang",
-    role: "Co-founder & CTO",
+    role: "CTO",
     imageUrl: "https://avatars.githubusercontent.com/u/102006756",
     github: "https://github.com/ZigaoWang",
   },
   {
     name: "Lily Ding",
-    role: "Co-founder & CFO",
+    role: "Member",
     imageUrl: "https://avatars.githubusercontent.com/u/188736174",
     github: "https://github.com/Lily-D-coder",
   },
   {
     name: "July Wu",
-    role: "Co-founder & COO",
+    role: "Member",
     imageUrl: "https://cdn.linkscape.app/JulyWu.png",
     github: "https://github.com/JLW-7",
   },
@@ -43,10 +49,22 @@ const people = [
     github: "https://github.com/matt-dong-123",
   },
   {
-    name: "Eric Yan",
-    role: "Member",
-    imageUrl: "https://cdn.linkscape.app/EricYan.jpg",
-    github: "",
+    name: "Jett Chen",
+    role: "Fellow & Former Co-founder",
+    imageUrl: "https://cdn.linkscape.app/JettChen.png",
+    github: "https://github.com/JettChenT",
+  },
+  {
+    name: "Evan Luo",
+    role: "Fellow & Head of Web",
+    imageUrl: "https://placehold.co/600x600",
+    github: "https://github.com/evannotfound",
+  },
+  {
+    name: "Tz-yun Hsiao",
+    role: "Fellow & Head of Designs",
+    imageUrl: "https://cdn.linkscape.app/TzeYunHsiao.png",
+    github: "https://github.com/Powerlean",
   },
 ];
 
