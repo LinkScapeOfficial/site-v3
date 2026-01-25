@@ -99,6 +99,26 @@ export default function Index() {
                   </div>
                 </div>
 
+                {/* Eric Yan */}
+                <div className="border-r border-b border-border last:border-r-0">
+                  <div className="p-6 flex flex-col items-center text-center gap-4 min-h-[200px]">
+                    <Image
+                      src={"https://cdn.linkscape.app/JulyWu.png"}
+                      alt="Eric Yan"
+                      width={80}
+                      height={80}
+                      className="rounded-xl bg-zinc-100 w-20 h-20 object-cover"
+                    />
+                    <div>
+                      <p className="font-semibold tracking-tight">Eric Yan</p>
+                      <p className="text-muted-foreground text-sm tracking-tight">
+                        Co-founder
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
                 {/* Zigao Wang */}
                 <div className="border-r border-b border-border last:border-r-0">
                   <div className="p-6 flex flex-col items-center text-center gap-4 min-h-[200px]">
@@ -112,7 +132,7 @@ export default function Index() {
                     <div>
                       <p className="font-semibold tracking-tight">Zigao Wang</p>
                       <p className="text-muted-foreground text-sm tracking-tight">
-                        Co-founder & CTO
+                        CTO
                       </p>
                     </div>
                   </div>
@@ -123,7 +143,7 @@ export default function Index() {
                   <div className="p-6 flex flex-col items-center text-center gap-4 min-h-[200px]">
                     <Image
                       src={"https://avatars.githubusercontent.com/u/188736174"}
-                      alt="Lily Ding"
+                      alt="Eric Yan"
                       width={80}
                       height={80}
                       className="rounded-xl bg-zinc-100 w-20 h-20 object-cover"
@@ -131,31 +151,12 @@ export default function Index() {
                     <div>
                       <p className="font-semibold tracking-tight">Lily Ding</p>
                       <p className="text-muted-foreground text-sm tracking-tight">
-                        Co-founder & CFO
+                        Member
                       </p>
                     </div>
                   </div>
                 </div>
 
-                {/* July Wu */}
-                <div className="border-r border-b border-border last:border-r-0">
-                  <div className="p-6 flex flex-col items-center text-center gap-4 min-h-[200px]">
-                    <Image
-                      src={"https://cdn.linkscape.app/JulyWu.png"}
-                      alt="July Wu"
-                      width={80}
-                      height={80}
-                      className="rounded-xl bg-zinc-100 w-20 h-20 object-cover"
-                    />
-                    <div>
-                      <p className="font-semibold tracking-tight">July Wu</p>
-                      <p className="text-muted-foreground text-sm tracking-tight">
-                        Co-founder & COO
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
               {/* Arrow link */}
               <Link
