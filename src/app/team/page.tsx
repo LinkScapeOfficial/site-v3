@@ -20,7 +20,7 @@ const people = [
   },
   {
     name: "Eric Yan",
-    role: "Co-founder",
+    role: "Co-founder & CFO",
     imageUrl: "https://cdn.linkscape.app/EricYan.jpg",
     github: "",
   },

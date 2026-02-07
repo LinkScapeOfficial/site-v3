@@ -112,7 +112,7 @@ export default function Index() {
                     <div>
                       <p className="font-semibold tracking-tight">Eric Yan</p>
                       <p className="text-muted-foreground text-sm tracking-tight">
-                        Co-founder
+                        Co-founder & CFO
                       </p>
                     </div>
                   </div>
