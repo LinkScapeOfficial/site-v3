@@ -57,7 +57,7 @@ const people = [
   {
     name: "Evan Luo",
     role: "Fellow & Head of Web",
-    imageUrl: "https://placehold.co/600x600",
+    imageUrl: "https://cdn.linkscape.app/EvanLuo.png",
     github: "https://github.com/evannotfound",
   },
   {
