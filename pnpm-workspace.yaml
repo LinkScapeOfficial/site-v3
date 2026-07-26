@@ -1,0 +1,8 @@
+# pnpm will not run a dependency's install scripts unless it is approved here,
+# and pnpm 11 reads these settings from this file rather than from package.json.
+# Both packages below build a native binary:
+#   sharp          image optimisation for next/image
+#   unrs-resolver  the resolver behind eslint-plugin-import
+allowBuilds:
+  sharp: true
+  unrs-resolver: true

@@ -1,148 +1,101 @@
 import Link from "next/link";
 import Image from "next/image";
+import { site } from "@/content/site";
 
-const navigation = [
-  { name: "About", href: "/about" },
-  { name: "Team", href: "/team" },
-  { name: "Projects", href: "/projects" },
-];
-
-const social = [
+const columns = [
   {
-    name: "GitHub",
-    href: "https://github.com/LinkScapeOfficial",
+    heading: "Explore",
+    links: [
+      { name: "Work", href: "/work" },
+      { name: "About", href: "/about" },
+      { name: "Team", href: "/team" },
+      { name: "Join", href: "/join" },
+    ],
   },
   {
-    name: "Twitter",
-    href: "https://twitter.com/RealLinkScape",
+    heading: "Governance",
+    links: [
+      { name: "All documents", href: "/governance" },
+      { name: "Mission & Values", href: "/governance/g-01" },
+      { name: "Code of Conduct", href: "/governance/pp-01" },
+      { name: "Responsible AI", href: "/governance/e-01" },
+      { name: "Privacy", href: "/governance/e-02" },
+    ],
   },
   {
-    name: "Discord",
-    href: "https://discord.gg/WDdvabyKaH",
+    heading: "Elsewhere",
+    links: [
+      { name: "GitHub", href: site.social.github },
+      { name: "Discord", href: site.social.discord },
+      { name: "X", href: site.social.x },
+      { name: "SH Hacks", href: "https://www.shhacks.com/" },
+      { name: "Donate", href: "/donate" },
+    ],
   },
 ];
 
 export default function Footer() {
   return (
-    <footer className="linkscape-wrapper">
-      <section className="flex flex-col sm:grid sm:grid-cols-12 gap-8 sm:gap-0 py-16 border-x border-border border-dashed px-4 relative">
-
-        <div className="pointer-events-none absolute inset-0 hidden sm:block">
-          <div
-            className="border-ds-gray-alpha-400 absolute top-0 h-full border-l border-dashed"
-            style={{ left: "calc(50% - 0.5px)" }}
-          ></div>
-          <div
-            className="border-ds-gray-alpha-400 absolute top-0 h-full border-l border-dashed"
-            style={{ left: "calc(75% - 0.5px)" }}
-          ></div>
-        </div>
-
-        {/* Logo and copyright section */}
-        <div className="flex flex-col items-start sm:col-span-8 z-20">
-          <Image
-            src={
-              "https://evan.beee.top/img/38a40a6e7aef11dee616fc3373c0f1d1-72dad.svg"
-            }
-            alt={"Linkscape logo"}
-            width={648}
-            height={2194}
-            className={"w-32 sm:w-48"}
-          />
-          <div className="text-sm sm:text-base text-left mt-4 sm:mt-6 text-muted-foreground">
-            <div className="mb-2">
-              © {new Date().getFullYear()} LinkScape. All rights reserved.
-            </div>
-            <div className="flex flex-row items-center">
-              <span>An</span>
-              <Link
-                href={"https://evannotfound.com"}
-                className="text-muted-foreground hover:text-primary transition-all duration-200 mx-1 underline decoration-zinc-300"
-              >
-                evannotfound
-              </Link>
-              <span>production. Powered by</span>
-              <Link
-                href={
-                  "https://vercel.com/?utm_source=linkscape&utm_campaign=oss"
-                }
-                className="inline-flex items-center"
-              >
-                <Image
-                  src={"https://files.ohevan.com/tmp/Vercel_logo_black.svg"}
-                  alt={"Vercel logo"}
-                  width={158}
-                  height={48}
-                  className={"inline-block ml-1 w-12 sm:w-16"}
-                />
-              </Link>
-              <span>.</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile navigation sections */}
-        <div className="flex flex-row justify-between gap-8 sm:hidden">
-          <div className="flex flex-col">
-            <h3 className="text-sm font-medium text-primary mb-2">Contacts</h3>
-            <div className="flex flex-col gap-1">
-              {social.map((item) => (
+    <footer className="surface border-t border-border">
+      <div className="linkscape-wrapper">
+        <div className="lattice-dashed relative px-4 py-16">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-5">
+            <div className="col-span-2">
+              <Image
+                src="https://cdn.linkscape.app/linkscape-logo.png"
+                alt="LinkScape"
+                width={244}
+                height={72}
+                sizes="108px"
+                className="h-8 w-auto dark:invert"
+              />
+              <p className="mt-5 max-w-xs text-sm leading-relaxed text-muted-foreground">
+                {site.positioning}
+              </p>
+              <div className="mt-6 flex flex-wrap items-center gap-2">
                 <Link
-                  href={item.href}
-                  key={item.name}
-                  className="text-muted-foreground hover:text-primary transition-all duration-200 text-sm"
+                  href={site.fiscalSponsor.url}
+                  className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1.5 text-xs text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  {item.name}
+                  <Image
+                    src="https://assets.hackclub.com/flag-orpheus-left.svg"
+                    alt=""
+                    width={64}
+                    height={20}
+                    className="h-4 w-auto"
+                  />
+                  Fiscally sponsored by Hack Club
                 </Link>
-              ))}
+              </div>
             </div>
-          </div>
-          <div className="flex flex-col">
-            <h3 className="text-sm font-medium text-primary mb-2">Navigation</h3>
-            <div className="flex flex-col gap-1">
-              {navigation.map((item) => (
-                <Link
-                  href={item.href}
-                  key={item.name}
-                  className="text-muted-foreground hover:text-primary transition-all duration-200 text-sm"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
 
-        {/* Desktop navigation sections */}
-        <div className="hidden sm:flex flex-col justify-center items-end sm:col-start-9 z-20">
-          <h3 className="text-sm font-medium text-primary">Contacts</h3>
-          <div className="flex flex-col mt-3 gap-2 items-end text-sm">
-            {social.map((item) => (
-              <Link
-                href={item.href}
-                key={item.name}
-                className="text-muted-foreground hover:text-primary transition-all duration-200"
-              >
-                {item.name}
-              </Link>
+            {columns.map((col) => (
+              <div key={col.heading} className="flex flex-col">
+                <h2 className="mono-label mb-3">{col.heading}</h2>
+                <ul className="flex flex-col gap-2 text-sm">
+                  {col.links.map((l) => (
+                    <li key={l.name}>
+                      <Link
+                        href={l.href}
+                        className="text-muted-foreground transition-colors hover:text-foreground"
+                      >
+                        {l.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
-        </div>
-        <div className="hidden sm:flex flex-col justify-center items-end sm:col-start-12 z-20">
-          <h3 className="text-sm font-medium text-primary">Navigation</h3>
-          <div className="flex flex-col mt-3 gap-2 items-end text-sm">
-            {navigation.map((item) => (
-              <Link
-                href={item.href}
-                key={item.name}
-                className="text-muted-foreground hover:text-primary transition-all duration-200"
-              >
-                {item.name}
-              </Link>
-            ))}
+
+          <div className="mt-12 flex flex-col gap-3 border-t border-dashed border-border pt-6 text-xs leading-relaxed text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+            <p className="max-w-2xl">{site.fiscalSponsor.statement}</p>
+            {/* No year: this is a static build, so a rendered year freezes
+                at deploy time and quietly goes stale. */}
+            <p className="shrink-0 font-mono">&copy; LinkScape</p>
           </div>
         </div>
-      </section>
+      </div>
     </footer>
   );
 }

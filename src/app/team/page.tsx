@@ -1,154 +1,183 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import NavBar from "@/components/header";
-import { Metadata } from "next";
+import { Mail } from "lucide-react";
 import { MarkGithubIcon } from "@primer/octicons-react";
-import BlurFadeStagger from "@/components/animations/blur-fade-stagger";
+
+import PageHero from "@/components/layout/page-hero";
+import { Section, SectionHeader } from "@/components/layout/section";
+import Spotlight from "@/components/animations/spotlight";
 import { Button } from "@/components/ui/button";
+import { Chip } from "@/components/ui/chip";
+import { people, tiers, byTier } from "@/content/team";
+import { site } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "LinkScape | Team",
-  description: "Meet the LinkScape team",
+  title: "Team",
+  description:
+    "The officers, members, and fellows behind LinkScape, and what each is accountable for.",
 };
-
-const people = [
-  {
-    name: "Thomas Wu",
-    role: "Founder & CEO",
-    imageUrl: "https://avatars.githubusercontent.com/u/62056970",
-    github: "https://github.com/TakumiBC",
-  },
-  {
-    name: "Eric Yan",
-    role: "Co-founder & CFO",
-    imageUrl: "https://cdn.linkscape.app/EricYan.jpg",
-    github: "",
-  },
-  {
-    name: "Zigao Wang",
-    role: "CTO",
-    imageUrl: "https://avatars.githubusercontent.com/u/102006756",
-    github: "https://github.com/ZigaoWang",
-  },
-  {
-    name: "Lily Ding",
-    role: "Member",
-    imageUrl: "https://avatars.githubusercontent.com/u/188736174",
-    github: "https://github.com/Lily-D-coder",
-  },
-  {
-    name: "July Wu",
-    role: "Member",
-    imageUrl: "https://cdn.linkscape.app/JulyWu.png",
-    github: "https://github.com/JLW-7",
-  },
-  {
-    name: "Matthew Dong",
-    role: "Member",
-    imageUrl: "https://cdn.linkscape.app/MattDong.jpg",
-    github: "https://github.com/matt-dong-123",
-  },
-  {
-    name: "Jett Chen",
-    role: "Fellow & Former Co-founder",
-    imageUrl: "https://cdn.linkscape.app/JettChen.png",
-    github: "https://github.com/JettChenT",
-  },
-  {
-    name: "Evan Luo",
-    role: "Fellow & Head of Web",
-    imageUrl: "https://cdn.linkscape.app/EvanLuo.png",
-    github: "https://github.com/evannotfound",
-  },
-  {
-    name: "Tz-yun Hsiao",
-    role: "Fellow & Head of Designs",
-    imageUrl: "https://cdn.linkscape.app/TzeYunHsiao.png",
-    github: "https://github.com/Powerlean",
-  },
-];
 
 export default function Team() {
   return (
     <>
-      <NavBar />
-      <main className="flex flex-col min-h-screen">
-        {/* Hero Title */}
-        <section className="relative bg-background">
-          {/* Gradient shine overlay at the bottom */}
-          <div
-            className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-radial from-blue-300/20 via-blue-300/5 to-transparent pointer-events-none z-10"
-            style={{
-              background:
-                "radial-gradient(ellipse at bottom center, rgba(147, 197, 253, 0.2) 0%, rgba(147, 197, 253, 0.05) 50%, transparent 100%)",
-            }}
-          ></div>
-          <div className="linkscape-wrapper">
-            <div className="flex flex-col gap-4 pt-32 pb-16 border-x border-border border-dashed px-4">
-              <BlurFadeStagger initialDelay={0.1}>
-                <h1 className="font-semibold tracking-tight text-4xl sm:text-5xl w-full text-transparent bg-clip-text bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-500">
-                  Team
-                </h1>
-                <h2 className="text-base sm:text-lg text-gh-text-secondary max-w-md">
-                  Meet the team behind LinkScape.
-                </h2>
-              </BlurFadeStagger>
-            </div>
-          </div>
-        </section>
+      <PageHero
+        eyebrow={`${people.length} people`}
+        title="Team"
+        lede="Three officers, three members, three fellows. Every officer publishes their own address."
+      />
 
-        {/* Team section */}
-        <section className="relative border-y border-border bg-white">
-          <div className="linkscape-wrapper">
-            <div className="border-x border-border">
-              {/* Team members list */}
-              <div className="flex flex-col">
-                {people.map((person, index) => (
-                  <div 
-                    key={index} 
-                    className={`bg-white hover:bg-gray-50 transition-colors flex flex-row items-center p-6 min-h-[120px] ${
-                      index !== people.length - 1 ? 'border-b border-border' : ''
-                    }`}
+      {tiers.map((tier, ti) => {
+        const group = byTier(tier.key);
+        const isLeadership = tier.key === "leadership";
+
+        return (
+          <Section key={tier.key} topBorder={ti === 0}>
+            <SectionHeader
+              eyebrow={`${group.length} ${group.length === 1 ? "person" : "people"}`}
+              title={tier.title}
+              lede={tier.blurb}
+            />
+
+            <div
+              className={
+                isLeadership
+                  ? "flex flex-col"
+                  : "-mb-px -mr-px grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+              }
+            >
+              {group.map((person) =>
+                isLeadership ? (
+                  <Spotlight
+                    key={person.name}
+                    className="border-b border-border"
                   >
-                    {/* Profile Picture */}
-                    <div className="flex-shrink-0 mr-6">
+                    <div className="flex flex-col gap-6 p-6 sm:flex-row sm:items-start sm:p-8">
                       <Image
-                        src={person.imageUrl || "https://assets.ohevan.com/img/a3c212565127bde07c193731c3a1e997-421e1.svg"}
+                        src={person.imageUrl}
                         alt={person.name}
-                        width={100}
-                        height={100}
-                        className="rounded-xl bg-zinc-100 w-24 h-24 object-cover"
+                        width={120}
+                        height={120}
+                        className="h-20 w-20 shrink-0 rounded-xl bg-muted object-cover sm:h-24 sm:w-24"
                       />
-                    </div>
-
-                    {/* Info Content */}
-                    <div className="flex-1 flex flex-col justify-center">
-                      <h3 className="text-2xl font-semibold tracking-tight mb-1">
-                        {person.name}
-                      </h3>
-                      <p className="text-muted-foreground text-base tracking-tight mb-3">
-                        {person.role}
-                      </p>
-                      
-                      {/* GitHub Button */}
-                      {person.github && (
-                        <div>
-                          <Button variant="outline" size="sm" asChild className="rounded-full">
-                            <Link href={person.github} className="flex items-center !gap-1">
-                              <MarkGithubIcon className="w-4 h-4 mr-2" />
-                              <span className="text-sm">{person.github.replace("https://github.com/", "")}</span>
-                            </Link>
-                          </Button>
+                      <div className="flex-1">
+                        <div className="flex flex-wrap items-center gap-3">
+                          <h3 className="text-xl font-semibold tracking-tight sm:text-2xl">
+                            {person.name}
+                          </h3>
+                          {person.term ? (
+                            <Chip tone="neutral" mono>
+                              {person.term}
+                            </Chip>
+                          ) : null}
                         </div>
-                      )}
+                        <p className="mt-1 text-base tracking-tight text-muted-foreground">
+                          {person.role}
+                        </p>
+                        {person.remit ? (
+                          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-foreground/80">
+                            {person.remit}
+                          </p>
+                        ) : null}
+                        <div className="mt-5 flex flex-wrap gap-2">
+                          {person.email ? (
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              asChild
+                              className="rounded-full"
+                            >
+                              <Link href={`mailto:${person.email}`}>
+                                <Mail className="mr-2 h-3.5 w-3.5" />
+                                {person.email}
+                              </Link>
+                            </Button>
+                          ) : null}
+                          {person.github ? (
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              asChild
+                              className="rounded-full"
+                            >
+                              <Link href={person.github}>
+                                <MarkGithubIcon className="mr-2 h-3.5 w-3.5" />
+                                {person.github.replace(
+                                  "https://github.com/",
+                                  "",
+                                )}
+                              </Link>
+                            </Button>
+                          ) : null}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  </Spotlight>
+                ) : (
+                  <Spotlight
+                    key={person.name}
+                    className="border-b border-r border-border"
+                  >
+                    <div className="flex h-full flex-col items-start gap-4 p-6">
+                      <Image
+                        src={person.imageUrl}
+                        alt={person.name}
+                        width={96}
+                        height={96}
+                        className="h-16 w-16 rounded-xl bg-muted object-cover"
+                      />
+                      <div className="flex-1">
+                        <p className="font-semibold tracking-tight">
+                          {person.name}
+                        </p>
+                        <p className="mt-0.5 text-sm text-muted-foreground">
+                          {person.role}
+                        </p>
+                      </div>
+                      {person.github ? (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          asChild
+                          className="rounded-full"
+                        >
+                          <Link href={person.github}>
+                            <MarkGithubIcon className="mr-2 h-3.5 w-3.5" />
+                            {person.github.replace("https://github.com/", "")}
+                          </Link>
+                        </Button>
+                      ) : null}
+                    </div>
+                  </Spotlight>
+                ),
+              )}
             </div>
+          </Section>
+        );
+      })}
+
+      <Section topBorder={false}>
+        <div className="flex flex-col gap-5 border-b border-border p-8 sm:flex-row sm:items-center sm:justify-between sm:p-10">
+          <div>
+            <h2 className="text-lg font-semibold tracking-tight">
+              Want to be on this page?
+            </h2>
+            <p className="mt-1.5 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              We take students who finish what they start. Write to{" "}
+              <Link
+                href={`mailto:${site.email.general}`}
+                className="underline underline-offset-2"
+              >
+                {site.email.general}
+              </Link>
+              .
+            </p>
           </div>
-        </section>
-      </main>
+          <Button asChild className="shrink-0 rounded-full">
+            <Link href="/join">How to join</Link>
+          </Button>
+        </div>
+      </Section>
     </>
   );
 }

@@ -40,3 +40,9 @@ next-env.d.ts
 .idea/workspace.xml
 
 .env
+# Organizational document pack: internal, held outside this repository
+/LinkScape/
+
+# python
+__pycache__/
+*.pyc

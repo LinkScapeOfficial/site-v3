@@ -1,270 +1,272 @@
-import Newsletter from "@/components/newsletter";
-import NavBar from "@/components/header";
-import { Metadata } from "next";
-import BlurFadeStagger from "@/components/animations/blur-fade-stagger";
-import { HeartIcon } from "@primer/octicons-react";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { MarkGithubIcon } from "@primer/octicons-react";
-import BlurFade from "@/components/animations/blur-fade";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { Divider } from "@/components/ui/divider";
-import { CircleArrowRight } from "lucide-react";
+import { ArrowRight, CircleArrowRight } from "lucide-react";
+import { MarkGithubIcon } from "@primer/octicons-react";
 
-export const metadata: Metadata = {
-  title: "LinkScape | Home",
-  description: "We are LinkScape.",
-};
+import PageHero from "@/components/layout/page-hero";
+import { Section, SectionHeader, LatticeSpacer } from "@/components/layout/section";
+import { LatticeGrid, LatticeCell } from "@/components/layout/lattice";
+import StatCell, { type Stat } from "@/components/stat-cell";
+import WorkCard from "@/components/work-card";
+import PartnerMarquee from "@/components/partner-marquee";
+import Spotlight from "@/components/animations/spotlight";
+import BlurFade from "@/components/animations/blur-fade";
+import { Button } from "@/components/ui/button";
+import { site, pillars } from "@/content/site";
+import { featured } from "@/content/work";
+import { byTier } from "@/content/team";
 
-export default function Index() {
+const stats: Stat[] = [
+  {
+    value: 80,
+    prefix: "×",
+    label: "NVIDIA H100 GPUs",
+    note: "Members train on the same class of hardware as a corporate lab.",
+  },
+  {
+    value: 14,
+    label: "Public repositories",
+    note: "Everything we have shipped, free to read and reuse.",
+  },
+  {
+    value: 9,
+    label: "People on the team",
+    note: "Three officers, three members, three fellows.",
+  },
+  {
+    label: "Students reached",
+    note: "We publish this once our program records are verified.",
+  },
+];
+
+export default function Home() {
+  const leadership = byTier("leadership");
+
   return (
     <>
-      <NavBar />
-      <main className="flex flex-col min-h-screen">
-        {/* Home Title  */}
-        <section className="relative bg-background">
-          {/* Gradient shine overlay at the bottom */}
-          <div
-            className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-radial from-blue-300/20 via-blue-300/5 to-transparent pointer-events-none z-10"
-            style={{
-              background:
-                "radial-gradient(ellipse at bottom center, rgba(147, 197, 253, 0.2) 0%, rgba(147, 197, 253, 0.05) 50%, transparent 100%)",
-            }}
-          ></div>
-          <div className="linkscape-wrapper">
-            <div className="flex flex-col gap-4 pt-96 pb-20 border-x border-border border-dashed px-4">
-              <BlurFadeStagger initialDelay={0.1}>
-                <h1 className="font-semibold tracking-tight text-4xl sm:text-5xl w-full text-transparent bg-clip-text bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-500">
-                  Hack, Build, Compete
-                </h1>
-                <h2 className="text-base sm:text-lg text-gh-text-secondary max-w-md">
-                  At LinkScape, we believe in the power of open source.
-                </h2>
-                <div className="flex flex-row gap-3 mt-4">
-                  <div>
-                    <Link href={"https://github.com/LinkScapeOfficial"}>
-                      <Button className="mr-3 flex items-center rounded-full bg-gh-dark-bg px-6 py-6 gh-border text-white hover:bg-gh-gray-8 shadow-xl hover:shadow-2xl transition-all hover:scale-105 active:scale-95 active:shadow-sm">
-                        <MarkGithubIcon className="mr-2 h-5 w-5" />
-                        <div className="font-semibold">GitHub</div>
-                      </Button>
-                    </Link>
-                  </div>
-                  <div>
-                    <Link href={"/donate"}>
-                      <Button className="flex items-center rounded-full bg-gh-bg px-4 py-6 gh-border text-gh-text-primary hover:bg-gradient-to-br hover:from-red-500/80 hover:to-pink-600/80 hover:text-white transition-all shadow-sm active:scale-95">
-                        <HeartIcon className="mr-2 h-5 w-5" />
-                        <div className="font-semibold">Donate</div>
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              </BlurFadeStagger>
-            </div>
-          </div>
-        </section>
-
-        {/* Team section */}
-        <section className="relative border-t border-border bg-white">
-          <div className="linkscape-wrapper">
-            <div className="flex flex-col border-x border-border">
-              {/* Title section */}
-              <div className="py-12 border-b border-border px-4">
-                <h2 className="font-semibold text-3xl tracking-tight">
-                  Meet the team
-                </h2>
-                <p className="text-lg text-muted-foreground tracking-tight">
-                  The team behind LinkScape.
-                </p>
-              </div>
-
-              {/* Team members */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-                {/* Thomas Wu */}
-                <div className="border-r border-b border-border last:border-r-0">
-                  <div className="p-6 flex flex-col items-center text-center gap-4 min-h-[200px]">
-                    <Image
-                      src={"https://avatars.githubusercontent.com/u/62056970"}
-                      alt="Thomas Wu"
-                      width={80}
-                      height={80}
-                      className="rounded-xl bg-zinc-100 w-20 h-20 object-cover"
-                    />
-                    <div>
-                      <p className="font-semibold tracking-tight">Thomas Wu</p>
-                      <p className="text-muted-foreground text-sm tracking-tight">
-                        Founder & CEO
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Eric Yan */}
-                <div className="border-r border-b border-border last:border-r-0">
-                  <div className="p-6 flex flex-col items-center text-center gap-4 min-h-[200px]">
-                    <Image
-                      src={"https://cdn.linkscape.app/EricYan.jpg"}
-                      alt="Eric Yan"
-                      width={80}
-                      height={80}
-                      className="rounded-xl bg-zinc-100 w-20 h-20 object-cover"
-                    />
-                    <div>
-                      <p className="font-semibold tracking-tight">Eric Yan</p>
-                      <p className="text-muted-foreground text-sm tracking-tight">
-                        Co-founder & CFO
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Zigao Wang */}
-                <div className="border-r border-b border-border last:border-r-0">
-                  <div className="p-6 flex flex-col items-center text-center gap-4 min-h-[200px]">
-                    <Image
-                      src={"https://avatars.githubusercontent.com/u/102006756"}
-                      alt="Zigao Wang"
-                      width={80}
-                      height={80}
-                      className="rounded-xl bg-zinc-100 w-20 h-20 object-cover"
-                    />
-                    <div>
-                      <p className="font-semibold tracking-tight">Zigao Wang</p>
-                      <p className="text-muted-foreground text-sm tracking-tight">
-                        CTO
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Lily Ding */}
-                <div className="border-r border-b border-border last:border-r-0">
-                  <div className="p-6 flex flex-col items-center text-center gap-4 min-h-[200px]">
-                    <Image
-                      src={"https://avatars.githubusercontent.com/u/188736174"}
-                      alt="Lily Ding"
-                      width={80}
-                      height={80}
-                      className="rounded-xl bg-zinc-100 w-20 h-20 object-cover"
-                    />
-                    <div>
-                      <p className="font-semibold tracking-tight">Lily Ding</p>
-                      <p className="text-muted-foreground text-sm tracking-tight">
-                        Member
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Arrow link */}
-              <Link
-                href={"/team"}
-                className=" bg-white hover:bg-gray-50 transition-all duration-200 group"
-              >
-                <div className="flex items-center justify-center py-8 gap-2">
-                  <span className="text-lg text-muted-foreground mr-2 tracking-tight">
-                    See all team members
-                  </span>
-                  <CircleArrowRight
-                    className="w-5 h-5 group-hover:translate-x-0.5 transition-transform duration-200 text-muted-foreground"
-                    strokeWidth={1.5}
-                  />
-                </div>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        <div className="linkscape-wrapper bg-white">
-          <Divider variant="diagonal" className="border border-border h-12" />
+      <PageHero
+        size="tall"
+        eyebrow="Youth-led · open source · AI"
+        title={site.tagline}
+        lede="We give high-school and university students an 80-GPU cluster, a real research problem, and someone to review their code. Everything they build ships open source."
+      >
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Button
+            asChild
+            className="h-12 rounded-full px-6 shadow-lg transition-all hover:scale-[1.03] hover:shadow-xl active:scale-95 active:shadow-sm"
+          >
+            <Link href="/work">
+              Explore our work
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+          <Button
+            asChild
+            variant="outline"
+            className="h-12 rounded-full border-border bg-background px-6 shadow-sm transition-all hover:scale-[1.03] active:scale-95"
+          >
+            <Link href="/join">Join us</Link>
+          </Button>
+          <Button
+            asChild
+            variant="ghost"
+            className="h-12 rounded-full px-5 text-muted-foreground hover:text-foreground"
+          >
+            <Link href={site.social.github}>
+              <MarkGithubIcon className="mr-2 h-4 w-4" />
+              GitHub
+            </Link>
+          </Button>
         </div>
-
-        {/* Sponsors section */}
-        <section className="relative bg-white">
-          <div className="linkscape-wrapper">
-            <div className="flex flex-col border-x border-border">
-              {/* Title section */}
-              <div className="py-12 border-b border-border px-4">
-                <h2 className="font-semibold text-3xl tracking-tight">
-                  Partners
-                </h2>
-                <p className="text-lg text-muted-foreground tracking-tight">
-                  LinkScape is proudly partnering with the following companies /
-                  nonprofits.
+      </PageHero>
+      <Section>
+        <div className="-mb-px -mr-px grid grid-cols-2 lg:grid-cols-4">
+          {stats.map((s) => (
+            <StatCell key={s.label} stat={s} />
+          ))}
+        </div>
+      </Section>
+      <Section topBorder={false}>
+        <SectionHeader
+          eyebrow="How the work is organized"
+          title="Three pillars"
+          lede="Every program serves at least one. The best ones serve all three."
+        />
+        <LatticeGrid cols={3}>
+          {pillars.map((p, i) => (
+            <Spotlight key={p.key} className="border-b border-r border-border">
+              <div className="flex h-full flex-col p-7">
+                <span className="mono-label">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="mt-4 text-lg font-semibold tracking-tight">
+                  {p.name}
+                </h3>
+                <p className="mt-2 text-[15px] font-medium leading-relaxed">
+                  {p.line}
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {p.body}
                 </p>
               </div>
+            </Spotlight>
+          ))}
+        </LatticeGrid>
+      </Section>
+      <Section topBorder={false}>
+        <SectionHeader
+          eyebrow="Selected work"
+          title="What we have built"
+          lede="Two research projects, two tools people use daily, and the hackathon where most of us met."
+          action={
+            <Button asChild variant="outline" className="rounded-full">
+              <Link href="/work">
+                See everything
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          }
+        />
+        <div className="-mb-px -mr-px grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {featured.slice(0, 6).map((item) => (
+            <WorkCard key={item.slug} item={item} />
+          ))}
+        </div>
+      </Section>
 
-              {/* Partners grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-                {/* Hack Club */}
-                <div className="border-r border-b border-border last:border-r-0">
-                  <Link
-                    href={"https://hackclub.com/"}
-                    className="p-6 flex flex-col items-center justify-center min-h-[160px] hover:bg-gray-50 transition-colors"
-                  >
-                    <Image
-                      src="https://assets.hackclub.com/flag-orpheus-left.svg"
-                      alt="Hack Club"
-                      width={120}
-                      height={36}
-                      className="max-h-9 w-auto object-contain"
-                    />
-                  </Link>
-                </div>
-
-                {/* Figma */}
-                <div className="border-r border-b border-border last:border-r-0">
-                  <Link
-                    href={"https://www.figma.com/"}
-                    className="p-6 flex flex-col items-center justify-center min-h-[160px] hover:bg-gray-50 transition-colors"
-                  >
-                    <Image
-                      src="https://files.ohevan.com/tmp/Figma-Wordmark-Black.svg"
-                      alt="Figma"
-                      width={120}
-                      height={36}
-                      className="max-h-9 w-auto object-contain"
-                    />
-                  </Link>
-                </div>
-
-                {/* AdventureX */}
-                <div className="border-r border-b border-border last:border-r-0">
-                  <Link
-                    href={"https://adventure-x.org/en"}
-                    className="p-6 flex flex-col items-center justify-center min-h-[160px] hover:bg-gray-50 transition-colors"
-                  >
-                    <Image
-                      src="https://cdn.linkscape.app/adventureX.png"
-                      alt="AdventureX"
-                      width={120}
-                      height={36}
-                      className="max-h-9 w-auto object-contain"
-                    />
-                  </Link>
-                </div>
-
-                {/* Spark Lab */}
-                <div className="border-r border-b border-border last:border-r-0">
-                  <Link
-                    href={"https://www.twilio.com/"}
-                    className="p-6 flex flex-col items-center justify-center min-h-[160px] hover:bg-gray-50 transition-colors"
-                  >
-                    <Image
-                      src="https://cdn.linkscape.app/spark_logo.png"
-                      alt="Spark Lab"
-                      width={120}
-                      height={36}
-                      className="max-h-9 w-auto object-contain"
-                    />
-                  </Link>
-                </div>
+      <LatticeSpacer />
+      <Section topBorder={false}>
+        <div className="relative grid grid-cols-1 items-stretch lg:grid-cols-5">
+          <div className="border-b border-border p-8 sm:p-12 lg:col-span-3 lg:border-b-0 lg:border-r">
+            <BlurFade inView>
+              <p className="mono-label">What makes it credible</p>
+              <h2 className="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">
+                Eighty H100s, pointed at students
+              </h2>
+              <div className="mt-5 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
+                <p>
+                  A training run that would take three weeks on a laptop
+                  finishes here overnight. That single fact decides which ideas
+                  a student can actually test, and it is why our members
+                  co-author papers instead of reading them.
+                </p>
+                <p>
+                  Access is tiered and every job is logged. The CTO signs off on
+                  allocations under our compute policy, so a first-year member
+                  and a research lead get different quotas and both know why.
+                </p>
               </div>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <Button asChild variant="outline" className="rounded-full">
+                  <Link href="/join">
+                    Get access
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button asChild variant="ghost" className="rounded-full">
+                  <Link href="/work/cnm-bert">See what came out of it</Link>
+                </Button>
+              </div>
+            </BlurFade>
+          </div>
+
+          <div className="flex flex-col justify-center gap-px bg-border lg:col-span-2">
+            {[
+              { k: "Cluster", v: "80× NVIDIA H100" },
+              { k: "Access", v: "Tiered, logged, CTO-approved" },
+              { k: "Cost to members", v: "Nothing" },
+              { k: "Output licence", v: "Open source" },
+            ].map((row) => (
+              <div
+                key={row.k}
+                className="surface row-hover flex items-baseline justify-between px-8 py-5 sm:px-12"
+              >
+                <span className="mono-label">{row.k}</span>
+                <span className="text-right text-sm font-medium tracking-tight">
+                  {row.v}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+      <Section topBorder>
+        <SectionHeader
+          eyebrow="Who runs it"
+          title="Meet the team"
+          lede="Three officers run LinkScape. Each publishes their own address and answers it."
+        />
+        <LatticeGrid cols={3}>
+          {leadership.map((person) => (
+            <Spotlight key={person.name} className="border-b border-r border-border">
+              <div className="flex h-full flex-col items-start gap-4 p-7">
+                <Image
+                  src={person.imageUrl}
+                  alt={person.name}
+                  width={80}
+                  height={80}
+                  className="h-16 w-16 rounded-xl bg-muted object-cover"
+                />
+                <div>
+                  <p className="font-semibold tracking-tight">{person.name}</p>
+                  <p className="text-sm text-muted-foreground">{person.role}</p>
+                </div>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {person.remit}
+                </p>
+              </div>
+            </Spotlight>
+          ))}
+        </LatticeGrid>
+        <Link
+          href="/team"
+          className="row-hover group flex items-center justify-center gap-2 py-8"
+        >
+          <span className="text-base tracking-tight text-muted-foreground">
+            Meet the members and fellows
+          </span>
+          <CircleArrowRight
+            className="h-5 w-5 text-muted-foreground transition-transform duration-200 group-hover:translate-x-1"
+            strokeWidth={1.5}
+          />
+        </Link>
+      </Section>
+      <Section topBorder={false}>
+        <SectionHeader
+          eyebrow="Who we work with"
+          title="Partners"
+          lede="They fund the venues, the compute, and the events."
+        />
+        <div className="border-b border-border">
+          <PartnerMarquee />
+        </div>
+      </Section>
+      <Section topBorder={false}>
+        <div className="flex flex-col gap-6 border-b border-border p-8 sm:flex-row sm:items-center sm:justify-between sm:p-12">
+          <div className="flex items-center gap-5">
+            <Image
+              src="https://assets.hackclub.com/flag-orpheus-left.svg"
+              alt="Hack Club"
+              width={140}
+              height={42}
+              className="h-9 w-auto"
+            />
+            <div>
+              <p className="text-sm font-semibold tracking-tight">
+                Backed by Hack Club
+              </p>
+              <p className="mt-1 max-w-xl text-sm leading-relaxed text-muted-foreground">
+                Your donation is tax-deductible and Hack Club issues the
+                receipt. {site.fiscalSponsor.statement}
+              </p>
             </div>
           </div>
-        </section>
-      </main>
+          <Button asChild className="shrink-0 rounded-full">
+            <Link href="/donate">
+              Support the work
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
+      </Section>
     </>
   );
 }

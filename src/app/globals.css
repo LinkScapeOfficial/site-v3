@@ -2,19 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.gh-border {
-  @apply border border-solid border-gh-gray-2;
-}
-
-.background-dotted {
-  background-size: 40px 40px;
-  background-image: radial-gradient(
-    circle,
-    rgb(214, 219, 220) 1.2px,
-    rgb(255, 255, 255) 1.2px
-  );
-}
-
 @layer base {
   :root {
     --background: 0 0% 98%;
@@ -36,17 +23,18 @@
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 240 10% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+
+    /* Surface the lattice reads against. Light mode keeps the original white. */
+    --surface: 0 0% 100%;
+    --hover: 210 20% 98%;
+    --shine: 147 197 253;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
+    --card: 240 10% 5.9%;
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
@@ -60,14 +48,13 @@
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
+    --border: 240 4% 16%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+
+    --surface: 240 10% 4.6%;
+    --hover: 240 5% 10%;
+    --shine: 84 174 255;
   }
 }
 
@@ -85,6 +72,182 @@ body {
   scrollbar-gutter: stable;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .linkscape-wrapper {
-  @apply mx-auto max-w-6xl w-full px-4 sm:px-8;
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-8;
+}
+
+@layer components {
+  /* Content lives inside ruled columns. */
+  .lattice {
+    @apply border-x border-border;
+  }
+  .lattice-dashed {
+    @apply border-x border-dashed border-border;
+  }
+  .surface {
+    background-color: hsl(var(--surface));
+  }
+  .row-hover {
+    @apply transition-colors duration-200;
+  }
+  .row-hover:hover {
+    background-color: hsl(var(--hover));
+  }
+
+  .heading-gradient {
+    @apply bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-500 bg-clip-text text-transparent;
+  }
+  .dark .heading-gradient {
+    @apply from-zinc-50 via-zinc-200 to-zinc-500;
+  }
+
+  .mono-label {
+    @apply font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground;
+  }
+}
+
+/* The bloom that closes every hero. */
+.hero-shine {
+  background: radial-gradient(
+    ellipse at bottom center,
+    rgb(var(--shine) / 0.22) 0%,
+    rgb(var(--shine) / 0.05) 50%,
+    transparent 100%
+  );
+}
+
+.grid-field {
+  background-image:
+    linear-gradient(to right, hsl(var(--border) / 0.55) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--border) / 0.55) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 20%, transparent 75%);
+  -webkit-mask-image: radial-gradient(
+    ellipse 80% 60% at 50% 40%,
+    #000 20%,
+    transparent 75%
+  );
+}
+
+.diagonal-hatch {
+  @apply text-border;
+  background-image: repeating-linear-gradient(
+    315deg,
+    currentColor 0 1px,
+    transparent 1px 50%
+  );
+  background-size: 10px 10px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee var(--marquee-duration, 42s) linear infinite;
+}
+.marquee-mask {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+}
+
+/* Governance documents. */
+.prose-linkscape {
+  @apply text-[15px] leading-[1.75];
+  color: hsl(var(--foreground) / 0.85);
+}
+.prose-linkscape h2 {
+  @apply mb-3 mt-12 scroll-mt-24 border-b border-border pb-2 text-xl font-semibold tracking-tight text-foreground;
+}
+.prose-linkscape h3 {
+  @apply mb-2 mt-8 scroll-mt-24 text-base font-semibold tracking-tight text-foreground;
+}
+.prose-linkscape h4 {
+  @apply mb-2 mt-6 scroll-mt-24 text-sm font-semibold tracking-tight text-foreground;
+}
+.prose-linkscape p {
+  @apply mb-4;
+}
+.prose-linkscape ul {
+  @apply mb-5 list-disc space-y-1.5 pl-5 marker:text-gh-gray-3;
+}
+.prose-linkscape ol {
+  @apply mb-5 list-decimal space-y-1.5 pl-5 marker:text-gh-gray-4;
+}
+.prose-linkscape li {
+  @apply pl-1;
+}
+.prose-linkscape a {
+  @apply font-medium text-gh-blue-5 underline decoration-gh-blue-2 underline-offset-2 hover:decoration-gh-blue-5;
+}
+.dark .prose-linkscape a {
+  @apply text-gh-blue-2 decoration-gh-blue-5 hover:decoration-gh-blue-2;
+}
+.prose-linkscape blockquote {
+  @apply my-6 border-l-2 border-gh-blue-4 bg-gh-blue-0/50 px-5 py-4 text-[14.5px];
+  color: hsl(var(--foreground) / 0.9);
+}
+.dark .prose-linkscape blockquote {
+  @apply border-gh-blue-4 bg-gh-blue-5/10;
+}
+.prose-linkscape blockquote p:last-child {
+  @apply mb-0;
+}
+.prose-linkscape table {
+  @apply my-6 w-full border-collapse text-[13.5px];
+}
+.prose-linkscape th {
+  @apply border border-border bg-muted px-3 py-2 text-left font-semibold text-foreground;
+}
+.prose-linkscape td {
+  @apply border border-border px-3 py-2 align-top;
+}
+.prose-linkscape pre {
+  @apply my-6 overflow-x-auto rounded-lg border border-border bg-muted p-4 font-mono text-[12.5px] leading-relaxed;
+}
+.prose-linkscape code {
+  @apply font-mono text-[0.9em];
+}
+.prose-linkscape strong {
+  @apply font-semibold text-foreground;
+}
+
+.scroll-x {
+  @apply overflow-x-auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }

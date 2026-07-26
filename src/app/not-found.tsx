@@ -1,48 +1,49 @@
-import { FaDonate, FaHome } from "react-icons/fa";
 import Link from "next/link";
-import { Metadata } from "next";
-import Header from "@/components/header";
+import type { Metadata } from "next";
+import { ArrowRight } from "lucide-react";
+
+import PageHero from "@/components/layout/page-hero";
+import { Section } from "@/components/layout/section";
 
 export const metadata: Metadata = {
-  title: "LinkScape | 404",
-  description: "We are LinkScape.",
+  title: "Page not found",
+  description: "That page does not exist.",
 };
 
-export default function Home() {
+const elsewhere = [
+  { href: "/work", label: "Work", body: "Two research projects, two tools, one hackathon." },
+  { href: "/about", label: "About", body: "What LinkScape is and who runs it." },
+  { href: "/governance", label: "Governance", body: "Our policies, published in full." },
+  { href: "/join", label: "Join", body: "Four ways in." },
+];
+
+export default function NotFound() {
   return (
     <>
-      <Header />
-      <div className="mb-64 mt-60 flex flex-col items-center justify-center sm:mt-64">
-        <div
-          className="absolute inset-0 grid grid-cols-2 -space-x-12 opacity-40 dark:opacity-20 sm:-space-x-52"
-          style={{ zIndex: -1 }}
-        >
-          <div className="fix-safari-blur h-32 bg-gradient-to-br from-blue-500 to-blue-400 blur-[32px] dark:from-blue-700 sm:h-64 sm:blur-[106px]"></div>
-          <div className="fix-safari-blur h-20 bg-gradient-to-r from-blue-400 to-blue-300 blur-[32px] dark:to-blue-600 sm:h-40 sm:blur-[106px]"></div>
+      <PageHero
+        eyebrow="404"
+        title="Nothing here"
+        lede="This page moved when we reorganized the site. Try one of these."
+      />
+      <Section>
+        <div className="-mr-px grid grid-cols-1 sm:grid-cols-2">
+          {elsewhere.map((c) => (
+            <Link
+              key={c.href}
+              href={c.href}
+              className="row-hover group border-b border-r border-border p-7"
+            >
+              <div className="flex items-center justify-between">
+                <p className="font-semibold tracking-tight">{c.label}</p>
+                <ArrowRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:translate-x-1" />
+              </div>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {c.body}
+              </p>
+            </Link>
+          ))}
         </div>
-        <h1 className="text-center text-4xl font-bold sm:text-8xl">
-          <span className="bg-gradient-to-r from-blue-500 to-purple-700 bg-clip-text text-transparent">
-            404 Error
-          </span>
-        </h1>
-        <div className="py-6 text-center text-base sm:text-lg">
-          Sorry, we couldn&apos;t find the page you&apos;re looking for.
-        </div>
-        <div className="flex flex-row">
-          <Link href="/">
-            <button className="mr-3 flex items-center rounded-md bg-black px-3 py-2 text-white">
-              <FaHome className="mr-1.5 h-7 w-7" />
-              <div className="font-semibold">Home</div>
-            </button>
-          </Link>
-          <Link href="/">
-            <button className="mr-3 flex items-center rounded-md bg-black px-3 py-2 text-white">
-              <FaDonate className="mr-1.5 h-7 w-7" />
-              <div className="font-semibold">Donate</div>
-            </button>
-          </Link>
-        </div>
-      </div>
+      </Section>
     </>
   );
 }

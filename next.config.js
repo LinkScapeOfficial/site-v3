@@ -3,11 +3,20 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     remotePatterns: [
-      new URL("https://cdn.linkscape.app/**"),
-      new URL("https://avatars.githubusercontent.com/**"),
-      new URL("https://files.ohevan.com/**"),
-      new URL("https://assets.ohevan.com/**"),
+      { protocol: "https", hostname: "cdn.linkscape.app" },
+      { protocol: "https", hostname: "avatars.githubusercontent.com" },
+      { protocol: "https", hostname: "assets.hackclub.com" },
+      { protocol: "https", hostname: "files.ohevan.com" },
+      { protocol: "https", hostname: "assets.ohevan.com" },
     ],
+  },
+  async redirects() {
+    return [
+      // /projects and /legal predate the Work hub and the Governance section.
+      // Both were linked externally, so they redirect rather than 404.
+      { source: "/projects", destination: "/work", permanent: true },
+      { source: "/legal", destination: "/governance", permanent: true },
+    ];
   },
 };
 
