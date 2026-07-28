@@ -19,29 +19,23 @@ const people = [
     github: "https://github.com/TakumiBC",
   },
   {
-    name: "Eric Yan",
-    role: "Co-founder & CFO",
-    imageUrl: "https://cdn.linkscape.app/EricYan.jpg",
-    github: "",
-  },
-  {
     name: "Zigao Wang",
-    role: "CTO",
+    role: "Co-founder & CTO",
     imageUrl: "https://avatars.githubusercontent.com/u/102006756",
     github: "https://github.com/ZigaoWang",
   },
   {
     name: "Lily Ding",
-    role: "Member",
+    role: "Co-founder & COO",
     imageUrl: "https://avatars.githubusercontent.com/u/188736174",
     github: "https://github.com/Lily-D-coder",
   },
   {
-    name: "July Wu",
-    role: "Member",
-    imageUrl: "https://cdn.linkscape.app/JulyWu.png",
-    github: "https://github.com/JLW-7",
-  },
+    name: "Eric Yan",
+    role: "Co-founder & CFO",
+    imageUrl: "https://cdn.linkscape.app/EricYan.jpg",
+    github: "",
+  },  
   {
     name: "Matthew Dong",
     role: "Member",
@@ -66,6 +60,18 @@ const people = [
     imageUrl: "https://cdn.linkscape.app/TzeYunHsiao.png",
     github: "https://github.com/Powerlean",
   },
+  {
+    name: "Ana Jiang",
+    role: "Fellow",
+    imageUrl: "https://cdn.linkscape.app/AnaJiang.jpg",
+    github: "https://github.com/ana-jiangR",
+  },
+  {
+    name: "July Wu",
+    role: "Fellow & Former COO",
+    imageUrl: "https://cdn.linkscape.app/JulyWu.png",
+    github: "https://github.com/JLW-7",
+  }
 ];
 
 export default function Team() {
