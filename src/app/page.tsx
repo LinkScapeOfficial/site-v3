@@ -110,7 +110,7 @@ export default function Index() {
                       className="rounded-xl bg-zinc-100 w-20 h-20 object-cover"
                     />
                     <div>
-                      <p className="font-semibold tracking-tight">Eric Yan</p>
+                      <p className="font-semibold tracking-tight">Zigao Wang</p>
                       <p className="text-muted-foreground text-sm tracking-tight">
                         Co-founder & CTO
                       </p>
